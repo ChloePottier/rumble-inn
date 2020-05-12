@@ -15,6 +15,11 @@ Version: 1.0 -->
 get_header();
 ?>
 
+<!-- Le Studio -->
+<section>
+    
+</section>
+
 <?php 
 get_footer();
 ?>

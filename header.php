@@ -25,8 +25,12 @@ Version: 1.0 -->
         <title><?php ?></title>
     </head>
     <body class="home blog logged-in admin-bar no-customize-support">
-        <header class="custom-header" style="background-image: url('<?php echo get_header_image()?>');">
-            <div class="">
+        <header class="custom-header">
+            <div class="position-absolute z-index-1">
+                <!-- image d'en-tête -->
+                <img src="<?php echo get_header_image()?>" class="header-image d-block mx-auto" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>"/>
+            </div>
+            <div class="position-relative z-index-100">
                 <!-- Logo -->
                 <?php echo get_custom_logo() ?>
             </div>
