@@ -1,0 +1,23 @@
+
+/*
+Theme Name: Rumble Inn
+Author: Chloé Pottier
+Description: Thème Rumble Inn
+Version: 1.0
+Text Domain: Rumble Inn
+*/
+
+/* HEADER */
+header{background-attachment: fixed; background-repeat: no-repeat; background-position: center; height:500px;}
+
+/* MEDIA QUERIES */
+@media screen  and (max-width:991px){
+
+}
+
+@media screen  and (max-width:767px){
+	
+}
+@media screen  and (max-width:575px){
+	
+}
