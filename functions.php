@@ -27,6 +27,7 @@ $defaults = array(
     'video-active-callback'  => 'is_front_page',
 );
 add_theme_support( 'custom-header', $defaults );
+
 // widget header
 function header_widgets_init() {
         register_sidebar( array(
@@ -43,7 +44,13 @@ function header_widgets_init() {
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 // NAvigation top menu
-register_nav_menu( 'nav-top', 'Top Menu' );
+
+register_nav_menus(
+    array(
+        'top'    => __( 'Top Menu', 'rumbleinn' ),
+        'social' => __( 'Social Links Menu', 'rumbleinn' ),
+    )
+);
 
 
 

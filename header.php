@@ -55,7 +55,7 @@ Version: 1.0 -->
         </div>
     </header>
     <div class="container">
-        <div class="row">
+        <nav class="row">
             <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-        </div>
+        </nav>
     </div>
