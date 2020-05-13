@@ -22,15 +22,17 @@ Version: 1.0 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- ajouter les méta, opengraph et micro données ? -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
+    <?php wp_head(); ?>
     <title><?php ?></title>
 </head>
 
-<body class="home blog logged-in admin-bar no-customize-support">
-    <header class="custom-header">
+<body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
+<?php wp_body_open(); ?>
+    <header class="custom-header" >
         <div class="position-absolute z-index-1">
-        <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
+            <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
             <!-- image d'en-tête -->
-            <?php if (get_header_image()!= '') :?>
+            <?php if (get_header_image() != '') : ?>
                 <img src="<?php echo get_header_image() ?>" class="header-image d-block mx-auto" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" />
             <?php endif; ?>
 
@@ -51,8 +53,58 @@ Version: 1.0 -->
                 </div>
             </div>
         </div>
-        <nav>
+        <div class="container">
+            <div class="row">
+                <!-- Menu desktop -->
+                <div class="col-12">
+                    <nav class="menu-nav d-none d-md-flex flex-row">
+                    <?php wp_nav_menu(
+                            array(
+                                'container' => false,
+                                'theme_location' => 'top',
+                                'menu_id'  => 'nav-top',
+                                'echo' => true,
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'depth' => 0,
+                                'items_wrap'      => '%3$s',
+                                'walker' => ''
+                            )
+                        );
+                        ?>  
+                    </nav>
+                </div>
+                <!-- Menu smartphone (burger) -->
+                <div class="col-12">
+                    <label class="burger text-center d-flex flex-column d-md-none position-fixed rounded-circle" id="burger">MENU
+                        <span class="bg-black isclosed mx-auto" id="burger1">&nbsp;</span>
+                        <span class="bg-black isclosed mx-auto" id="burger2">&nbsp;</span>
+                        <span class="bg-black isclosed mx-auto" id="burger3">&nbsp;</span>
+                    </label>
+                    <nav class="menu-burger display-none bg-burger px-auto" id="navigation">
+                        <?php wp_nav_menu(
+                            array(
+                                'container' => false,
+                                'theme_location' => 'top',
+                                'menu_id'  => 'nav-top',
+                                'echo' => true,
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'depth' => 0,
+                                'items_wrap'      => '%3$s',
+                                'walker' => ''
+                            )
+                        );
+                        ?>
+                    </nav>
 
-        </nav>
+                </div>
+
+            </div>
+        </div>
 
     </header>

@@ -29,7 +29,6 @@ $defaults = array(
 add_theme_support( 'custom-header', $defaults );
 // widget header
 function header_widgets_init() {
- 
         register_sidebar( array(
         
          'name' => 'Ajouter du texte au Header',
@@ -39,14 +38,12 @@ function header_widgets_init() {
          'before_title' => '<h2 class="header-title">',
          'after_title' => '</h2>',
          ) );
-     
      }
-    
     add_action( 'widgets_init', 'header_widgets_init' );
-    
-
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
+// NAvigation top menu
+register_nav_menu( 'nav-top', 'Top Menu' );
 
 
 
