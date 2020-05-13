@@ -35,20 +35,24 @@ Version: 1.0 -->
             <?php endif; ?>
 
         </div>
-        <div class="container">
+        <div class="container position-relative z-index-100">
             <div class="row">
-                <div class="col">
-                    <div class="position-relative z-index-100">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start py-5">
+                    <div class="">
                         <!-- Logo -->
                         <?php echo get_custom_logo() ?>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end py-5">
+                    <!-- widget header text -->
                     <?php if (is_active_sidebar('widget-header-text')) :
                         dynamic_sidebar('widget-header-text');
                     endif; ?>
                 </div>
             </div>
         </div>
+        <nav>
+
+        </nav>
 
     </header>
