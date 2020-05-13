@@ -71,6 +71,14 @@ header{background-color: #e5e5e5;}
         height: 24,386px;
         outline : none ;
     }
+
+/* FONTS */
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('font/BebasNeue-Regular.otf') format('otf'),
+        url('font/BebasNeue-Regular.woff') format('woff'),
+        url('font/BebasNeue-Regular.woff2') format('woff2'),
+        url('font/BebasNeue-Regular.ttf') format('ttf');}
 /* MEDIA QUERIES */
 @media screen  and (max-width:991px){
 
