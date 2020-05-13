@@ -1,3 +1,9 @@
+/* global rumbleinnBurger*/
+/**
+ * Theme functions file.
+ *
+ */
+
 let burger = document.getElementById("burger");
             let navigation = document.getElementById("navigation");
             let burger1 = document.getElementById("burger1");

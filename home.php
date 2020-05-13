@@ -5,7 +5,7 @@ Version: 1.0 -->
 <?php
 
 /**
- * Header file for the Rumble Inn theme
+ * Homepage file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
