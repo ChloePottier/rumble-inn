@@ -8,7 +8,7 @@ Text Domain: Rumble Inn
 */
 
 /* HEADER */
-header{}
+header{background-color: #e5e5e5;}
 
 /* MEDIA QUERIES */
 @media screen  and (max-width:991px){

@@ -9,7 +9,7 @@ function theme_prefix_setup() {
      ) );   }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
-//ajouter l'image d'entête du site
+//ajouter l'image d'entête du site(options de cette img)
 $defaults = array(
     'default-image'          => '',
     'random-default'         => false,
@@ -27,9 +27,30 @@ $defaults = array(
     'video-active-callback'  => 'is_front_page',
 );
 add_theme_support( 'custom-header', $defaults );
+// widget header
+function header_widgets_init() {
+ 
+        register_sidebar( array(
+        
+         'name' => 'Ajouter du texte au Header',
+         'id' => 'widget-header-text',
+         'before_widget' => '<div class="header-text">',
+         'after_widget' => '</div>',
+         'before_title' => '<h2 class="header-title">',
+         'after_title' => '</h2>',
+         ) );
+     
+     }
+    
+    add_action( 'widgets_init', 'header_widgets_init' );
+    
 
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
+
+
+
+
 
 
 
