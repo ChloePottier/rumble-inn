@@ -12,6 +12,7 @@ Text Domain: Rumble Inn
 .bg-black{background-color: #000;}
 
 ul{list-style: none;padding: 0; margin:0;}
+h2{font-family: 'Cocogoose';}
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* Menu, NAv top */
@@ -75,10 +76,29 @@ header{background-color: #e5e5e5;}
 /* FONTS */
 @font-face {
     font-family: 'Cocogoose';
-    src: url('font/BebasNeue-Regular.otf') format('otf'),
-        url('font/BebasNeue-Regular.woff') format('woff'),
-        url('font/BebasNeue-Regular.woff2') format('woff2'),
-        url('font/BebasNeue-Regular.ttf') format('ttf');}
+    src: 
+        url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
+
+    font-family: 'Cocogoose Light';
+    src: 
+        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
+
+    font-family: 'Cocogoose Light Italic';
+    src: 
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
+
+    font-family: 'Cocogoose Italic';
+    src: 
+    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf');
+    }
 /* MEDIA QUERIES */
 @media screen  and (max-width:991px){
 

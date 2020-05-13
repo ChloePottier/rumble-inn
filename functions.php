@@ -31,7 +31,6 @@ add_theme_support( 'custom-header', $defaults );
 // widget header
 function header_widgets_init() {
         register_sidebar( array(
-        
          'name' => 'Ajouter du texte au Header',
          'id' => 'widget-header-text',
          'before_widget' => '<div class="header-text">',
@@ -39,6 +38,14 @@ function header_widgets_init() {
          'before_title' => '<h2 class="header-title">',
          'after_title' => '</h2>',
          ) );
+         register_sidebar( array(
+            'name' => 'Logo Home menu top',
+            'id' => 'widget-menu-top',
+            'before_widget' => '<div class="widget-menu-top">',
+            'after_widget' => '</div>',
+            'before_title' => '<div class="widget-menu-title">',
+            'after_title' => '</div>',
+            ) );
      }
     add_action( 'widgets_init', 'header_widgets_init' );
 // Ajouter la prise en charge des images mises en avant

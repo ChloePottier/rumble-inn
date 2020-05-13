@@ -54,8 +54,10 @@ Version: 1.0 -->
             </div>
         </div>
     </header>
-    <div class="container">
-        <nav class="row">
-            <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-        </nav>
+    <div class="container-fluid border-bottom">
+        <div class="container">
+            <nav class="row">
+                <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+            </nav>
+        </div>
     </div>

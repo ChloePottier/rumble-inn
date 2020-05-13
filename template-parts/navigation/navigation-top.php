@@ -10,8 +10,13 @@
 
 ?>
 <!-- Menu desktop -->
-<div class="col-12">
-    <div class="menu-nav d-none d-md-flex flex-row py-4">
+<div class="col-12 d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+        <?php if (is_active_sidebar('widget-menu-top')) :
+                        dynamic_sidebar('widget-menu-top');
+                    endif; ?>
+    </div>
+    <div class="menu-nav d-none d-md-flex flex-row py-4  align-items-center">
         <?php wp_nav_menu(
             array(
                 'container' => false,
@@ -30,6 +35,9 @@
         <span class="bg-black isclosed mx-auto" id="burger3">&nbsp;</span>
     </label>
     <div class="menu-burger display-none bg-burger" id="navigation">
+    <?php if (is_active_sidebar('widget-menu-top')) :
+                        dynamic_sidebar('widget-menu-top');
+                    endif; ?>
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'top',
