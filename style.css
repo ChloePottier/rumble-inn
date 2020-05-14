@@ -14,15 +14,71 @@ Text Domain: Rumble Inn
 ul{list-style: none;padding: 0; margin:0;}
 a:hover{text-decoration: none;}
 /* FONTS */
-h2, .font-family-cocogoose{font-family: 'Cocogoose';}
+@font-face {
+    font-family: 'Cocogoose';
+    src: 
+        url('font/cocogoose_pro-trial-webfont.otf') format('otf'),
+        url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
+
+    /* font-family: 'Cocogoose Light';
+    src: 
+        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
+        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
+
+    font-family: 'Cocogoose Light Italic';
+    src: 
+    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
+
+    font-family: 'Cocogoose Italic';
+    src: 
+    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); */
+    }
+    @font-face {
+    font-family: 'Cocogoose Light';
+    src: 
+        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
+        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
+    }
+    @font-face {        
+        font-family: 'Cocogoose Light Italic';
+        src: 
+        url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
+        url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: 'Cocogoose Italic';
+        src: 
+        url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
+        url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
+        url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+        url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
+    }
+
+h2, .font-family-cocogoose{font-family: 'Cocogoose', Helvetica,Arial,  sans-serif;}
 /* HEADER */
 header{background-color: #e5e5e5;}
+    /* widget menu (logo)*/
+    #widget-menu-top{width: 200px; height:auto;}
     /* Menu, NAv top */
     #navigation{
         position: fixed;
         z-index: 1500;
-        width: 200vw;
-        height: 110vh;
+        /* width: 200vw;
+        height: 110vh; */
         top: 0%;
         left: 0;
         padding-top: 5rem;
@@ -69,49 +125,7 @@ header{background-color: #e5e5e5;}
         display: block;
         margin-bottom: 6px;
     }
-    .home-rumble-inn{ 
-        background: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/Logo-rumble-inn-little.svg) no-repeat;
-        width: 200px;
-        height: 24,386px;
-        text-indent: -1000px;
-    }
-    .home-rumble-inn a{
-        display: block;
-        width: 200px;
-        height: 24,386px;
-        outline : none ;
-    }
 
-/* FONTS */
-@font-face {
-    font-family: 'Cocogoose';
-    src: 
-        url('font/cocogoose_pro-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
-
-    font-family: 'Cocogoose Light';
-    src: 
-        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
-
-    font-family: 'Cocogoose Light Italic';
-    src: 
-    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
-
-    font-family: 'Cocogoose Italic';
-    src: 
-    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
-    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
-    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
-    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf');
-    }
 /* MEDIA QUERIES */
 @media screen  and (max-width:991px){
 

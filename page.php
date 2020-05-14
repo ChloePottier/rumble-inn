@@ -1,28 +1,39 @@
-<?php /*Template Name: Rumble InnPages*/?>
+<?php /*Template Name: Rumble Inn Pages modèle*/?>
 <?php get_header()?>
-<div class="container-fluid">
+
+
+
+<?php
+        // chargement du contenu de la page.
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+            the_content();
+            endwhile;
+        else : echo '<p> Cette page nest pas disponible</p>';
+        endif;
+    ?>
+<div class="container-fluid modele-pages">
     <div class="container">
         <!-- Comment récuper le contenu d'une page -->
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php if ( have_posts() ) : 
+            while ( have_posts() ) : the_post(); ?>
         <div class="row">
             <div class="col-12">
                 <!-- on récupère grace à cela le titre de la page -->
-                <h2><?php the_title(); ?></h2>
+                <h1><?php the_title(); ?></h1>
             </div>
-            <div>
+            <div class="col-12">
                 <!-- L'image de présentation -->
-                <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+                <?php if ( has_post_thumbnail() ) { the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); } ?>
                 <!-- Le contenu -->
                 <?php the_content(); ?>
-                <?php endwhile; endif; ?>
+                <?php endwhile; 
+                else : echo '<p> Cette page nest pas disponible</p>';
+                endif; ?>
             </div>
         </div>
-
     </div>
 </div>
-
-
-
 
 
 <?php get_footer()?>
