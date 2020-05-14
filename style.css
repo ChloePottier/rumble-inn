@@ -6,7 +6,8 @@ Description: Thème Rumble Inn
 Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier
-Text Domain: Rumble Inn
+Text Domain: rumble-inn
+
 */
 /*COLORS*/
 .bg-black{background-color: #000;}
@@ -21,27 +22,6 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
         url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
         url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
-
-    /* font-family: 'Cocogoose Light';
-    src: 
-        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
-
-    font-family: 'Cocogoose Light Italic';
-    src: 
-    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
-    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
-
-    font-family: 'Cocogoose Italic';
-    src: 
-    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
-    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
-    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
-    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); */
     }
     @font-face {
     font-family: 'Cocogoose Light';
@@ -68,7 +48,7 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
     }
 
-h2, .font-family-cocogoose{font-family: 'Cocogoose', Helvetica,Arial,  sans-serif;}
+h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* widget menu (logo)*/

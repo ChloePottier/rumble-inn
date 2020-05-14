@@ -8,6 +8,7 @@
 <!-- Menu desktop -->
 <div class="col-12 d-flex justify-content-between">
     <a href="<?php echo get_option('home'); ?>" class="d-none d-md-flex align-items-center">
+        <!-- widget logo -->
         <?php
         if (is_active_sidebar('widget-menu-top')) :
             dynamic_sidebar('widget-menu-top');
@@ -15,7 +16,7 @@
         ?>
     </a>
     <div class="menu-nav d-none d-md-flex flex-row py-4  align-items-center  font-family-cocogoose text-uppercase">
-        <?php 
+        <?php // menu nav-top
         wp_nav_menu(
             array(
                 'container' => false,
@@ -34,14 +35,17 @@
         <span class="bg-black isclosed mx-auto" id="burger3">&nbsp;</span>
     </label>
     <div class="menu-burger display-none bg-burger font-family-cocogoose text-uppercase" id="navigation">
-        <?php 
+    <a href="<?php echo get_option('home'); ?>" >
+        <?php
         if (is_active_sidebar('widget-menu-top')) :
             dynamic_sidebar('widget-menu-top');
-        endif; 
+        endif;
         ?>
+    </a>
         <?php 
         wp_nav_menu(
             array(
+                'container' => false,
                 'theme_location' => 'top',
                 'menu_id'  => 'nav-top',
             )); 

@@ -16,12 +16,14 @@ get_header();
 ?>
 <div class="container-fluid">
     <div class="container">
+    <h3><?php echo get_post_field('post_title', '1905'); ?></h3>
+									<p><?php echo get_post_field('post_content', '1905'); ?></p>
         <!-- Comment récuper le contenu d'une page -->
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="row">
             <div class="col-12">
                 <!-- on récupère grace à cela le titre de la page -->
-                <h1><?php the_title(); ?> BIENVENUE</h1>
+                <h1><?php the_title(); ?></h1>
             </div>
             <div class="col-12">
                 <!-- L'image de présentation -->
@@ -29,6 +31,16 @@ get_header();
                 <!-- Le contenu -->
                 <?php the_content(); ?>
                 <?php endwhile; endif; ?>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p><a href="<?php echo esc_url( get_page_link( 1893 ) ); ?>">Accéder au blog</a></p>
             </div>
         </div>
     </div>
