@@ -16,7 +16,7 @@
                         dynamic_sidebar('widget-menu-top');
                     endif; ?>
     </div>
-    <div class="menu-nav d-none d-md-flex flex-row py-4  align-items-center">
+    <div class="menu-nav d-none d-md-flex flex-row py-4  align-items-center  font-family-cocogoose">
         <?php wp_nav_menu(
             array(
                 'container' => false,
@@ -34,8 +34,8 @@
         <span class="bg-black isclosed mx-auto" id="burger2">&nbsp;</span>
         <span class="bg-black isclosed mx-auto" id="burger3">&nbsp;</span>
     </label>
-    <div class="menu-burger display-none bg-burger" id="navigation">
-    <?php if (is_active_sidebar('widget-menu-top')) :
+    <div class="menu-burger display-none bg-burger  font-family-cocogoose" id="navigation">
+        <?php if (is_active_sidebar('widget-menu-top')) :
                         dynamic_sidebar('widget-menu-top');
                     endif; ?>
         <?php wp_nav_menu(
