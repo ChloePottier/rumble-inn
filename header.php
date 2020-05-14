@@ -56,7 +56,7 @@ Version: 1.0 -->
     </header>
     <div class="container-fluid border-bottom">
         <div class="container">
-            <nav class="row">
+            <nav class="row font-family-cocogoose">
                 <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
             </nav>
         </div>

@@ -12,7 +12,9 @@ Text Domain: Rumble Inn
 .bg-black{background-color: #000;}
 
 ul{list-style: none;padding: 0; margin:0;}
-h2{font-family: 'Cocogoose';}
+a:hover{text-decoration: none;}
+/* FONTS */
+h2, .font-family-cocogoose{font-family: 'Cocogoose';}
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* Menu, NAv top */
@@ -25,6 +27,10 @@ header{background-color: #e5e5e5;}
         left: 0;
         padding-top: 5rem;
     }
+    #nav-top li{padding-right:.5rem;}
+    #nav-top li:last-child{padding-right:0;}
+    #nav-top li a{color: #000;}
+    #nav-top li a:hover{color: rgba(117, 117, 117, 0.925);}
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
     .burger {
         margin: 0;
@@ -77,24 +83,28 @@ header{background-color: #e5e5e5;}
 @font-face {
     font-family: 'Cocogoose';
     src: 
+        url('font/cocogoose_pro-trial-webfont.otf') format('otf'),
         url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
         url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
         url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
 
     font-family: 'Cocogoose Light';
     src: 
+        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
         url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
         url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
         url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
 
     font-family: 'Cocogoose Light Italic';
     src: 
+    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
     url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
     url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
     url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
 
     font-family: 'Cocogoose Italic';
     src: 
+    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
     url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
     url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
     url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf');
