@@ -18,15 +18,17 @@
                 <h1><?php the_title(); ?></h1>
             </div>
             <div class="col-12">
-                <!-- L'image de présentation -->
-                <?php if ( has_post_thumbnail() ) { the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); } ?>
+                 <!-- L'image de présentation -->
+                 <?php if ( has_post_thumbnail() ) { the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); } ?>
+            </div>
+            <div class="col-12">
                 <!-- Le contenu -->
                 <?php the_content(); ?>
-                <?php endwhile; 
-                else : echo '<p> Cette page nest pas disponible</p>';
-                endif; ?>
             </div>
         </div>
+        <?php endwhile; 
+                else : echo '<p> Cette page nest pas disponible</p>';
+                endif; ?>
     </div>
 </div>
 <?php get_footer()?>

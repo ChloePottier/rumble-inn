@@ -43,16 +43,14 @@ get_header();
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <?php
-            $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged)); ?>
-
-            <?php while ($loop->have_posts()) : $loop->the_post();
-                
-                the_title('<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h2>');
             
-
-                the_content();?>
-                <!--  -->
+            <?php
+            $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged)); 
+            while ($loop->have_posts()) : $loop->the_post();?>
+                <div class="col">
+                    <?php the_title('<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h2>');
+                    the_content();?>
+                </div>
             <?php endwhile; ?>
         </div>
     </div>
@@ -61,17 +59,18 @@ get_header();
 <!-- références -->
 <div class="container-fluid">
     <div class="container">
-        <div class="row">
+        <div class="row d-flex">
             <?php
-            $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged)); ?>
-
-            <?php while ($loop->have_posts()) : $loop->the_post();
-                $image = get_field('image-reference');
-                the_title('<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h2>');
-            ?>
-
-                <div class="entry-content">
-                    <img src="<?php echo $image ?>" />
+            $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
+            while ($loop->have_posts()) : $loop->the_post();
+                $image = get_field('image-reference');?>
+                <div class="col">
+                    <div class="entry-header">
+                        <?php the_title('<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h2>'); ?>
+                    </div>
+                    <div class="entry-content">
+                        <img src="<?php echo $image ?>" />
+                    </div>
                 </div>
                 <!--  -->
             <?php endwhile; ?>
