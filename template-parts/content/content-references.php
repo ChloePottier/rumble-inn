@@ -1,5 +1,15 @@
 <?php
 /**
+ * Reference content for the Rumble Inn theme
+ * @package WordPress
+ * @subpackage rumble-inn
+ * @since 1.0
+ * @version 1.0
+ */
+?>
+
+<?php
+/**
  * Content article single file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
@@ -24,9 +34,12 @@
         <?php
         the_content(
             sprintf(
-                get_the_title()
+                get_the_field('title-reference'),
+                get_the_field('image-reference')
+                
             )
         );
+        
         wp_link_pages(
             array(
                 'before' => '<div class="page-links">' . __('Pages:', 'rumble-inn'),
@@ -39,3 +52,6 @@
     <div class="entry-footer">
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->
+
+
+            

@@ -1,4 +1,4 @@
-<? php
+<?php
 /**
  * Content article single file for the Rumble Inn theme
  * @package WordPress
@@ -14,14 +14,12 @@
     </div>
     <div class="entry-content">
         <?php
-
         the_content(
             sprintf(
 
                 get_the_title()
             )
         );
-
         wp_link_pages(
             array(
                 'before' => '<div class="page-links">' . __('Pages:', 'rumble-inn'),

@@ -1,10 +1,4 @@
-<!-- Theme Name: Rumble Inn
-Author: Chloé Pottier
-Description: Thème Rumble Inn
-Version: 1.0 -->
-<?php
-
-/**
+<?php /**
  * Header file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn

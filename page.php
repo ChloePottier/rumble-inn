@@ -1,5 +1,12 @@
-<?php /*Template Name: Rumble Inn Pages modèle*/?>
-<?php get_header()?>
+<?php
+/**
+ * Modèle de page pour le thème Rumble Inn
+ * @package WordPress
+ * @subpackage rumble-inn
+ * @since 1.0
+ * @version 1.0
+ */
+?><?php get_header()?>
 <div class="container-fluid modele-pages">
     <div class="container">
         <!-- Comment récuper le contenu d'une page -->
@@ -21,10 +28,7 @@
             </div>
         </div>
     </div>
-    
 </div>
-
-
 <?php get_footer()?>
 
 

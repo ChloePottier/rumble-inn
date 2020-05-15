@@ -51,7 +51,6 @@ function header_widgets_init() {
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 // NAvigation top menu
-
 register_nav_menus(
     array(
         'top'    => __( 'Top Menu', 'rumbleinn' ),
