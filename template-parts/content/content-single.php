@@ -16,7 +16,6 @@
         <?php
         the_content(
             sprintf(
-
                 get_the_title()
             )
         );
@@ -27,12 +26,8 @@
             )
         );
         ?>
-    </div><!-- .entry-content -->
-
+    </div>
     <div class="entry-footer">
         <?php the_autor(); ?>
     </div><!-- .entry-footer -->
-
-
-
 </article><!-- #post-<?php the_ID(); ?> -->

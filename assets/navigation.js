@@ -3,7 +3,20 @@
  * Theme functions file.
  *
  */
+window.onscroll = function() {
+    stickyToScroll()
+};
 
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyToScroll() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
 let burger = document.getElementById("burger");
             let navigation = document.getElementById("navigation");
             let burger1 = document.getElementById("burger1");

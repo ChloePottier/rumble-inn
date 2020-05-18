@@ -16,7 +16,7 @@ get_header();
 <!-- Le studio -->
 <section class="container-fluid py-5" id="studio">
     <div class="container">
-        <!-- récupérer le contenu de la page (type page) -->
+        <!-- récupérer le contenu de la page studio (type page) -->
         <h2><?php echo get_post_field('post_title', '1905'); ?></h2>
         <p><?php echo get_post_field('post_content', '1905'); ?></p>
     </div>
@@ -56,16 +56,16 @@ get_header();
         </div>
         <!-- YouTube -->
         <div class="row py-5 youtube">
-        <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
-            while ($loop->have_posts()) : $loop->the_post();
-                ?>
-                <div class="col-3">
-                    <h3><?php the_field('titre_video'); ?></h3>
-                    <?php the_field('lien_youtube'); ?>
-                </div>
-                <!--  -->
+            <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
+                while ($loop->have_posts()) : $loop->the_post();
+                    ?>
+                    <div class="col-3">
+                        <h3><?php the_field('titre_video'); ?></h3>
+                        <?php the_field('lien_youtube'); ?>
+                    </div>
             <?php endwhile; ?>
         </div>
+        <!-- Page d'accueil : références -->
         <div class="row py-5">
             <!-- récupérer le contenu de la page d'accueil -->
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -84,6 +84,7 @@ get_header();
             <?php endwhile;
             endif; ?>
         </div>
+        <!-- Artistes de références -->
         <div class="row d-flex">
             <!-- Récupérer les articles de type référence -->
             <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
@@ -98,6 +99,25 @@ get_header();
                     </div>
                 </div>
                 <!--  -->
+            <?php endwhile; ?>
+        </div>
+        <!-- post-production -->
+        <div class="row py-5 postproduction">
+            <div class="col-12">
+                <h3>Nos références en post production</h3>
+            </div>
+            <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
+                while ($loop->have_posts()) : $loop->the_post();
+                $image = get_field('image_trailer'); ?>
+                    <div class="col-6">
+                        <div class="carte card-front">
+                            <img src="<?php echo $image ?>" class="img-fluid" width="" height=""/>
+                        </div>
+                        <div class="carte card-back">
+                            <h4><?php the_field('nom_trailer');?></h4>
+                            <p><?php the_field('description_trailer');?></p>
+                        </div>
+                    </div>
             <?php endwhile; ?>
         </div>
     </div>
@@ -126,6 +146,18 @@ get_header();
                     </div>
                 <!--  -->
             <?php endwhile; ?>
+        </div>
+    </div>
+</section>
+<!-- HISTORIQUE -->
+<section class="container-fluid py-5" id="historique">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- récupérer le contenu de la page (type page) -->
+                <h2><?php echo get_post_field('post_title', '2012'); ?></h2>
+                <p><?php echo get_post_field('post_content', '2012'); ?></p>
+            </div>
         </div>
     </div>
 </section>

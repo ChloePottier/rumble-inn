@@ -21,7 +21,7 @@
 </head>
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>
-    <header class="custom-header" >
+    <header class="custom-header pb-5" >
         <div class="position-absolute z-index-1">
             <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
             <!-- image d'en-tête -->
@@ -46,10 +46,12 @@
             </div>
         </div>
     </header>
-    <div class="container-fluid border-bottom">
+    <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+
+    <!-- <div class="container-fluid border-bottom  bg-white" id="navbar">
         <div class="container">
-            <nav class="row">
-                <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+            <nav class="row " >
+                
             </nav>
         </div>
-    </div>
+    </div> -->
