@@ -17,11 +17,8 @@
     <!-- ajouter les méta, opengraph et micro données ? -->
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
-
-    
     <title><?php ?></title>
 </head>
-
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>
     <header class="custom-header" >
@@ -31,7 +28,6 @@
             <?php if (get_header_image() != '') : ?>
                 <img src="<?php echo get_header_image() ?>" class="header-image d-block mx-auto" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" />
             <?php endif; ?>
-
         </div>
         <div class="container position-relative z-index-100">
             <div class="row">

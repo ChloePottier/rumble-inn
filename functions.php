@@ -48,6 +48,18 @@ function header_widgets_init() {
             ) );
      }
     add_action( 'widgets_init', 'header_widgets_init' );
+ // widget content
+function content_widgets_init() {
+    register_sidebar( array(
+     'name' => 'Lien Soudcloud',
+     'id' => 'widget-soundcloud',
+     'before_widget' => '<div class="widget-soundcloud-content">',
+     'after_widget' => '</div>',
+     'before_title' => '<h3 class="content-title">',
+     'after_title' => '</h3>',
+     ) );
+ }
+add_action( 'widgets_init', 'content_widgets_init' );
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 // NAvigation top menu

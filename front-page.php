@@ -18,7 +18,7 @@ get_header();
     <div class="container">
         <!-- récupérer le contenu de la page (type page) -->
         <h2><?php echo get_post_field('post_title', '1905'); ?></h2>
-        <p><?php echo get_post_field('post_content', '1905'); ?></p>        
+        <p><?php echo get_post_field('post_content', '1905'); ?></p>
     </div>
 </section>
 <!-- BLOG -->
@@ -47,26 +47,42 @@ get_header();
         <!-- Soundcloud -->
         <div class="row">
             <div class="col-12">
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/12862009&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <!-- widget pour lien soundcloud -->
+                <?php if (is_active_sidebar('widget-soundcloud')) :
+                    dynamic_sidebar('widget-soundcloud');
+                endif; ?>
+                <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/12862009&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
             </div>
+        </div>
+        <!-- YouTube -->
+        <div class="row py-5 youtube">
+        <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
+            while ($loop->have_posts()) : $loop->the_post();
+                ?>
+                <div class="col-3">
+                    <h3><?php the_field('titre_video'); ?></h3>
+                    <?php the_field('lien_youtube'); ?>
+                </div>
+                <!--  -->
+            <?php endwhile; ?>
         </div>
         <div class="row py-5">
             <!-- récupérer le contenu de la page d'accueil -->
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="col-12">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <div class="col-12">
                         <!-- on récupère grace à cela le titre de la page -->
-                        <h1><?php the_title(); ?></h1>
+                        <h2><?php the_title(); ?></h2>
                         <!-- L'image de présentation -->
                         <div class="img-fluid">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail();
-                        } ?>
+                            <?php if (has_post_thumbnail()) {
+                                the_post_thumbnail();
+                            } ?>
                         </div>
                         <!-- Le contenu -->
                         <?php the_content(); ?>
-                </div>
-                <?php endwhile;
-        endif; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
         </div>
         <div class="row d-flex">
             <!-- Récupérer les articles de type référence -->
@@ -78,7 +94,7 @@ get_header();
                         <?php the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); ?>
                     </div>
                     <div class="entry-content">
-                        <img src="<?php echo $image ?>" class="img-fluid"/>
+                        <img src="<?php echo $image ?>" class="img-fluid" />
                     </div>
                 </div>
                 <!--  -->
@@ -88,14 +104,30 @@ get_header();
 </section>
 <!-- PRESTATIONS -->
 <section class="container-fluid py-5" id="prestations">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-
-
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Prestations</h2>
             </div>
+            <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
+            while ($loop->have_posts()) : $loop->the_post();
+                 ?>
+                    <div class="col-12 entry-header pt-3">
+                        <?php 
+                        // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
+                        ?>
+                        <h3><?php the_field('titre_prestation'); ?></h3>
+                    </div>
+                    <div class="col-10">
+                    <?php the_field('details_prestation');?>
+                    </div>
+                    <div class="col-2 d-flex prix-prestation">
+                        <?php the_field('prix_prestation');?>
+                    </div>
+                <!--  -->
+            <?php endwhile; ?>
         </div>
+    </div>
 </section>
 
 
