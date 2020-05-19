@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-4">
             <?php 
-            // if (is_active_sidebar('widget-contact')) :
-            //             dynamic_sidebar('widget-contact');
-            //         endif; 
+            if (is_active_sidebar('widget-contact')) :
+                        dynamic_sidebar('widget-contact');
+                    endif; 
                     ?>    
             </div>
             <div class="col-4">
