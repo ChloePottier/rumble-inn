@@ -16,8 +16,8 @@
                         <img src="<?php echo $image ?>" class="image-responsive-blog" />
                     </div>
                     <a href=" <?php the_field('lien_article'); ?>" class="content-blog w-50 py-2 px-3">
-                        <h5 class="text-uppercase font-family-cocogoose-light m-0"><?php the_author(); ?></h5>
-                        <p class="date m-0"><?php the_date() ?></p>
+                        <span class="text-uppercase font-family-cocogoose-light m-0 ."><?php the_author(); ?></span>
+                        <span class="date m-0"><?php the_date() ?></span>
                         <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
                         <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
                         

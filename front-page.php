@@ -30,7 +30,7 @@ get_header();
             </div>
         </div>
         <div class="row">
-        <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
+            <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_article'); ?>
                 <div class="col-12 col-md-6 d-flex pb-3 pb-md-0">
@@ -38,16 +38,16 @@ get_header();
                         <img src="<?php echo $image ?>" class="image-responsive-blog" />
                     </div>
                     <a href=" <?php the_field('lien_article'); ?>" class="content-blog w-50 py-2 px-3">
-                        <h5 class="text-uppercase font-family-cocogoose-light m-0"><?php the_author(); ?></h5>
-                        <p class="date m-0"><?php the_date() ?></p>
+                        <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
+                        <span class="date m-0"><?php the_date() ?></span>
                         <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
                         <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
-                        
+
                     </a>
                 </div>
                 <!--  -->
             <?php endwhile; ?>
-         
+
         </div>
     </div>
 </section>
@@ -61,18 +61,17 @@ get_header();
                 <?php if (is_active_sidebar('widget-soundcloud')) :
                     dynamic_sidebar('widget-soundcloud');
                 endif; ?>
-                <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/12862009&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
             </div>
         </div>
         <!-- YouTube -->
         <div class="row py-5 youtube">
             <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
-                while ($loop->have_posts()) : $loop->the_post();
-                    ?>
-                    <div class="col-3">
-                        <h3><?php the_field('titre_video'); ?></h3>
-                        <?php the_field('lien_youtube'); ?>
-                    </div>
+            while ($loop->have_posts()) : $loop->the_post();
+            ?>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h3><?php the_field('titre_video'); ?></h3>
+                    <?php the_field('lien_youtube'); ?>
+                </div>
             <?php endwhile; ?>
         </div>
         <!-- Page d'accueil : références -->
@@ -117,17 +116,17 @@ get_header();
                 <h3>Nos références en post production</h3>
             </div>
             <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
-                while ($loop->have_posts()) : $loop->the_post();
+            while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_trailer'); ?>
-                    <div class="col-6">
-                        <div class="carte card-front">
-                            <img src="<?php echo $image ?>" class="img-fluid" width="" height=""/>
-                        </div>
-                        <div class="carte card-back">
-                            <h4><?php the_field('nom_trailer');?></h4>
-                            <p><?php the_field('description_trailer');?></p>
-                        </div>
+                <div class="col-6">
+                    <div class="carte card-front">
+                        <img src="<?php echo $image ?>" class="img-fluid" width="" height="" />
                     </div>
+                    <div class="carte card-back">
+                        <h4><?php the_field('nom_trailer'); ?></h4>
+                        <p><?php the_field('description_trailer'); ?></p>
+                    </div>
+                </div>
             <?php endwhile; ?>
         </div>
     </div>
@@ -141,19 +140,19 @@ get_header();
             </div>
             <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
-                 ?>
-                    <div class="col-12 entry-header pt-3">
-                        <?php 
-                        // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
-                        ?>
-                        <h3><?php the_field('titre_prestation'); ?></h3>
-                    </div>
-                    <div class="col-10">
-                    <?php the_field('details_prestation');?>
-                    </div>
-                    <div class="col-2 d-flex prix-prestation">
-                        <?php the_field('prix_prestation');?>
-                    </div>
+            ?>
+                <div class="col-12 entry-header pt-3">
+                    <?php
+                    // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
+                    ?>
+                    <h3><?php the_field('titre_prestation'); ?></h3>
+                </div>
+                <div class="col-10">
+                    <?php the_field('details_prestation'); ?>
+                </div>
+                <div class="col-2 d-flex prix-prestation">
+                    <?php the_field('prix_prestation'); ?>
+                </div>
                 <!--  -->
             <?php endwhile; ?>
         </div>

@@ -12,9 +12,23 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-            <?php if (is_active_sidebar('widget-contact')) :
-                        dynamic_sidebar('widget-contact');
-                    endif; ?>    
+            <?php 
+            // if (is_active_sidebar('widget-contact')) :
+            //             dynamic_sidebar('widget-contact');
+            //         endif; 
+                    ?>    
+            </div>
+            <div class="col-4">
+                emplacement newsletter
+            </div>
+            <div class="col-4 menu-rs">
+                <!-- Menu des réseaux sociaux -->
+            <?php  wp_nav_menu(
+                        array(
+                            'container' => false,
+                            'theme_location' => 'social',
+                            'menu_id'  => 'Social Links Menu',
+                        ));?>
             </div>
         </div>
     </div>

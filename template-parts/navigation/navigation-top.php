@@ -8,7 +8,7 @@
  */
 ?>
 <!-- Menu desktop -->
-<div class="container-fluid border-bottom bg-white d-none d-md-block" id="navbar">
+<div class="container-fluid border-bottom bg-white d-none d-lg-block" id="navbar">
     <div class="container">
         <nav class="row ">
             <div class="col-12 d-flex justify-content-between">
@@ -27,21 +27,18 @@
                             'container' => false,
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
-                        )
-                    );
-                    ?>
+                        ));?>
                 </div>
             </div>
-            <!-- Menu smartphone (burger) -->
-
         </nav>
     </div>
 </div>
-<div class="container-fluid d-block d-md-none position-fixed" id="nav-burger">
+<!-- Menu smartphone (burger) -->
+<div class="container-fluid d-block d-lg-none position-fixed" id="nav-burger">
     <div class="container">
         <div class="row">
             <div class="col">
-                <label class="burger text-center d-block flex-column rounded-circle" id="burger">MENU
+                <label class="burger text-center d-block flex-column rounded-circle position-fixed" id="burger">MENU
                     <span class="bg-black isclosed mx-auto" id="burger1">&nbsp;</span>
                     <span class="bg-black isclosed mx-auto" id="burger2">&nbsp;</span>
                     <span class="bg-black isclosed mx-auto" id="burger3">&nbsp;</span>

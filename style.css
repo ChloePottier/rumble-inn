@@ -57,8 +57,10 @@ header{background-color: #e5e5e5;}
         width: 200vw;
         height: 110vh;
         top: 0%;
-        left: 0;
-        padding-top: 5rem;
+        right: 0;
+        padding-top: 7rem;
+        text-align: right;
+        padding-right: 5rem ;
     }
     #nav-top li{padding-right:.5rem;}
     #nav-top li:last-child{padding-right:0;}
@@ -66,13 +68,12 @@ header{background-color: #e5e5e5;}
     #nav-top li a:hover, #nav-top li a:focus, #nav-top li a:active{color: rgba(117, 117, 117, 0.925);}
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
     #nav-burger{top: 3%;
-        right : -32%; 
         z-index: 2000;}
     .burger {
         margin: 0;
-        /* top: 3%;
-        right : 32%; 
-        z-index: 2000; */
+        top: 3%;
+        right : 3%; 
+        z-index: 2000;
         cursor: pointer;
         width: 4.75rem;
         height: 4.75rem;
@@ -113,14 +114,15 @@ header{background-color: #e5e5e5;}
 /* BLOG */
 .image-blog,.content-blog{height: 15rem; overflow: hidden;}
 .image-blog img{height: 15rem; height: 100%;}
-#blog h5{font-size: .8rem;}
-#blog h4{font-size: 1rem;}
-#blog .date{font-size: .7rem;}
+#index-blog .author,#blog .author{font-size: .65rem;}
+#index-blog h4,#blog h4{font-size: 1rem;}
+.date{font-size: .6rem;}
 .content-blog{background-color: #e5e5e5; color: #000;}
 .content-blog:hover{ color:rgba(61, 61, 61, 0.925);}
 /* REFERENCES */
     /* youtube  */
     #references .youtube h3{font-size: 1rem; height: 40px;}
+    #references iframe{width: 100%;}
     /* groupes */
     #references .entry-title{font-size: .75rem; white-space: nowrap; overflow: hidden;}
     /* post-production */
@@ -132,9 +134,23 @@ header{background-color: #e5e5e5;}
       /* Contact */
       input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem;}
       textarea{height: 8rem;}
+      /* Réseaux sociaux */
+      footer .menu-rs ul{display: flex; justify-content: flex-end;}
+      footer .menu-rs li{padding-left: 1rem; font-size: 2rem;}
+      footer .menu-rs a{color: #000;}
+      footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
+
+
 
 /* MEDIA QUERIES */
+@media screen  and (max-width:1200px){
+
+}
 @media screen  and (max-width:991px){
+    /* NAV */
+    #nav-top li{padding-right: 0; padding-bottom: .3rem; font-size: 1.5rem;}
+    .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;}
+    
 
 }
 
@@ -142,5 +158,5 @@ header{background-color: #e5e5e5;}
 	
 }
 @media screen  and (max-width:575px){
-    .burger{right: 53%;}	
+    /* .burger{right: 53%;}	 */
 }
