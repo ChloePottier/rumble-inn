@@ -7,28 +7,22 @@
  * @version 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="image-blog">
-       
-    </div>
-    <div class="content-blog">
-    <?php
-        // if (is_sticky() && is_home() && !is_paged()) {
-        //     printf('<span class="sticky-post">%s</span>', _x('Featured', 'post', 'rumble-inn'));
-        // }
-        if (is_singular()) :
-            the_title('<h1 class="entry-title">', '</h1>');
-        else :
-            the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>');
-        endif;
-        ?>
-        <?php
-        the_content(
-            sprintf(
-                get_the_title()
-            )
-        );
-    
-        ?>
-    </div>
+<article id="post-<?php the_ID(); ?>" class="row">
+    <?php $loop = new WP_Query(array('post_type' => 'post', 'paged' => $paged));
+            while ($loop->have_posts()) : $loop->the_post();
+                $image = get_field('image_article'); ?>
+                <div class="col-12 col-md-6 d-flex pb-3 pb-md-0">
+                    <div class="image-blog w-50">
+                        <img src="<?php echo $image ?>" class="image-responsive-blog" />
+                    </div>
+                    <a href=" <?php the_field('lien_article'); ?>" class="content-blog w-50 py-2 px-3">
+                        <h5 class="text-uppercase font-family-cocogoose-light m-0"><?php the_author(); ?></h5>
+                        <p class="date m-0"><?php the_date() ?></p>
+                        <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
+                        <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
+                        
+                    </a>
+                </div>
+                <!--  -->
+            <?php endwhile; ?>
 </article>
