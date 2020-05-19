@@ -18,13 +18,13 @@
             //         endif; 
             ?>
             <!-- </div> -->
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <!-- emplacement newsletter -->
                 <div class="d-flex flex-row"><input type="text" /><button>S'inscrire</button></div>
                 <div class="mentions-legales">Politique de confidentialité</div>
 
             </div>
-            <div class="col-6 menu-rs text-right">
+            <div class="col-12 col-sm-6 menu-rs text-right">
                 <!-- Menu des réseaux sociaux -->
                 <h3 class="d-inline">SUIVEZ-NOUS !</h3>
                 <?php wp_nav_menu(

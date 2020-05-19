@@ -86,7 +86,6 @@ header{background-color: #e5e5e5;}
     .display-none{display:none;}
     .display-flex{display: flex; flex-direction: column;}
     .burger span:last-child { margin-bottom:0px;    }
-    
     .isclosed{
         transform: none; 
         width: 35px;
@@ -103,17 +102,15 @@ header{background-color: #e5e5e5;}
         display: block;
         margin-bottom: 6px;
     }
-    /* sticky */
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1500;
       }
-      /* #navbar{z-index: 1500;} */
 /* BLOG */
 .image-blog,.content-blog{height: 15rem; overflow: hidden;}
-.image-blog img{height: 15rem; height: 100%;}
+.image-blog img{ height: 100%;}
 #index-blog .author,#blog .author{font-size: .65rem;}
 #index-blog h4,#blog h4{font-size: 1rem;}
 .date{font-size: .6rem;}
@@ -131,21 +128,25 @@ header{background-color: #e5e5e5;}
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
 #prestations .prix-prestation{font-weight: 600;}
 /* FOOTER */
-footer{height: 20rem;}
-      /* Contact */
-      input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem;}
-      textarea{height: 8rem;}
+footer{height: 20rem;}  
       /* Réseaux sociaux */
-      footer .menu-rs h3{border-bottom: 3px solid #000;}
+      footer .menu-rs h3{border-bottom: 3px solid #000; font-size: 1.5rem;}
       footer .menu-rs ul{display: flex; justify-content: flex-end; margin-top: 1rem;}
       footer .menu-rs li{padding-left: 1.5rem; font-size: 2rem;}
       footer .menu-rs a{color: #000;}
       footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
+/* CONTACT */
+.content-left{width: 40%;}
+.content-right{width: 60%;}
+input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem;}
+      textarea{height: 8rem;}
+.container-contact{max-width:600px;}
 
 
 
 /* MEDIA QUERIES */
-@media screen  and (max-width:1200px){
+@media screen  and (max-width:1199px){
+    /* .image-blog img{height: 15rem; width: auto; height: 100%;} */
 
 }
 @media screen  and (max-width:991px){
@@ -160,5 +161,7 @@ footer{height: 20rem;}
 	
 }
 @media screen  and (max-width:575px){
-    /* .burger{right: 53%;}	 */
+    .menu-rs{padding-top: 1rem;}
+    .image-blog{max-width:50%!important; }
+    .content-blog p{font-size: .8rem;}
 }

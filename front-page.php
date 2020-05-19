@@ -34,7 +34,7 @@ get_header();
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_article'); ?>
                 <div class="col-12 col-md-6 d-flex pb-3 pb-md-0">
-                    <div class="image-blog w-50">
+                    <div class="image-blog w-auto mw-50">
                         <img src="<?php echo $image ?>" class="image-responsive-blog" />
                     </div>
                     <a href=" <?php the_field('lien_article'); ?>" class="content-blog w-50 py-2 px-3">
@@ -94,12 +94,12 @@ get_header();
             endif; ?>
         </div>
         <!-- Artistes de références -->
-        <div class="row d-flex">
+        <div class="row d-flex justify-content-center">
             <!-- Récupérer les articles de type référence -->
             <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image-reference'); ?>
-                <div class="col-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="entry-header">
                         <?php the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); ?>
                     </div>
