@@ -131,12 +131,14 @@ header{background-color: #e5e5e5;}
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
 #prestations .prix-prestation{font-weight: 600;}
 /* FOOTER */
+footer{height: 20rem;}
       /* Contact */
       input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem;}
       textarea{height: 8rem;}
       /* Réseaux sociaux */
-      footer .menu-rs ul{display: flex; justify-content: flex-end;}
-      footer .menu-rs li{padding-left: 1rem; font-size: 2rem;}
+      footer .menu-rs h3{border-bottom: 3px solid #000;}
+      footer .menu-rs ul{display: flex; justify-content: flex-end; margin-top: 1rem;}
+      footer .menu-rs li{padding-left: 1.5rem; font-size: 2rem;}
       footer .menu-rs a{color: #000;}
       footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
 
