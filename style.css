@@ -136,11 +136,11 @@ footer{height: 20rem;}
       footer .menu-rs a{color: #000;}
       footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
 /* CONTACT */
-.content-left{width: 40%;}
-.content-right{width: 60%;}
+.content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
+.content-right{width: 75%;}
 input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem;}
       textarea{height: 8rem;}
-.container-contact{max-width:600px;}
+.container-contact{max-width:800px;}
 
 
 
