@@ -10,7 +10,7 @@
 <?php
 get_header();
 ?>
-<div id="blog" class="container-fluid">
+<div id="index-blog" class="container-fluid">
 	<div class="container">
 		<?php
 		if (have_posts()) {
