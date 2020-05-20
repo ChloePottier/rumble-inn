@@ -98,7 +98,9 @@ get_header();
             ?>
                 <div class="col-12 col-sm-6 col-md-3">
                     <h3 class="pb-2"><?php the_field('titre_video'); ?></h3>
+                    <div class="embed-container">
                     <?php the_field('lien_youtube'); ?>
+                    </div>
                 </div>
             <?php endwhile; ?>
         </div>
@@ -122,7 +124,7 @@ get_header();
             endif; ?>
         </div>
         <!-- Artistes de références -->
-        <div class="row d-flex justify-content-between">
+        <div class="row d-flex justify-content-between artistes-ref">
             <!-- Récupérer les articles de type référence -->
             <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
