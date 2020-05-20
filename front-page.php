@@ -30,24 +30,7 @@ get_header();
             </div>
         </div>
         <div class="row">
-            <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
-            while ($loop->have_posts()) : $loop->the_post();
-                $image = get_field('image_article'); ?>
-                <div class="col-12 col-md-6 d-flex pb-3 pb-md-0">
-                    <div class="image-blog w-auto mw-50">
-                        <img src="<?php echo $image ?>" class="image-responsive-blog" />
-                    </div>
-                    <a href=" <?php the_field('lien_article'); ?>" class="content-blog w-50 py-2 px-3">
-                        <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
-                        <span class="date m-0"><?php the_date() ?></span>
-                        <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
-                        <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
-
-                    </a>
-                </div>
-                <!--  -->
-            <?php endwhile; ?>
-
+            <?php get_template_part( 'template-parts/content/content' ); ?>
         </div>
     </div>
 </section>
