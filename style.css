@@ -108,6 +108,10 @@ header{background-color: #e5e5e5;}
         width: 100%;
         z-index: 1500;
       }
+/* STUDIO */
+#studio h4{font-size: .8rem; padding-bottom: 0;}
+.content-materiel,.content-plan{height: 263px;}
+.content-materiel{overflow-y: scroll;}
 /* BLOG */
 .image-blog,.content-blog{height: 15rem; overflow: hidden;}
 .image-blog img{ height: 100%;}

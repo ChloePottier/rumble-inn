@@ -14,30 +14,44 @@ Version: 1.0 -->
 get_header();
 ?>
 <!-- STUDIO -->
-<section class="container-fluid py-5" id="studio">
+<section class="container-fluid py-5 " id="studio">
     <div class="container">
         <div class="row">
             <div class="col-12 pt-5">
                 <h2>Le Studio</h2>
             </div>
         </div>
-        <div class="row">
-         
+        <div class="row ">
+            <!-- affichage des articles studio sauf materiel et plan-->
             <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array( 20055, 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_publication_studio'); ?>
-                <div class="col-12">
-                    <h3><?php the_field('titre_publication_studio'); ?></h3>
+                <div class="col-12 pb-5">
+                    <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
                     <?php the_field('description_publication_studio'); ?>
                 </div>
-                <!--  -->
             <?php endwhile; ?>
-            <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20055, 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
+            <!-- affichage de l'article matériel du studio -->
+            <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20055 ), 'paged' => $paged, 'order'   => 'ASC'));
             while ($loop2->have_posts()) : $loop2->the_post();
                 $image = get_field('image_publication_studio'); ?>
                 <div class="col-6">
-                    <h3><?php the_field('titre_publication_studio'); ?></h3>
-                    <?php the_field('description_publication_studio'); ?>
+                    <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
+                    <div class="content-materiel">
+                        <?php the_field('description_publication_studio'); ?>
+                    </div>
+                </div>
+                <!--  -->
+            <?php endwhile; ?>
+            <!-- affichage de l'article plan du studio -->
+            <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
+            while ($loop2->have_posts()) : $loop2->the_post();
+                $image = get_field('image_publication_studio'); ?>
+                <div class="col-6">
+                    <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
+                    <div class="content-plan">
+                        <?php the_field('description_publication_studio'); ?>
+                    </div>
                 </div>
                 <!--  -->
             <?php endwhile; ?>
