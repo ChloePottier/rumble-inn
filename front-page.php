@@ -31,11 +31,19 @@ get_header();
                     <?php the_field('description_publication_studio'); ?>
                 </div>
             <?php endwhile; ?>
-            <!-- affichage de l'article matériel du studio -->
+
+        </div>
+
+    </div>
+</section>
+<section class="container-fluid py-5 bg-burger" id="studio-equipement">
+    <div class="container">
+        <div class="row">
+                <!-- affichage de l'article matériel du studio -->
             <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20055 ), 'paged' => $paged, 'order'   => 'ASC'));
             while ($loop2->have_posts()) : $loop2->the_post();
                 $image = get_field('image_publication_studio'); ?>
-                <div class="col-6">
+                <div class="col-12- col-md-6">
                     <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
                     <div class="content-materiel">
                         <?php the_field('description_publication_studio'); ?>
@@ -47,7 +55,7 @@ get_header();
             <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
             while ($loop2->have_posts()) : $loop2->the_post();
                 $image = get_field('image_publication_studio'); ?>
-                <div class="col-6">
+                <div class="col-12- col-md-6">
                     <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
                     <div class="content-plan">
                         <?php the_field('description_publication_studio'); ?>
@@ -56,7 +64,6 @@ get_header();
                 <!--  -->
             <?php endwhile; ?>
         </div>
-        
     </div>
 </section>
 <!-- BLOG -->
@@ -64,7 +71,7 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Blog</h2>
+                <h2 class="pb-2">Blog</h2>
             </div>
         </div>
         <div class="row">
@@ -90,7 +97,7 @@ get_header();
             while ($loop->have_posts()) : $loop->the_post();
             ?>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <h3><?php the_field('titre_video'); ?></h3>
+                    <h3 class="pb-2"><?php the_field('titre_video'); ?></h3>
                     <?php the_field('lien_youtube'); ?>
                 </div>
             <?php endwhile; ?>
@@ -101,7 +108,7 @@ get_header();
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="col-12">
                         <!-- on récupère grace à cela le titre de la page -->
-                        <h2><?php the_title(); ?></h2>
+                        <h2 class="pb-2"><?php the_title(); ?></h2>
                         <!-- L'image de présentation -->
                         <div class="img-fluid">
                             <?php if (has_post_thumbnail()) {
@@ -115,14 +122,14 @@ get_header();
             endif; ?>
         </div>
         <!-- Artistes de références -->
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-between">
             <!-- Récupérer les articles de type référence -->
             <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image-reference'); ?>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="entry-header">
-                        <?php the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); ?>
+                <div class="text-center text-sm-left col-12 col-sm-6 col-md-4 col-lg-2 pb-2">
+                    <div class="entry-header font-family-cocogoose-light">
+                        <?php the_title('<h3 class="entry-title "></h3>'); ?>
                     </div>
                     <div class="entry-content">
                         <img src="<?php echo $image ?>" class="img-fluid" />
@@ -134,7 +141,7 @@ get_header();
         <!-- post-production -->
         <div class="row py-5 postproduction">
             <div class="col-12">
-                <h3>Nos références en post production</h3>
+                <h3 class="pb-2">Nos références en post production</h3>
             </div>
             <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
@@ -144,7 +151,7 @@ get_header();
                         <img src="<?php echo $image ?>" class="img-fluid" width="" height="" />
                     </div>
                     <div class="carte card-back">
-                        <h4><?php the_field('nom_trailer'); ?></h4>
+                        <h4 class="pt-2"><?php the_field('nom_trailer'); ?></h4>
                         <p><?php the_field('description_trailer'); ?></p>
                     </div>
                 </div>

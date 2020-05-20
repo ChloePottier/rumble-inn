@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?><?php get_header() ?>
-<div class="w-100 modele-page-contact d-flex pb-5">
+<div class="w-100 modele-page-contact d-flex">
     <div class="content-left">
     </div>
     <div class="content-right">
@@ -17,10 +17,10 @@
             <?php while (have_posts()) : the_post(); ?>
                 <div class="container-contact pl-3 ">
                     <h1 class="py-5 w-100 text-center"><?php the_title(); ?></h1>
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                         <div class="w-50 text-center">
-                            <h2>RUMBLE INN</h2>
-                            <h3>Recording studio</h3>
+                            <h2 class="pb-2">RUMBLE INN</h2>
+                            <h3 class="pb-1">Recording studio</h3>
                             <p>13 rue René Leynaud<br />
                                 69001 Lyon – FR</p>
                         </div>
