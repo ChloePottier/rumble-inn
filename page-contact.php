@@ -8,27 +8,29 @@
  * @version 1.0
  */
 ?><?php get_header() ?>
-<div class="w-100 modele-page-contact d-flex">
+<div class="w-100 modele-page-contact d-flex pb-5">
     <div class="content-left">
-
     </div>
     <div class="content-right">
         <!-- Comment récuper le contenu d'une page -->
         <?php if (have_posts()) : ?>
-            <div class="container-contact">
-                <div class="">
-                    <div class="">
-                        <?php while (have_posts()) : the_post(); ?>
-
-                            <!-- on récupère grace à cela le titre de la page -->
-                            <h1 class="pt-5 pb-3"><?php the_title(); ?></h1>
-
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="container-contact pl-3 ">
+                    <h1 class="py-5 w-100 text-center"><?php the_title(); ?></h1>
+                    <div class="d-flex">
+                        <div class="w-50 text-center">
+                            <h2>RUMBLE INN</h2>
+                            <h3>Recording studio</h3>
+                            <p>13 rue René Leynaud<br />
+                                69001 Lyon – FR</p>
+                        </div>
+                        <div class="w-50">
                             <!-- Le contenu -->
                             <?php the_content(); ?>
-                        <?php endwhile; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endwhile; ?>
         <?php else : echo '<p class="pb-5"> Cette page nest pas disponible</p>';
         endif; ?>
     </div>

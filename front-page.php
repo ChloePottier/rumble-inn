@@ -13,12 +13,36 @@ Version: 1.0 -->
 
 get_header();
 ?>
-<!-- Le studio -->
+<!-- STUDIO -->
 <section class="container-fluid py-5" id="studio">
     <div class="container">
-        <!-- récupérer le contenu de la page studio (type page) -->
-        <h2><?php echo get_post_field('post_title', '1905'); ?></h2>
-        <p><?php echo get_post_field('post_content', '1905'); ?></p>
+        <div class="row">
+            <div class="col-12 pt-5">
+                <h2>Le Studio</h2>
+            </div>
+        </div>
+        <div class="row">
+         
+            <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array( 20055, 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
+            while ($loop->have_posts()) : $loop->the_post();
+                $image = get_field('image_publication_studio'); ?>
+                <div class="col-12">
+                    <h3><?php the_field('titre_publication_studio'); ?></h3>
+                    <?php the_field('description_publication_studio'); ?>
+                </div>
+                <!--  -->
+            <?php endwhile; ?>
+            <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array( 20055, 20058 ), 'paged' => $paged, 'order'   => 'ASC'));
+            while ($loop2->have_posts()) : $loop2->the_post();
+                $image = get_field('image_publication_studio'); ?>
+                <div class="col-6">
+                    <h3><?php the_field('titre_publication_studio'); ?></h3>
+                    <?php the_field('description_publication_studio'); ?>
+                </div>
+                <!--  -->
+            <?php endwhile; ?>
+        </div>
+        
     </div>
 </section>
 <!-- BLOG -->

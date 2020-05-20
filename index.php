@@ -7,8 +7,6 @@
  * @since 1.0
  * @version 1.0
  */
-?>
-<?php
 get_header();
 if (have_posts()) { ?>
 	<div id="index-blog" class="container-fluid py-5">
