@@ -45,7 +45,7 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
     }
 
-h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, .wpcf7-submit{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
+h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
 /* HEADER */
 header{background-color: #e5e5e5;}
@@ -143,7 +143,6 @@ header{background-color: #e5e5e5;}
         width: 100%;
         height: 200px;
     }
-
     /* groupes */
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
@@ -152,6 +151,15 @@ header{background-color: #e5e5e5;}
 /* PRESTATIONS */
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
 #prestations .prix-prestation{font-weight: 600;}
+/* CONTACT */
+.content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
+.content-right{width: 75%;}
+input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
+#formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
+textarea{height: 8rem;}
+.wpcf7-submit, .submit{background-color: #e8e5e5;}
+.wpcf7-submit:hover, .submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
+.container-contact{max-width:800px;}
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */
@@ -160,14 +168,12 @@ footer{height: 20rem;}
       footer .menu-rs li{padding-left: 1.5rem; font-size: 2rem;}
       footer .menu-rs a{color: #000;}
       footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
-/* CONTACT */
-.content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
-.content-right{width: 75%;}
-input, textarea{width: 100%; margin-top: .2rem; margin-bottom: .2rem; border-radius: .2rem; border: solid 1px #e5e5e5; padding: .5rem;}
-textarea{height: 8rem;}
-.wpcf7-submit{background-color: #e8e5e5;}
-.wpcf7-submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
-.container-contact{max-width:800px;}
+      /* Newsletter Sendinblue */
+      #sib_signup_form_1 input, .sib-default-btn, .sib-email-area{border-radius: none!important; }
+      .sib-email-area{width: 70%;}
+      .submit{width: 30%;}
+      .text-newsletter{font-size: .75rem; padding-top: .3rem;}
+
 
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){

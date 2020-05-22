@@ -61,14 +61,14 @@ function content_widgets_init() {
  }
 add_action( 'widgets_init', 'content_widgets_init' );
 function footer_widgets_init() {
-    register_sidebar( array(
-     'name' => 'Formulaire de contact',
-     'id' => 'widget-contact',
-     'before_widget' => '<div class="widget-formulaire-contact">',
-     'after_widget' => '</div>',
-     'before_title' => '<h3 class="contact-title">',
-     'after_title' => '</h3>',
-     ) );
+     register_sidebar( array(
+        'name' => 'Newsletter',
+        'id' => 'widget-newsletter',
+        'before_widget' => '<div class="widget-newsletter">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="newsletter title-title">',
+        'after_title' => '</h3>',
+        ) );
  }
 add_action( 'widgets_init', 'footer_widgets_init' );
 // Ajouter la prise en charge des images mises en avant

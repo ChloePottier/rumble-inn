@@ -11,17 +11,14 @@
 <footer class="container-fluid border-top py-5">
     <div class="container">
         <div class="row">
-            <!-- <div class="col-4"> -->
-            <?php
-            // if (is_active_sidebar('widget-contact')) :
-            //             dynamic_sidebar('widget-contact');
-            //         endif; 
-            ?>
-            <!-- </div> -->
+
             <div class="col-12 col-sm-6">
                 <!-- emplacement newsletter -->
-                <div class="d-flex flex-row"><input type="text" /><button>S'inscrire</button></div>
-                <div class="mentions-legales">Politique de confidentialité</div>
+                <?php
+            if (is_active_sidebar('widget-newsletter')) :
+                        dynamic_sidebar('widget-newsletter');
+                    endif; 
+            ?>
 
             </div>
             <div class="col-12 col-sm-6 menu-rs text-right">

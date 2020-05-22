@@ -24,7 +24,7 @@
                             <p>13 rue René Leynaud<br />
                                 69001 Lyon – FR</p>
                         </div>
-                        <div class="w-50">
+                        <div id="formulaire_contact" class="w-50" >
                             <!-- Le contenu -->
                             <?php the_content(); ?>
                         </div>
