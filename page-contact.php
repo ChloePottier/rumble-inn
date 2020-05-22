@@ -21,7 +21,7 @@
                         <div class="w-50 text-center">
                             <h2 class="pb-2">RUMBLE INN</h2>
                             <h3 class="pb-1">Recording studio</h3>
-                            <p>13 rue René Leynaud<br />
+                            <p class="adresse-JFX font-family-cocogoose-light">13 rue René Leynaud<br />
                                 69001 Lyon – FR</p>
                         </div>
                         <div id="formulaire_contact" class="w-50" >

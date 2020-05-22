@@ -148,9 +148,9 @@ get_header();
             <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_trailer'); ?>
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <div class="carte card-front">
-                        <img src="<?php echo $image ?>" class="img-fluid" width="" height="" />
+                        <img src="<?php echo $image ?>" class="h-100" width="" height="" />
                     </div>
                     <div class="carte card-back">
                         <h4 class="pt-2"><?php the_field('nom_trailer'); ?></h4>
@@ -159,6 +159,7 @@ get_header();
                 </div>
             <?php endwhile; ?>
         </div>
+        <!-- Galerie photos -->
     </div>
 </section>
 <!-- PRESTATIONS -->
@@ -177,10 +178,10 @@ get_header();
                     ?>
                     <h3><?php the_field('titre_prestation'); ?></h3>
                 </div>
-                <div class="col-10">
+                <div class="col-12- col-sm-10">
                     <?php the_field('details_prestation'); ?>
                 </div>
-                <div class="col-2 d-flex prix-prestation">
+                <div class="col-12 col-sm-2  prix-prestation text-right">
                     <?php the_field('prix_prestation'); ?>
                 </div>
                 <!--  -->

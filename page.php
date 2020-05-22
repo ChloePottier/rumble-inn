@@ -60,6 +60,7 @@ if (is_page(1905)) : ?>
             </div>
         </div>
     </section>
+    <!--galerie photos -->
     <?php
 // sinon si c'est un age différent de studio, afficher :
 else :

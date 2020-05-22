@@ -158,6 +158,8 @@ textarea{height: 8rem;}
 .wpcf7-submit, .submit{background-color: #e8e5e5;}
 .wpcf7-submit:hover, .submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
 .container-contact{max-width:800px;}
+.container-contact h3{font-size: 1.35rem;}
+.adresse-JFX{font-size: 1.35rem;}
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */
@@ -186,11 +188,12 @@ footer{height: 20rem;}
     .content-materiel{height: 70vh;}
     .content-plan{height: auto;}
     .content-plan img{height: auto; width: 100%;}
+    .image-blog img{width: 100%!important; height: auto; }
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
-    .image-blog{max-width:100%; height: auto;}
-    .image-blog img{width: 100%!important; height: auto; }
+    .image-blog{max-width:100%; height: auto; width: 100%;}
+    
     .content-blog p{font-size: .8rem;}
     .content-blog{ padding-bottom: 1rem; max-width:100%; width: 100%; height: auto;}
     footer .menu-rs ul{justify-content: center;}
