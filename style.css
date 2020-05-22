@@ -125,7 +125,6 @@ header{background-color: #e5e5e5;}
     /* youtube  */
     #references .youtube h3{font-size: 1rem; height: 40px;}
     #references iframe{width: 100%;}
-    
     .embed-container { 
         position: relative; 
         padding-bottom: 56.25%;
@@ -133,7 +132,6 @@ header{background-color: #e5e5e5;}
         max-width: 100%;
         height: auto;
     } 
-
     .embed-container iframe,
     .embed-container object,
     .embed-container embed { 
@@ -191,6 +189,12 @@ footer{height: 20rem;}
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
-    .image-blog{max-width:50%!important; }
+    .image-blog{max-width:100%; height: auto;}
+    .image-blog img{width: 100%!important; height: auto; }
     .content-blog p{font-size: .8rem;}
+    .content-blog{ padding-bottom: 1rem; max-width:100%; width: 100%; height: auto;}
+    footer .menu-rs ul{justify-content: center;}
+    .menu-rs { padding-top: 2rem; }
+    .sib-email-area, .submit{width: 100%;}
+    #studio-equipement h4{font-size: 1rem;}
 }
