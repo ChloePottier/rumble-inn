@@ -78,8 +78,6 @@ elseif (is_page(20101)) :     ?>
                             <?php the_content(); ?>
                         </div>
                     </div>
-
-
             <?php endwhile;
             endif; ?>
             <!-- Soundcloud -->
@@ -104,7 +102,6 @@ elseif (is_page(20101)) :     ?>
                     </div>
                 <?php endwhile; ?>
             </div>
-
             <!-- Artistes de références -->
             <div class="row d-flex justify-content-between justify-content-md-center justify-content-lg-between artistes-ref">
                 <!-- Récupérer les articles de type référence -->
@@ -112,7 +109,7 @@ elseif (is_page(20101)) :     ?>
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image-reference'); ?>
                     <div class="text-center text-sm-left col-12 col-sm-6 col-md-4 col-lg-2 pb-2">
-                        <div class="entry-header font-family-cocogoose-light">
+                        <div class="entry-header text-center text-sm-left font-family-cocogoose-light">
                             <?php the_title('<h3 class="entry-title "></h3>'); ?>
                         </div>
                         <div class="entry-content">
@@ -128,20 +125,20 @@ elseif (is_page(20101)) :     ?>
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
             </div>
-            <div class="row justify-content-between">
+            <div class="row justify-content-between mb-5">
                 <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image_trailer'); ?>
-                    <div class="col-12 col-md-6 card h-280 mb-3 mb-md-0">
-                        <a href="#" target="_blank">
+                    <div class="col-12 col-md-6 card h-280 mb-4">
+                        <a href="<?php the_field('url_trailer'); ?>" target="_blank">
                             <div class="card__side card__side--back">
-                                <div class="d-flex flex-column align-items-center justify-content-center bg-bordeau w-100 h-280">
-                                    <h4 class="pt-2 text-uppercase text-grey-dark"><?php the_field('nom_trailer'); ?></h4>
+                                <div class="text-center d-flex flex-column align-items-center justify-content-center bg-bordeau w-100 h-280">
+                                    <h4 class=" pt-2 text-uppercase text-grey-dark"><?php the_field('nom_trailer'); ?></h4>
                                     <p class="text-uppercase text-white"><?php the_field('description_trailer'); ?></p>
                                 </div>
                             </div>
-                            <div class="card__side card__side--front h-280 ">
-                                <img src="<?php echo $image ?>" class=" w-100" width="" height="" />
+                            <div class="card__side card__side--front h-280">
+                                <img src="<?php echo $image ?>" class="img-trailer" width="" height="" />
                             </div>
                         </a>
                     </div>
