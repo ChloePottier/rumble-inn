@@ -72,16 +72,16 @@ elseif (is_page(20101)) :     ?>
                 </div>
             </div>
             <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
-             <div class="row py-5">
-                 <div class="col-12">
-                    <?php the_content(); ?>
-                 </div>
-             </div>   
-                            
-                        
-            <?php endwhile; 
-        endif; ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5">
+                        <div class="col-12">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+
+
+            <?php endwhile;
+            endif; ?>
             <!-- Soundcloud -->
             <div class="row">
                 <div class="col-12">
@@ -123,21 +123,27 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- post-production -->
-            <div class="row py-5 postproduction">
+            <div class="row pt-5 postproduction">
                 <div class="col-12">
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
+            </div>
+            <div class="row justify-content-between">
                 <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image_trailer'); ?>
-                    <div class="col-12 col-sm-6">
-                        <div class="carte card-front">
-                            <img src="<?php echo $image ?>" class="h-100" width="" height="" />
-                        </div>
-                        <div class="carte card-back">
-                            <h4 class="pt-2"><?php the_field('nom_trailer'); ?></h4>
-                            <p><?php the_field('description_trailer'); ?></p>
-                        </div>
+                    <div class="col-12 col-md-6 card h-280 mb-3 mb-md-0">
+                        <a href="#" target="_blank">
+                            <div class="card__side card__side--back">
+                                <div class="d-flex flex-column align-items-center justify-content-center bg-bordeau w-100 h-280">
+                                    <h4 class="pt-2 text-uppercase text-grey-dark"><?php the_field('nom_trailer'); ?></h4>
+                                    <p class="text-uppercase text-white"><?php the_field('description_trailer'); ?></p>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--front h-280 ">
+                                <img src="<?php echo $image ?>" class=" w-100" width="" height="" />
+                            </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             </div>

@@ -9,6 +9,9 @@ Text Domain: rumble-inn */
 /*COLORS*/
 
 .bg-black{background-color: #000;}
+.bg-bordeau{background-color: #a63a3a;}
+.text-black{color: #000;}
+.text-grey-dark{color: #131316;}
 ul{list-style: none;padding: 0; margin:0;}
 a:hover{text-decoration: none;}
 /* FONTS */
@@ -146,8 +149,44 @@ header{background-color: #e5e5e5;}
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
     /* post-production */
-    #references .carte{height: 300px; overflow: hidden;}
-    
+    .h-280{height:280px;}
+    .border{border: solid 1px #b2b2b2 !important;}
+    .card {
+        border: none!important;
+        position: relative;
+        border-radius: 0;
+        overflow: hidden;
+    }
+    .card__side {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        -webkit-transition: all .8s ease;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        padding: 0 15px;
+    }
+    .card__side--front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card__side--back {
+        justify-content: center;
+        align-items: center;
+        transform: translateY(400px);
+    }
+    .card:hover .card__side--back {
+        transform: translateY(0px);
+        transition-timing-function : ease-out;
+        z-index:900;
+    }
 /* PRESTATIONS */
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
 #prestations .prix-prestation{font-weight: 600;}
