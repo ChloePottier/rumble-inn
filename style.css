@@ -65,8 +65,9 @@ header{background-color: #e5e5e5;}
     }
     #nav-top li{padding-right:.5rem;}
     #nav-top li:last-child{padding-right:0;}
-    #nav-top li a:link, #nav-top li a:visited{color: #000;}
-    #nav-top li a:hover,#nav-top li a:active ,.active{color: rgba(117, 117, 117, 0.925);}
+    #nav-top li a{color: #000;}
+    #nav-top li .active{color: rgba(117, 117, 117, 0.925);}
+    #nav-top li a:hover,.active{color: rgba(117, 117, 117, 0.925);}
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
     #nav-burger{top: 3%;
         z-index: 2000;}
@@ -119,7 +120,7 @@ header{background-color: #e5e5e5;}
 #index-blog .author,#blog .author{font-size: .65rem;}
 #index-blog h4,#blog h4{font-size: 1rem;}
 .date{font-size: .6rem;}
-.content-blog{background-color: #e5e5e5; color: #000;}
+.content-blog, .image-blog{background-color: #e5e5e5; color: #000;}
 .content-blog:hover{ color:rgba(61, 61, 61, 0.925);}
 /* REFERENCES */
     /* youtube  */
@@ -146,6 +147,7 @@ header{background-color: #e5e5e5;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
     /* post-production */
     #references .carte{height: 300px; overflow: hidden;}
+    
 /* PRESTATIONS */
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
 #prestations .prix-prestation{font-weight: 600;}
