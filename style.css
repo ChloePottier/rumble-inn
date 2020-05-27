@@ -127,7 +127,7 @@ header{background-color: #e5e5e5;}
 .btn-accueil h3{bottom: 2rem; left: 2rem; }
 .btn-accueil img{width: 100%; height:500px; object-fit: cover; }
 .btn-accueil img:hover{transform: rotate(0.02turn)  scale(1.25); transition-timing-function : ease-in;}
-.img-btn-accueil{opacity: .6;} 
+.img-btn-accueil{opacity: .6; object-fit: cover;} 
 /* STUDIO */
 #studio h4{font-size: .8rem; padding-bottom: 0;}
 .content-materiel,.content-plan{height: 263px;}
@@ -247,6 +247,15 @@ footer{height: 20rem;}
     .h-280{height: 250px;}
 }
 @media screen  and (max-width:767px){	
+    .snip1581 {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        /* height: 500px; */
+        text-align: left;
+        font-size: 16px;
+        width: 100%;
+    }
     .content-materiel{height: 70vh;}
     .content-plan{height: auto;}
     .content-plan img{height: auto; width: 100%;}
