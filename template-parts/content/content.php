@@ -8,6 +8,7 @@
  * @since 1.0
  * @version 1.0
  */
+// les noueaux articles
 $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
 while ($loop->have_posts()) : $loop->the_post();
     $image = get_field('image_article'); ?>
@@ -19,9 +20,24 @@ while ($loop->have_posts()) : $loop->the_post();
                 <h3 class=" text-uppercase"><?php the_field('titre_article'); ?></h3>
                 <span class="date m-0 font-weight-bold"><?php the_date('Y') ?></span>
                 <p class=""><?php the_field('resume_article'); ?></p>
-                
             </div>
-
         </figure>
     </a>
 <?php endwhile; ?>
+<?php 
+//BDD news. ancien site jarring-effects-studio
+global $wpdb;
+$resultats = $wpdb->get_results("SELECT * FROM news WHERE `idrubrique`= 1 ORDER BY datecreation DESC") ;
+foreach ($resultats as $post) {?>
+<?php $urlImage = home_url( '/wp-content/uploads'); ?>
+        <div class="col-12 col-md-6 col-lg-4 btn-accueil">
+        <figure class="snip1581 bg-black text-white">
+            <img src="<?php echo $urlImage.'/'.$post->image?>" class="img-btn-accueil h-100" width="" height="" />
+            <div class=" text-bloc-blog position-absolute text-white">
+                <h3 class=" text-uppercase"><?php echo $post->titre; ?></h3>
+                <span class="date m-0 font-weight-bold"><?php echo $post->tags ; ?></span>
+                <p class=""><?php echo $post->texte ;  ?></p>
+            </div>
+        </figure>
+        </div>
+<?php }?>

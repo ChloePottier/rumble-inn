@@ -120,9 +120,6 @@ header{background-color: #e5e5e5;}
     position: relative;
     display: inline-block;
     overflow: hidden;
-    margin: 10px;
-    min-width: 250px;
-    width: 100%;
     height: 500px;
     text-align: left;
     font-size: 16px;
@@ -130,13 +127,14 @@ header{background-color: #e5e5e5;}
 .btn-accueil h3{bottom: 2rem; left: 2rem; }
 .btn-accueil img{width: 100%; height:500px; object-fit: cover; }
 .btn-accueil img:hover{transform: rotate(0.02turn)  scale(1.25); transition-timing-function : ease-in;}
-.img-btn-accueil{opacity: .7;} 
+.img-btn-accueil{opacity: .6;} 
 /* STUDIO */
 #studio h4{font-size: .8rem; padding-bottom: 0;}
 .content-materiel,.content-plan{height: 263px;}
 .content-materiel{overflow-y: scroll;}
 /* BLOG */
-.text-bloc-blog{top:2rem; left: 2rem;}
+.text-bloc-blog{top:2rem; left: 2rem; right: 2rem;}
+.text-bloc-blog h3{font-size: 1.5rem;}
 .btn-lien-article{background-color: #131316;}
 /* REFERENCES */
     /* youtube  */

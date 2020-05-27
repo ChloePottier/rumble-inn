@@ -11,13 +11,13 @@
 <footer class="container-fluid border-top py-5">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 text-center text-sm-left">
+            <div class="col-12 col-md-6 text-center text-sm-left">
                 <!-- emplacement newsletter -->
                 <?php if (is_active_sidebar('widget-newsletter')) :
                         dynamic_sidebar('widget-newsletter');
                     endif; ?>
             </div>
-            <div class="col-12 col-sm-6 menu-rs text-center text-sm-right">
+            <div class="col-12 col-md-6 pt-3 pt-md-0 menu-rs text-center text-sm-right">
                 <!-- Menu des réseaux sociaux -->
                 <h3 class="d-inline">SUIVEZ-NOUS !</h3>
                 <?php wp_nav_menu(
@@ -25,8 +25,7 @@
                         'container' => false,
                         'theme_location' => 'social',
                         'menu_id'  => 'Social Links Menu',
-                    )
-                ); ?>
+                    )); ?>
             </div>
         </div>
     </div>
