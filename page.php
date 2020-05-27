@@ -147,5 +147,41 @@ elseif (is_page(20101)) :     ?>
             <!-- Galerie photos -->
         </div>
     </div>
+<?php elseif (is_page(20116)) :     ?>
+    <div class="container-fluid" id="prestations">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <h1> <?php the_title(); ?></h1>
+                </div>
+            </div>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5">
+                        <div class="col-12">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
+                        while ($loop->have_posts()) : $loop->the_post(); ?>
+                            <div class="col-12 entry-header pt-3">
+                                <?php
+                                // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
+                                ?>
+                                <h3><?php the_field('titre_prestation'); ?></h3>
+                            </div>
+                            <div class="col-12- col-sm-10">
+                                <?php the_field('details_prestation'); ?>
+                            </div>
+                            <div class="col-12 col-sm-2  prix-prestation text-right">
+                                <?php the_field('prix_prestation'); ?>
+                            </div>
+                            <!--  -->
+                        <?php endwhile; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
+    </div>
+    </div>
 <?php endif; ?>
 <?php get_footer(); ?>

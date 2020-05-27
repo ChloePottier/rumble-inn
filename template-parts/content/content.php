@@ -15,7 +15,7 @@ while ($loop->have_posts()) : $loop->the_post();
             <img src="<?php echo $image ?>" class="image-responsive-blog" />
         </div>
         <a href=" <?php
-        echo esc_url( get_permalink(the_ID(), 'post') )
+        echo get_permalink(the_ID(), 'post') 
         //  the_field('lien_article'); 
          ?>" target="_blank" class="content-blog w-100 w-sm-50 py-3 py-sm-2 px-3">
             <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
