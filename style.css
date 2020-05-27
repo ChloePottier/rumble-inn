@@ -134,13 +134,7 @@ header{background-color: #e5e5e5;}
 .content-materiel,.content-plan{height: 263px;}
 .content-materiel{overflow-y: scroll;}
 /* BLOG */
-.image-blog,.content-blog{height: 15rem; overflow: hidden;}
-.image-blog img{ height: 100%;}
-#index-blog .author,#blog .author{font-size: .65rem;}
-#index-blog h4,#blog h4{font-size: 1rem;}
-.date{font-size: .6rem;}
-.content-blog, .image-blog{background-color: #e5e5e5; color: #000;}
-.content-blog:hover{ color:rgba(61, 61, 61, 0.925);}
+.text-bloc-blog{top:2rem; left: 2rem;}
 /* REFERENCES */
     /* youtube  */
     #references .youtube h3{font-size: 1rem; height: 40px;}

@@ -17,11 +17,10 @@ get_header();
                 <img src="<?php echo $image ?>" class="image-responsive-blog" />
             </div>
             <div class="col-6">
-                
-                <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
-                <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
                 <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
                 <span class="date m-0"><?php the_date() ?></span>
+                <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
+                <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
             </div>
         </div>
     </div>
