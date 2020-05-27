@@ -10,7 +10,7 @@
 get_header();
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <div class="container pt-5">
+    <div class="container py-5">
         <div class="row">
             <div class="col-6">
                 <?php $image = get_field('image_article'); ?>

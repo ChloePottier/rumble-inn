@@ -81,7 +81,7 @@ elseif (is_page(20101)) :     ?>
             <?php endwhile;
             endif; ?>
             <!-- Soundcloud -->
-            <div class="row">
+            <div class="row pb-5">
                 <div class="col-12">
                     <!-- widget pour lien soundcloud -->
                     <?php if (is_active_sidebar('widget-soundcloud')) :
@@ -103,14 +103,14 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- Artistes de références -->
-            <div class="row d-flex justify-content-between justify-content-md-center justify-content-lg-between artistes-ref">
+            <div class="row py-5 d-flex justify-content-between justify-content-md-center justify-content-lg-between artistes-ref">
                 <!-- Récupérer les articles de type référence -->
                 <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image-reference'); ?>
                     <div class="text-center text-sm-left col-12 col-sm-6 col-md-4 col-lg-2 pb-2">
                         <div class="entry-header text-center text-sm-left font-family-cocogoose-light">
-                            <?php the_title('<h3 class="entry-title "></h3>'); ?>
+                            <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark" class="lien-reference-single">', esc_url(get_permalink())), '</a></h3>');?>
                         </div>
                         <div class="entry-content">
                             <img src="<?php echo $image ?>" class="img-fluid" />
@@ -120,7 +120,7 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- post-production -->
-            <div class="row pt-5 postproduction">
+            <div class="row py-5 postproduction">
                 <div class="col-12">
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
