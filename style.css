@@ -7,9 +7,9 @@ Licence: 1.0
 License URI: https://github.com/ChloePottier
 Text Domain: rumble-inn */
 /*COLORS*/
-
 .bg-black{background-color: #000;}
 .bg-bordeau{background-color: #a63a3a;}
+.bg-blue{background-color: #03848a;}
 .text-black{color: #000;}
 .text-grey-dark{color: #131316;}
 ul{list-style: none;padding: 0; margin:0;}
@@ -48,8 +48,10 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
     }
 
-h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
+h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
+.wpcf7-submit, .submit, .btn-lien-article{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
+.date{font-family: Helvetica, sans-serif;}
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* widget menu (logo)*/
@@ -135,6 +137,7 @@ header{background-color: #e5e5e5;}
 .content-materiel{overflow-y: scroll;}
 /* BLOG */
 .text-bloc-blog{top:2rem; left: 2rem;}
+.btn-lien-article{background-color: #131316;}
 /* REFERENCES */
     /* youtube  */
     #references .youtube h3{font-size: 1rem; height: 40px;}
@@ -210,8 +213,13 @@ header{background-color: #e5e5e5;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
 textarea{height: 8rem;}
-.wpcf7-submit, .submit{background-color: #e8e5e5;}
-.wpcf7-submit:hover, .submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
+.wpcf7-submit, .submit,.btn-lien-article{
+    /* background-color: #e8e5e5; 
+    color: #000; */
+    background-color: #03848a;
+    color: #fff;
+}
+.wpcf7-submit:hover, .submit:hover,.btn-lien-article:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
 .container-contact{max-width:800px;}
 .container-contact h3{font-size: 1.35rem;}
 .adresse-JFX{font-size: 1.35rem;}

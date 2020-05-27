@@ -15,10 +15,10 @@ while ($loop->have_posts()) : $loop->the_post();
         <?php echo sprintf('<a href="%s" rel="bookmark" class="col-12 col-md-6 col-lg-4 btn-accueil pb-4">', esc_url(get_permalink())) ?>
         <figure class="snip1581 bg-black text-white">
             <img src="<?php echo $image ?>" class="img-btn-accueil w-100" width="" height="" />
-            <div class=" text-bloc-blog position-absolute text-white text-uppercase">
-                <h3 class=""><?php the_field('titre_article'); ?></h3>
+            <div class=" text-bloc-blog position-absolute text-white">
+                <h3 class=" text-uppercase"><?php the_field('titre_article'); ?></h3>
+                <span class="date m-0 font-weight-bold"><?php the_date('Y') ?></span>
                 <p class=""><?php the_field('resume_article'); ?></p>
-                <span class="date m-0"><?php the_date('Y') ?></span>
                 
             </div>
 
