@@ -46,6 +46,12 @@ function header_widgets_init() {
             'before_title' => '<div class="widget-menu-title">',
             'after_title' => '</div>',
             ) );
+            register_sidebar( array(
+                'name' => 'Logo JFX menu top',
+                'id' => 'widget-logo-jfx',
+                'before_widget' => '<div class="widget-jfx">',
+                'after_widget' => '</div>',
+                ) );
      }
     add_action( 'widgets_init', 'header_widgets_init' );
  // widget content

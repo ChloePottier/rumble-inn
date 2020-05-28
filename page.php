@@ -164,7 +164,7 @@ elseif (is_page(20101)) :     ?>
                         </div>
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="col-12 col-md-6 col-lg-4 mb-4 text-blacks ">
+                            <div class="col-12 col-md-6 col-lg-4 mb-4 text-black">
                                 <div class="bg-light h-100 p-4 content-prestations">
                                     <?php
                                     // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
@@ -195,20 +195,19 @@ elseif (is_page(20101)) :     ?>
                     <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
                         while ($loop->have_posts()) : $loop->the_post(); 
                             $image = get_field('logo_label');?>
-                                <div class="col-12 col-md-6 col-lg-2 my-5 text-center">
+                                <div class="col-6 col-sm-4 col-lg-2 my-5 text-center">
                                     <a href="<?php the_field('lien_site'); ?>" target="_blank">
                                         <img src="<?php echo $image ?>" class="logo-label" />
                                         <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
                                     </a>
                                 </div>
-
-                            <!--  -->
                         <?php endwhile; ?>
                 </div>
             <?php endwhile;
             endif; ?>
         </div>
     </div>
+    <!-- Sinon -->
     <?php else :     ?>
         <div class="container-fluid" id="labels">
         <div class="container">
@@ -218,7 +217,6 @@ elseif (is_page(20101)) :     ?>
                     <div class="col-12 font-family-cocogoose text-center">
                         <?php the_content(); ?>
                     </div>
-
                 </div>
             <?php endwhile;
             endif; ?>

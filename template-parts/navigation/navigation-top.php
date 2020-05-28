@@ -28,6 +28,12 @@
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
                         ));?>
+                        <!-- widget logo JFX : page tous les labels -->
+                    <?php
+                    if (is_active_sidebar('widget-logo-jfx')) :?>
+                        <a href="<?php echo get_option('home'); ?>/?page_id=20123"><?php dynamic_sidebar('widget-logo-jfx');?></a>
+                   <?php endif;
+                    ?>
                 </div>
                 
             </div>
