@@ -164,14 +164,11 @@ elseif (is_page(20101)) :     ?>
                         </div>
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="col-12 col-md-6 col-lg-4 mb-4 text-black">
-                                <div class="bg-light h-100 p-4 content-prestations">
-                                    <?php
-                                    // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
-                                    ?>
-                                    <h3><?php the_field('titre_prestation'); ?></h3>
-
-                                    <?php the_field('details_prestation'); ?>
+                            <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">
+                                <div class="bg-blue h-100 p-4 content-prestations">
+                                    <h3 class="bg-dark d-inline py-2 px-3 position-absolute"><?php the_field('titre_prestation'); ?></h3>
+                                    <p class="details-prestations mt-5"><?php the_field('details_prestation'); ?></p>
+                                    
                                 </div>
                             </div>
 
@@ -209,12 +206,15 @@ elseif (is_page(20101)) :     ?>
     </div>
     <!-- Sinon -->
     <?php else :     ?>
-        <div class="container-fluid" id="labels">
+        <div class="container-fluid" id="page-<?php the_ID(); ?>">
         <div class="container">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                 <div class="row py-5">
-                    <div class="col-12 font-family-cocogoose text-center">
+                <div class="col-12 pb-3">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                    <div class="col-12">
                         <?php the_content(); ?>
                     </div>
                 </div>
