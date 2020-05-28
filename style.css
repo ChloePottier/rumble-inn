@@ -204,7 +204,7 @@ header{background-color: #e5e5e5;}
     }
 /* PRESTATIONS */
 #prestations h3{font-size: 1rem; text-transform: uppercase; }
-#prestations .prix-prestation{font-weight: 600;}
+#prestations .content-prestations{min-height: 270px;}
 /* CONTACT */
 .content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
 .content-right{width: 75%;}
@@ -221,6 +221,11 @@ textarea{height: 8rem;}
 .container-contact{max-width:800px;}
 .container-contact h3{font-size: 1.35rem;}
 .adresse-JFX{font-size: 1.35rem;}
+/* 360° */
+.wp-image-1852,.wp-image-20132{max-width: 20%!important;}
+#labels figcaption{font-family: 'Cocogoose',Helvetica, sans-serif; font-size: .6rem; color: #03848a;margin-top: .8rem; margin-bottom: 1.5rem;}
+.description-label{font-size: .5rem; color: #03848a;}
+.logo-label{height: 69px;}
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */

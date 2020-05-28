@@ -48,10 +48,3 @@
     </header>
     <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 
-    <!-- <div class="container-fluid border-bottom  bg-white" id="navbar">
-        <div class="container">
-            <nav class="row " >
-                
-            </nav>
-        </div>
-    </div> -->

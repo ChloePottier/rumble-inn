@@ -81,10 +81,10 @@ register_nav_menus(
     )
 );
 
-
-
-
-
-
-
-
+/* Autoriser l'upload de tous types de format dans les médias */
+add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
+function wpm_myme_types($mime_types){
+    $mime_types['svg'] = 'image/svg+xml'; //On autorise les .svg
+    $mime_types['webp'] = 'image/webp'; //On autorise les .webp
+    return $mime_types;
+}

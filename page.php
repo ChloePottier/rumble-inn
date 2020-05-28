@@ -110,7 +110,7 @@ elseif (is_page(20101)) :     ?>
                     $image = get_field('image-reference'); ?>
                     <div class="text-center text-sm-left col-12 col-sm-6 col-md-4 col-lg-2 pb-2">
                         <div class="entry-header text-center text-sm-left font-family-cocogoose-light">
-                            <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark" class="lien-reference-single">', esc_url(get_permalink())), '</a></h3>');?>
+                            <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark" class="lien-reference-single">', esc_url(get_permalink())), '</a></h3>'); ?>
                         </div>
                         <div class="entry-content">
                             <img src="<?php echo $image ?>" class="img-fluid" />
@@ -147,7 +147,7 @@ elseif (is_page(20101)) :     ?>
             <!-- Galerie photos -->
         </div>
     </div>
-     <!-- PAGE PRESTATIONS-->
+    <!-- PAGE PRESTATIONS-->
 <?php elseif (is_page(20116)) :     ?>
     <div class="container-fluid" id="prestations">
         <div class="container">
@@ -164,18 +164,17 @@ elseif (is_page(20101)) :     ?>
                         </div>
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="col-12 entry-header pt-3">
-                                <?php
-                                // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
-                                ?>
-                                <h3><?php the_field('titre_prestation'); ?></h3>
+                            <div class="col-12 col-md-6 col-lg-4 mb-4 text-blacks ">
+                                <div class="bg-light h-100 p-4 content-prestations">
+                                    <?php
+                                    // the_title('<h3 class="entry-title font-family-cocogoose-light"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); 
+                                    ?>
+                                    <h3><?php the_field('titre_prestation'); ?></h3>
+
+                                    <?php the_field('details_prestation'); ?>
+                                </div>
                             </div>
-                            <div class="col-12- col-sm-10">
-                                <?php the_field('details_prestation'); ?>
-                            </div>
-                            <div class="col-12 col-sm-2  prix-prestation text-right">
-                                <?php the_field('prix_prestation'); ?>
-                            </div>
+
                             <!--  -->
                         <?php endwhile; ?>
                     </div>
@@ -183,6 +182,47 @@ elseif (is_page(20101)) :     ?>
             endif; ?>
         </div>
     </div>
+    <!-- PAGE 360 (tous les labels,...) -->
+<?php elseif (is_page(20123)) :     ?>
+    <div class="container-fluid" id="labels">
+        <div class="container">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                <div class="row py-5 justify-content-center">
+                    <div class="col-12 font-family-cocogoose text-center">
+                        <?php the_content(); ?>
+                    </div>
+                    <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
+                        while ($loop->have_posts()) : $loop->the_post(); 
+                            $image = get_field('logo_label');?>
+                                <div class="col-12 col-md-6 col-lg-2 my-5 text-center">
+                                    <a href="<?php the_field('lien_site'); ?>" target="_blank">
+                                        <img src="<?php echo $image ?>" class="logo-label" />
+                                        <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
+                                    </a>
+                                </div>
+
+                            <!--  -->
+                        <?php endwhile; ?>
+                </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
+    </div>
+    <?php else :     ?>
+        <div class="container-fluid" id="labels">
+        <div class="container">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                <div class="row py-5">
+                    <div class="col-12 font-family-cocogoose text-center">
+                        <?php the_content(); ?>
+                    </div>
+
+                </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
     </div>
 <?php endif; ?>
 <?php get_footer(); ?>
