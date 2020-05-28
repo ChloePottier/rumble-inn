@@ -9,7 +9,7 @@
  */
 ?><?php get_header() ?>
 <?php
-// Si on est sur la page studio alors afficher le post-type studio
+// Si on est sur la PAGE STUDIO
 if (is_page(1905)) : ?>
     <div class="container-fluid" id="studio">
         <div class="container">
@@ -62,7 +62,7 @@ if (is_page(1905)) : ?>
     </section>
     <!--galerie photos -->
 <?php
-// sinon si c'est la page références  :
+// PAGE REFERENCES
 elseif (is_page(20101)) :     ?>
     <div class="container-fluid" id="references">
         <div class="container">
@@ -147,6 +147,7 @@ elseif (is_page(20101)) :     ?>
             <!-- Galerie photos -->
         </div>
     </div>
+     <!-- PAGE PRESTATIONS-->
 <?php elseif (is_page(20116)) :     ?>
     <div class="container-fluid" id="prestations">
         <div class="container">
