@@ -2,7 +2,7 @@
 //ajouter le logo
 function theme_prefix_setup() {
     add_theme_support( 'custom-logo', array(
-        'height'      => 175,
+        'height'      => 400,
         'width'       => 400,
         'flex-width' => true,
         'header-text' => array( 'site-title', 'site-description' ),

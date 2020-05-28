@@ -56,7 +56,8 @@ h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-headin
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* widget menu (logo)*/
-    #widget-menu-top{width: 200px; height:auto;}
+    #widget-menu-top{width: 400px; height:auto;}
+    .custom-logo{width: 250px; height: auto;}
     /* Menu, NAv top */
     #navigation{
         position: fixed;
@@ -72,8 +73,8 @@ header{background-color: #e5e5e5;}
     #nav-top li{padding-right:.5rem;}
     #nav-top li:last-child{padding-right:0;}
     #nav-top li a{color: #000;}
-    #nav-top li .active{color: rgba(117, 117, 117, 0.925);}
-    #nav-top li a:hover,.active{color: rgba(117, 117, 117, 0.925);}
+    #nav-top li .active{color: #03848a;}
+    #nav-top li a:hover,.active, .current-menu-item a,.current_page_item a{color: #03848a!important; }
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
     #nav-burger{top: 3%;
         z-index: 2000;}
@@ -116,7 +117,8 @@ header{background-color: #e5e5e5;}
         width: 100%;
         z-index: 1500;
       }
-      .widget-jfx img{width: 50px; margin-left: 2rem; }
+      .widget-jfx{ width: 50px; height: 50px; overflow: hidden; margin-left: 2rem;}
+      .widget-jfx img{width: 50px; margin-bottom: 50px;}
 /* ACCUEIL */
 .snip1581 {
     position: relative;
@@ -162,8 +164,9 @@ header{background-color: #e5e5e5;}
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
     .lien-reference-single{font-size: .75rem; color: #000;}
-    .lien-reference-single:hover{color: rgba(61, 61, 61, 0.925);}
+    .lien-reference-single:hover{color: #03848a}
     #references h4{font-size: 1.1rem ;}
+    .image-reference{object-fit: cover;}
     /* post-production */
     .h-280{height:280px;}
     .border{border: solid 1px #b2b2b2 !important;}
@@ -252,7 +255,6 @@ footer{height: 20rem;}
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
 .elementor-text-editor h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;}
 .elementor-text-editor h5{color:  #03848a; font-weight: 600;}
-
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 
@@ -277,6 +279,9 @@ footer{height: 20rem;}
     .content-plan{height: auto;}
     .content-plan img{height: auto; width: 100%;}
     .image-blog img{width: 100%!important; height: auto; }
+    .content-right{width: 100%;}
+    #formulaire_contact{order: 1 !important;}
+    .adresse-rumble-inn{order:2!important;}
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
