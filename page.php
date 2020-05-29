@@ -165,7 +165,7 @@ elseif (is_page(20101)) :     ?>
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                             <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">
-                                <div class="bg-blue h-100 p-4 content-prestations">
+                                <div class="bg-blue h-100 p-4 content-blocs">
                                     <h3 class="bg-dark d-inline py-2 px-3 position-absolute"><?php the_field('titre_prestation'); ?></h3>
                                     <p class="details-prestations mt-5"><?php the_field('details_prestation'); ?></p>
                                     

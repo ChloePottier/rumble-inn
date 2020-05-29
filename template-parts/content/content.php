@@ -10,19 +10,15 @@
 $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
 while ($loop->have_posts()) : $loop->the_post();
     $image = get_field('image_article'); ?>
-    <div class="col-12 col-md-6 d-flex flex-column flex-sm-row align-items-center pb-5 pb-sm-3" id="post-<?php the_ID(); ?>">
-        <div class="image-blog w-100 w-sm-auto mw-50">
-            <img src="<?php echo $image ?>" class="image-responsive-blog" />
+    <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">
+        <div>
+            <img src="<?php echo $image ?>" class="image-responsive-blog w-100" />
         </div>
-        <!-- lien sur la page de l'article-->
-        <?php echo sprintf('<a href="%s" rel="bookmark">', esc_url(get_permalink())) ?>
-            <div class="content-blog w-100 w-sm-50 py-3 py-sm-2 px-3">
-                <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
-                <span class="date m-0"><?php the_date() ?></span>
-                <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
-                <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
-            </div>
-        </a>
+        <div class="bg-blue h-100 p-4 content-blocs">
+            <h3 class="bg-dark d-inline py-2 px-3 position-absolute"><?php the_field('titre_article'); ?></h3>
+            
+            <p class="details-prestations mt-5"><?php the_field('detail_article'); ?></p>
+
+        </div>
     </div>
 <?php endwhile; ?>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae officiis deserunt aliquid odio, facilis optio impedit error eos distinctio id quod harum laborum ex molestiae ut omnis, aspernatur facere!
