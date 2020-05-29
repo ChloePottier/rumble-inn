@@ -23,32 +23,31 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
         url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
         url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {
-    font-family: 'Cocogoose Light';
+}
+@font-face {
+font-family: 'Cocogoose Light';
+src: 
+    url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
+}
+@font-face {        
+    font-family: 'Cocogoose Light Italic';
     src: 
-        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {        
-        font-family: 'Cocogoose Light Italic';
-        src: 
-        url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {
-        font-family: 'Cocogoose Italic';
-        src: 
-        url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
-    }
-
+    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'Cocogoose Italic';
+    src: 
+    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
+}
 h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
 .wpcf7-submit, .submit, .btn-lien-article{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
@@ -70,7 +69,7 @@ header{background-color: #e5e5e5;}
         text-align: right;
         padding-right: 5rem ;
     }
-    #nav-top li{padding-right:.5rem;}
+    #nav-top li{padding-right:1.1rem;}
     #nav-top li:last-child{padding-right:0;}
     #nav-top li a{color: #000;}
     #nav-top li .active{color: #03848a;}

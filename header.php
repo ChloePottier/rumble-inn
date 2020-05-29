@@ -12,18 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <!-- ajouter les méta, opengraph et micro données ? -->
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/font-awesome/css/all.css">
     <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
     <title><?php ?></title>
 </head>
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>
-    <header class="custom-header pb-5" >
+    <header class="custom-header pb-3" >
         <div class="position-absolute z-index-1">
             <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
             <!-- image d'en-tête -->
@@ -33,13 +32,13 @@
         </div>
         <div class="container position-relative z-index-100">
             <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start py-5">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start py-3">
                     <div class="">
                         <!-- Logo -->
                         <?php echo get_custom_logo() ?>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end py-5">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end py-3">
                     <!-- widget header text -->
                     <?php if (is_active_sidebar('widget-header-text')) :
                         dynamic_sidebar('widget-header-text');

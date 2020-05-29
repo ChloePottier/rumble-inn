@@ -21,7 +21,7 @@
                             <h2 class="pb-2">RUMBLE INN</h2>
                             <h3 class="pb-1">Recording studio</h3>
                             <p class="adresse-JFX">Croix Rousse<br />
-                                69001 Lyon<br />
+                                69004 Lyon<br />
                                 Tél : 07 70 69 77 64</p>
                                
                         </div>

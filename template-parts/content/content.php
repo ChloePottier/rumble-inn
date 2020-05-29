@@ -1,6 +1,5 @@
 <?php
-// *************VERSION BLOCS COMME PAGE ACTUS
-
+// *************VERSION BLOCS COMME SPREAD
 /**
  * Content article single file for the Rumble Inn theme
  * @package WordPress
@@ -8,36 +7,22 @@
  * @since 1.0
  * @version 1.0
  */
-// les noueaux articles
 $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6, 'paged' => $paged));
 while ($loop->have_posts()) : $loop->the_post();
     $image = get_field('image_article'); ?>
-    <!--<a href="" class="col-12 col-md-6 col-lg-4 btn-accueil pb-4">-->
-        <?php echo sprintf('<a href="%s" rel="bookmark" class="col-12 col-md-6 col-lg-4 btn-accueil pb-4">', esc_url(get_permalink())) ?>
-        <figure class="snip1581 bg-black text-white">
-            <img src="<?php echo $image ?>" class="img-btn-accueil w-100" width="" height="" />
-            <div class=" text-bloc-blog position-absolute text-white">
-                <h3 class=" text-uppercase"><?php the_field('titre_article'); ?></h3>
-                <span class="date m-0 font-weight-bold"><?php the_date('Y') ?></span>
-                <p class=""><?php the_field('resume_article'); ?></p>
-            </div>
-        </figure>
-    </a>
-<?php endwhile; ?>
-<?php 
-//BDD news. ancien site jarring-effects-studio
-global $wpdb;
-$resultats = $wpdb->get_results("SELECT * FROM news WHERE `idrubrique`= 1 ORDER BY datecreation DESC") ;
-foreach ($resultats as $post) {?>
-<?php $urlImage = home_url( '/wp-content/uploads'); ?>
-        <div class="col-12 col-md-6 col-lg-4 btn-accueil">
-        <figure class="snip1581 bg-black text-white">
-            <img src="<?php echo $urlImage.'/'.$post->image?>" class="img-btn-accueil h-100" width="" height="" />
-            <div class=" text-bloc-blog position-absolute text-white">
-                <h3 class=" text-uppercase"><?php echo $post->titre; ?></h3>
-                <span class="date m-0 font-weight-bold"><?php echo $post->tags ; ?></span>
-                <p class=""><?php echo $post->texte ;  ?></p>
-            </div>
-        </figure>
+    <div class="col-12 col-md-6 d-flex flex-column flex-sm-row align-items-center pb-5 pb-sm-3" id="post-<?php the_ID(); ?>">
+        <div class="image-blog w-100 w-sm-auto mw-50">
+            <img src="<?php echo $image ?>" class="image-responsive-blog" />
         </div>
-<?php }?>
+        <!-- lien sur la page de l'article-->
+        <?php echo sprintf('<a href="%s" rel="bookmark">', esc_url(get_permalink())) ?>
+            <div class="content-blog w-100 w-sm-50 py-3 py-sm-2 px-3">
+                <span class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></span>
+                <span class="date m-0"><?php the_date() ?></span>
+                <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
+                <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
+            </div>
+        </a>
+    </div>
+<?php endwhile; ?>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae officiis deserunt aliquid odio, facilis optio impedit error eos distinctio id quod harum laborum ex molestiae ut omnis, aspernatur facere!
