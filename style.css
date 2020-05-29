@@ -118,7 +118,7 @@ header{background-color: #e5e5e5;}
         z-index: 1500;
       }
       .widget-jfx{ width: 50px; height: 50px; overflow: hidden; margin-left: 2rem;}
-      .widget-jfx img{width: 50px; margin-bottom: 50px;}
+      .widget-jfx img{width: 50px; margin-bottom: 50px; outline : none }
 /* ACCUEIL */
 .snip1581 {
     position: relative;
@@ -244,17 +244,17 @@ footer{height: 20rem;}
       #sib_signup_form_1 input, .sib-default-btn, .sib-email-area{border-radius: none!important; }
       .sib-email-area{width: 70%;}
       .submit{width: 30%;}
-      .text-newsletter{font-size: .75rem; padding-top: .3rem;}
+      .text-newsletter{font-size: .75rem; padding-top: .3rem; text-align: justify;}
 /* AUTRES */
 .elementor-text-editor{color: #131316;}
 .elementor-text-editor, .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h4{white-space: break-spaces; font-family: Helvetica, Arial, sans-serif;}
-.elementor-text-editor a{color: #e52d25;}
-.elementor-text-editor a:hover{color: #03848a;}
+.elementor-text-editor a{color: #03848a;}
+.elementor-text-editor a:hover{color: #e52d25;}
 .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
 .elementor-text-editor h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;}
-.elementor-text-editor h5{color:  #03848a; font-weight: 600;}
+.elementor-text-editor h5{color:  #000; font-weight: 600;}
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 
