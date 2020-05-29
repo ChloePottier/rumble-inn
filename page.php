@@ -179,6 +179,35 @@ elseif (is_page(20101)) :     ?>
             endif; ?>
         </div>
     </div>
+        <!-- PAGE HISTORIQUE-->
+<?php elseif (is_page(2012)) :     ?>
+    <div class="container-fluid" id="historique">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <h1> <?php the_title(); ?></h1>
+                </div>
+            </div>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5">
+                        <?php $loop = new WP_Query(array('post_type' => 'historique_jfx', 
+                                                        'order' => 'ASC',
+                                                        'tax_query' => array('taxonomy' => 'categorie', 'field' => 'slug', 'terms' => 'introduction')
+                                                            
+                        ));
+                        while ($loop->have_posts()) : $loop->the_post(); ?>
+                            <div class="col-12 ">
+                            <?php the_field('details_histoire'); ?>
+                            </div>
+
+                            <!--  -->
+                        <?php endwhile; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
+    </div>
     <!-- PAGE 360 (tous les labels,...) -->
 <?php elseif (is_page(20123)) :     ?>
     <div class="container-fluid" id="labels">
