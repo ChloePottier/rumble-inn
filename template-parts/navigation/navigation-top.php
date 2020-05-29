@@ -28,12 +28,10 @@
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
                         ));?>
-                        <!-- widget logo JFX : page tous les labels -->
-                    <?php
-                    if (is_active_sidebar('widget-logo-jfx')) :?>
+                        <!-- widget logo -->
+                    <?php if (is_active_sidebar('widget-logo-jfx')) :?>
                         <a href="<?php echo get_option('home'); ?>/?page_id=20123"><?php dynamic_sidebar('widget-logo-jfx');?></a>
-                   <?php endif;
-                    ?>
+                   <?php endif; ?>
                 </div>
                 
             </div>
@@ -52,11 +50,9 @@
                 </label>
                 <div class="menu-burger display-none bg-burger font-family-cocogoose text-uppercase" id="navigation">
                     <a href="<?php echo get_option('home'); ?>">
-                        <?php
-                        if (is_active_sidebar('widget-menu-top')) :
+                        <?php if (is_active_sidebar('widget-menu-top')) :
                             dynamic_sidebar('widget-menu-top');
-                        endif;
-                        ?>
+                        endif;?>
                     </a>
                     <?php
                     wp_nav_menu(
@@ -64,15 +60,10 @@
                             'container' => false,
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
-                        )
-                    );
-                    ?>
-                    <!-- widget logo JFX : page tous les labels -->
-                    <?php
-                    if (is_active_sidebar('widget-logo-jfx')) :?>
-                        <a href="<?php echo get_option('home'); ?>/?page_id=20123"><?php dynamic_sidebar('widget-logo-jfx');?></a>
-                   <?php endif;
-                    ?>
+                        )); ?>
+                    <?php if (is_active_sidebar('widget-logo-jfx')) :?>
+                        <a href="<?php echo get_option('home'); ?>/?page_id=20123" class="lien-widget-jfx"><?php dynamic_sidebar('widget-logo-jfx');?></a>
+                   <?php endif; ?>
                 </div>
 
             </div>
