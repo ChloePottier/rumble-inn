@@ -168,7 +168,7 @@ elseif (is_page(20101)) :     ?>
                                 <div class="bg-blue h-100 p-4 content-blocs">
                                     <h3 class="bg-dark d-inline py-2 px-3 position-absolute"><?php the_field('titre_prestation'); ?></h3>
                                     <p class="details-prestations mt-5"><?php the_field('details_prestation'); ?></p>
-                                    
+
                                 </div>
                             </div>
 
@@ -179,77 +179,306 @@ elseif (is_page(20101)) :     ?>
             endif; ?>
         </div>
     </div>
-        <!-- PAGE HISTORIQUE-->
+    <!-- PAGE HISTORIQUE-->
 <?php elseif (is_page(2012)) :     ?>
     <div class="container-fluid" id="historique">
         <div class="container">
             <div class="row pt-5">
                 <div class="col-12">
-                    <h1> <?php the_title(); ?></h1>
+                    <h1 class="text-"> <?php the_title(); ?></h1>
+                    <h2>POST PRE RUMBLE INN</h2>
                 </div>
             </div>
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <div class="row py-5">
-                        <?php $loop = new WP_Query(array('post_type' => 'historique_jfx', 
-                                                        'order' => 'ASC',
-                                                        'tax_query' => array('taxonomy' => 'categorie', 'field' => 'slug', 'terms' => 'introduction')
-                                                            
-                        ));
-                        while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="col-12 ">
-                            <?php the_field('details_histoire'); ?>
-                            </div>
+                    <div class="row py-2">
+                        <!--introduction-->
+                        <?php $loop = new WP_Query(array(
+                            'post_type' => 'historique_jfx',
+                            'order' => 'ASC',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'categorie',
+                                    'field'    => 'slug',
+                                    'terms'    => 'introduction'
+                                )
+                            )
+                        )); ?>
 
-                            <!--  -->
+                        <h4>1er post introduction :</h4>
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $image = get_field('image_trailer'); ?>
+                            <div class="col-12 ">
+                                <h5><?php the_field('titre_histoire'); ?></h5>
+                            </div>
+                            <div class="col-12">
+                                <img src="<?php echo $image ?>" />
+                                <?php the_field('details_histoire'); ?>
+                            </div>
                         <?php endwhile; ?>
                     </div>
-            <?php endwhile;
+                    <div class="row py-2">
+                        <?php $loop = new WP_Query(array(
+                            'post_type' => 'historique_jfx',
+                            'order' => 'ASC',
+                            'tax_query' => array(
+                                // 'relation' => 'OR',
+                                array(
+                                    'taxonomy' => 'categorie',
+                                    'field'    => 'slug',
+                                    'terms'    => 'genese'
+                                )
+                            )
+                        )); ?>
+                        <h4>La génèse</h4>
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $image = get_field('image_histoire'); ?>
+                            <div class="col-12 ">
+                                <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            </div>
+                            <div class="col-12 col-sm-2">
+                                <img class="w-100" src="<?php echo $image ?>" />
+                            </div>
+                            <div class="col-12 col-sm-10">
+                                <?php the_field('details_histoire'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    // 'relation' => 'OR',
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'dub'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Le Dub</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'salamah'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Salamah</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'tropical_bass'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Tropical Bass</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'post_production'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Post Production</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'inclassables'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Inclassables</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'hiphop'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Hip Hop</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <div class="col-12 col-sm-2">
+                                    <img class="w-100" src="<?php echo $image ?>" />
+                                </div>
+                                <div class="col-12 col-sm-10">
+                                    <?php the_field('details_histoire'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="row py-2">
+                            <?php $loop = new WP_Query(array(
+                                'post_type' => 'historique_jfx',
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'categorie',
+                                        'field'    => 'slug',
+                                        'terms'    => 'dernier_post'
+                                    )
+                                )
+                            )); ?>
+                            <h4>Dernier post</h4>
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('image_histoire'); ?>
+                                <div class="col-12 ">
+                                    <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                </div>
+                                <?php if ($image != '') { ?>
+                                    <div class="col-12 col-sm-2">
+                                        <img class="w-100" src=" <?php echo $image ?>" />
+                                    </div>
+                                    <div class="col-12 col-sm-10">
+                                        <?php the_field("details_histoire"); ?>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="col-12">
+                                        <?php the_field("details_histoire"); ?>
+                                    </div>
+                                <?php } ?>
+
+                            <?php endwhile; ?>
+                        </div>
+                <?php endwhile;
             endif; ?>
-        </div>
-    </div>
-    <!-- PAGE 360 (tous les labels,...) -->
-<?php elseif (is_page(20123)) :     ?>
-    <div class="container-fluid" id="labels">
-        <div class="container">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                <div class="row py-5 justify-content-center">
-                    <div class="col-12 font-family-cocogoose text-center">
-                        <?php the_content(); ?>
                     </div>
-                    <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
-                        while ($loop->have_posts()) : $loop->the_post(); 
-                            $image = get_field('logo_label');?>
+        </div>
+        <!-- PAGE 360 (tous les labels,...) -->
+    <?php elseif (is_page(20123)) :     ?>
+        <div class="container-fluid" id="labels">
+            <div class="container">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <div class="row py-5 justify-content-center">
+                            <div class="col-12 font-family-cocogoose text-center">
+                                <?php the_content(); ?>
+                            </div>
+                            <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
+                            while ($loop->have_posts()) : $loop->the_post();
+                                $image = get_field('logo_label'); ?>
                                 <div class="col-6 col-sm-4 col-lg-2 my-5 text-center">
                                     <a href="<?php the_field('lien_site'); ?>" target="_blank">
                                         <img src="<?php echo $image ?>" class="logo-label" />
                                         <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
                                     </a>
                                 </div>
-                        <?php endwhile; ?>
-                </div>
-            <?php endwhile;
-            endif; ?>
+                            <?php endwhile; ?>
+                        </div>
+                <?php endwhile;
+                endif; ?>
+            </div>
         </div>
-    </div>
-    <!-- Sinon -->
+        <!-- Sinon -->
     <?php else :     ?>
         <div class="container-fluid" id="page-<?php the_ID(); ?>">
-        <div class="container">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                <div class="row py-5">
-                <div class="col-12 pb-3">
-                        <h1><?php the_title(); ?></h1>
-                    </div>
-                    <div class="col-12">
-                        <?php the_content(); ?>
-                    </div>
-                </div>
-            <?php endwhile;
-            endif; ?>
+            <div class="container">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <div class="row py-5">
+                            <div class="col-12 pb-3">
+                                <h1><?php the_title(); ?></h1>
+                            </div>
+                            <div class="col-12">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+                <?php endwhile;
+                endif; ?>
+            </div>
         </div>
-    </div>
-<?php endif; ?>
-<?php get_footer(); ?>
+    <?php endif; ?>
+    <?php get_footer(); ?>
