@@ -243,7 +243,7 @@ footer{height: 20rem;}
       footer .menu-rs ul{display: flex; justify-content: flex-end; margin-top: 1rem;}
       footer .menu-rs li{padding-left: 1.5rem; font-size: 2rem;}
       footer .menu-rs a{color: #000;}
-      footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
+      footer .menu-rs a:hover{color:#03848a;}
       /* Newsletter Sendinblue */
       #sib_signup_form_1 input, .sib-default-btn, .sib-email-area{border-radius: none!important; }
       .sib-email-area{width: 70%;}
@@ -253,12 +253,14 @@ footer{height: 20rem;}
 .elementor-text-editor{color: #131316;}
 .elementor-text-editor, .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h4{white-space: break-spaces; font-family: Helvetica, Arial, sans-serif;}
-.elementor-text-editor a{color: #03848a;}
-.elementor-text-editor a:hover{color: #e52d25;}
 .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
-.elementor-text-editor h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;}
-.elementor-text-editor h5{color:  #000; font-weight: 600;}
+/* Historique */
+#historique  h5{color:  #000; font-weight: 600;}
+#historique a{color: #03848a;}
+#historique a:hover{color: #e52d25;}
+#historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block; text-transform: capitalize; margin-left: 15px;}
+
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 
