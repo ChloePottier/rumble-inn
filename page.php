@@ -13,11 +13,6 @@
 if (is_page(1905)) : ?>
     <div class="container-fluid" id="studio">
         <div class="container">
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1> <?php the_title(); ?></h1>
-                </div>
-            </div>
             <div class="row">
                 <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array(20055, 20058), 'paged' => $paged, 'order'   => 'ASC'));
                 while ($loop->have_posts()) : $loop->the_post();
@@ -66,23 +61,9 @@ if (is_page(1905)) : ?>
 elseif (is_page(20101)) :     ?>
     <div class="container-fluid" id="references">
         <div class="container">
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1> <?php the_title(); ?></h1>
-                </div>
-            </div>
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <div class="row py-5">
-                        <div class="col-12">
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-            <?php endwhile;
-            endif; ?>
             <!-- Soundcloud -->
-            <div class="row pb-5">
-                <div class="col-12">
+            <div class="row pb-5 d-flex justify-content-center">
+                <div class="col-4">
                     <!-- widget pour lien soundcloud -->
                     <?php if (is_active_sidebar('widget-soundcloud')) :
                         dynamic_sidebar('widget-soundcloud');
@@ -92,18 +73,20 @@ elseif (is_page(20101)) :     ?>
             <!-- YouTube -->
             <div class="row py-5 youtube">
                 <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
-                while ($loop->have_posts()) : $loop->the_post();
-                ?>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <h3 class="pb-2"><?php the_field('titre_video'); ?></h3>
+                while ($loop->have_posts()) : $loop->the_post(); ?>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <h3 class="bg-dark d-inline py-2 px-3 position-absolute text-white z-index-1500"><?php the_field('titre_video'); ?></h3>
                         <div class="embed-container">
                             <?php the_field('lien_youtube'); ?>
                         </div>
                     </div>
                 <?php endwhile; ?>
             </div>
-            <!-- Artistes de références -->
+            <!-- Artistes de références, références en production -->
             <div class="row py-5 d-flex justify-content-between justify-content-md-center justify-content-lg-between artistes-ref">
+                <div class="col-12">
+                    <h3 class="pb-2">Nos références en production</h3>
+                </div>
                 <!-- Récupérer les articles de type référence -->
                 <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
@@ -120,12 +103,11 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- post-production -->
-            <div class="row py-5 postproduction">
-                <div class="col-12">
+            
+            <div class="row justify-content-between mb-5">
+            <div class="col-12">
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
-            </div>
-            <div class="row justify-content-between mb-5">
                 <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image_trailer'); ?>
@@ -149,19 +131,11 @@ elseif (is_page(20101)) :     ?>
     </div>
     <!-- PAGE PRESTATIONS-->
 <?php elseif (is_page(20116)) :     ?>
-    <div class="container-fluid" id="prestations">
+    <div class="container-fluid " id="prestations">
         <div class="container">
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1> <?php the_title(); ?></h1>
-                </div>
-            </div>
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="row py-5">
-                        <div class="col-12">
-                            <?php the_content(); ?>
-                        </div>
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                             <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">
@@ -177,49 +151,49 @@ elseif (is_page(20101)) :     ?>
             endif; ?>
         </div>
     </div>
-    
-        <!-- PAGE 360 (tous les labels,...) -->
-    <?php elseif (is_page(20123)) :     ?>
-        <div class="container-fluid" id="labels">
-            <div class="container">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <div class="row py-5 justify-content-center">
-                            <div class="col-12 font-family-cocogoose text-center">
-                                <?php the_content(); ?>
-                            </div>
-                            <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
-                            while ($loop->have_posts()) : $loop->the_post();
-                                $image = get_field('logo_label'); ?>
-                                <div class="col-6 col-sm-4 col-lg-2 my-5 text-center">
-                                    <a href="<?php the_field('lien_site'); ?>" target="_blank">
-                                        <img src="<?php echo $image ?>" class="logo-label" />
-                                        <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
-                                    </a>
-                                </div>
-                            <?php endwhile; ?>
+
+    <!-- PAGE 360 (tous les labels,...) -->
+<?php elseif (is_page(20123)) :     ?>
+    <div class="container-fluid" id="labels">
+        <div class="container">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5 justify-content-center">
+                        <div class="col-12 font-family-cocogoose text-center">
+                            <?php the_content(); ?>
                         </div>
-                <?php endwhile;
-                endif; ?>
-            </div>
+                        <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
+                        while ($loop->have_posts()) : $loop->the_post();
+                            $image = get_field('logo_label'); ?>
+                            <div class="col-6 col-sm-4 col-lg-2 my-5 text-center">
+                                <a href="<?php the_field('lien_site'); ?>" target="_blank">
+                                    <img src="<?php echo $image ?>" class="logo-label" />
+                                    <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
+                                </a>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
         </div>
-        <!-- Sinon -->
-    <?php else :     ?>
-        <div class="container-fluid" id="page-<?php the_ID(); ?>">
-            <div class="container">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <div class="row py-5">
-                            <div class="col-12 pb-3">
-                                <h1><?php the_title(); ?></h1>
-                            </div>
-                            <div class="col-12">
-                                <?php the_content(); ?>
-                            </div>
+    </div>
+    <!-- Sinon -->
+<?php else :     ?>
+    <div class="container-fluid" id="page-<?php the_ID(); ?>">
+        <div class="container">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5">
+                        <div class="col-12 pb-3">
+                            <h1><?php the_title(); ?></h1>
                         </div>
-                <?php endwhile;
-                endif; ?>
-            </div>
+                        <div class="col-12">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+            <?php endwhile;
+            endif; ?>
         </div>
-    <?php endif; ?>
-    <?php get_footer(); ?>
+    </div>
+<?php endif; ?>
+<?php get_footer(); ?>
