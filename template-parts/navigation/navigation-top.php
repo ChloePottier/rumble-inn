@@ -1,14 +1,12 @@
-<?php
-/**
+<?php /**
  * Navigation-top file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
  * @version 1.0
- */
-?>
+ */?>
 <!-- Menu desktop -->
-<div class="container-fluid border-bottom bg-white d-none d-lg-block" id="navbar">
+<div class="container-fluid  bg-white d-none d-lg-block " id="navbar">
     <div class="container">
         <nav class="row ">
             <div class="col-12 d-flex justify-content-between">
@@ -20,7 +18,7 @@
                     endif;
                     ?>
                 </a>
-                <div class="menu-nav d-none d-md-flex flex-row py-4  align-items-center  font-family-cocogoose text-uppercase">
+                <div class="menu-nav d-none d-md-flex flex-row py-2  align-items-center  font-family-cocogoose text-uppercase">
                     <?php // menu nav-top
                     wp_nav_menu(
                         array(
@@ -65,7 +63,6 @@
                         <a href="<?php echo get_option('home'); ?>/?page_id=20123" class="lien-widget-jfx"><?php dynamic_sidebar('widget-logo-jfx');?></a>
                    <?php endif; ?>
                 </div>
-
             </div>
         </div>
     </div>
