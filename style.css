@@ -139,8 +139,10 @@ header{background-color: #e5e5e5;}
 .content-materiel,.content-plan{height: 263px;}
 .content-materiel{overflow-y: scroll;}
 /* BLOG */
-.text-bloc-blog{top:2rem; left: 2rem; right: 2rem;}
-.text-bloc-blog h3{font-size: 1.5rem;}
+.read-more:hover{padding: .5rem; background-color: #fff; color: #03848a;}
+.read-more{padding: .3rem .5rem .5rem .5rem; background-color: #343a40 ; color: #fff; font-weight: 600;}
+#index-blog .content-blocs{height: 170px;}
+.img-blog{height: 340px; overflow: hidden;}
 .btn-lien-article{background-color: #131316;}
 /* REFERENCES */
     /* youtube  */
@@ -256,11 +258,12 @@ footer{height: 20rem;}
 .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
 /* Historique */
-#historique  h5{color:  #000; font-weight: 600;}
+#historique  h5{color:  #000; font-weight: 600; margin-top: 1rem;}
 #historique a{color: #03848a;}
 #historique a:hover{color: #e52d25;}
-#historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block; text-transform: capitalize; margin-left: 15px;}
-
+#historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
+     text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
+#historique p{text-align: justify; margin-bottom: 0;}
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 

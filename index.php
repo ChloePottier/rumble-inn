@@ -16,7 +16,7 @@ if (have_posts()) { ?>
 					<h1>Blog</h1>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row py-5">
 				<?php get_template_part('template-parts/content/content'); ?>
 			</div>
 		</div>
