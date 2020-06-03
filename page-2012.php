@@ -90,9 +90,7 @@
                                 'taxonomy' => 'categorie',
                                 'field'    => 'slug',
                                 'terms'    => 'genese'
-                            )
-                        )
-                    )); ?>
+                            )))); ?>
                     <h4>La génèse</h4>
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
