@@ -9,16 +9,8 @@
 <div class="container-fluid  bg-white d-none d-lg-block " id="navbar">
     <div class="container">
         <nav class="row ">
-            <div class="col-12 d-flex justify-content-between">
-                <a href="<?php echo get_option('home'); ?>" class="d-md-flex align-items-center">
-                    <!-- widget logo -->
-                    <?php
-                    if (is_active_sidebar('widget-menu-top')) :
-                        dynamic_sidebar('widget-menu-top');
-                    endif;
-                    ?>
-                </a>
-                <div class="menu-nav d-none d-md-flex flex-row py-2  align-items-center  font-family-cocogoose text-uppercase">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="menu-nav d-none d-md-flex flex-row py-2 align-items-center  font-family-cocogoose text-uppercase">
                     <?php // menu nav-top
                     wp_nav_menu(
                         array(

@@ -9,14 +9,9 @@
  */
 get_header();
 if (have_posts()) { ?>
-	<div id="index-blog" class="container-fluid py-5">
+	<div id="index-blog" class="container-fluid py-3">
 		<div class="container">
-			<div class="row pb-2">
-				<div class="col-12">
-					<h1>Blog</h1>
-				</div>
-			</div>
-			<div class="row py-5">
+			<div class="row ">
 				<?php get_template_part('template-parts/content/content'); ?>
 			</div>
 		</div>

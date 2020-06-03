@@ -22,7 +22,7 @@
 </head>
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>
-    <header class="custom-header pb-3" >
+    <header class="custom-header" >
         <div class="position-absolute z-index-1">
             <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
             <!-- image d'en-tête -->
@@ -32,13 +32,13 @@
         </div>
         <div class="container position-relative z-index-100">
             <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start py-3">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
                     <div class="">
                         <!-- Logo -->
                         <?php echo get_custom_logo() ?>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end py-3">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end">
                     <!-- widget header text -->
                     <?php if (is_active_sidebar('widget-header-text')) :
                         dynamic_sidebar('widget-header-text');
