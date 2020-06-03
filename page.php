@@ -34,9 +34,7 @@ if (is_page(1905)) : ?>
                     $image = get_field('image_publication_studio'); ?>
                     <div class="col-12- col-md-6">
                         <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
-                        <div class="content-materiel">
                             <?php the_field('description_publication_studio'); ?>
-                        </div>
                     </div>
                     <!--  -->
                 <?php endwhile; ?>
@@ -59,7 +57,7 @@ if (is_page(1905)) : ?>
 <?php
 // PAGE REFERENCES
 elseif (is_page(20101)) :     ?>
-    <div class="container-fluid" id="references">
+    <div class="container-fluid " id="references">
         <div class="container">
             <!-- Soundcloud -->
             <div class="row pb-5 d-flex justify-content-center">
@@ -72,10 +70,13 @@ elseif (is_page(20101)) :     ?>
             </div>
             <!-- YouTube -->
             <div class="row py-5 youtube">
+                <div class="col-12">
+                    <h3 class="pb-2">Nos références en production</h3>
+                </div>
                 <?php $loop = new WP_Query(array('post_type' => 'videos_youtube', 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post(); ?>
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <h3 class="bg-dark d-inline py-2 px-3 position-absolute text-white z-index-1500"><?php the_field('titre_video'); ?></h3>
+                        <h4 class="bg-dark d-inline py-2 px-3 position-absolute text-white z-index-1500"><?php the_field('titre_video'); ?></h4>
                         <div class="embed-container">
                             <?php the_field('lien_youtube'); ?>
                         </div>
@@ -83,15 +84,12 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- Artistes de références, références en production -->
-            <div class="row py-5 d-flex justify-content-between justify-content-md-center justify-content-lg-between artistes-ref">
-                <div class="col-12">
-                    <h3 class="pb-2">Nos références en production</h3>
-                </div>
+            <div class="row py-5 d-flex artistes-ref">
                 <!-- Récupérer les articles de type référence -->
                 <?php $loop = new WP_Query(array('post_type' => 'reference', 'posts_per_page' => 5, 'paged' => $paged));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image-reference'); ?>
-                    <div class="text-center text-sm-left col-12 col-sm-6 col-md-4 col-lg-2 pb-2">
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-2 pb-2 text-center text-sm-left">
                         <div class="entry-header text-center text-sm-left font-family-cocogoose-light">
                             <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark" class="lien-reference-single">', esc_url(get_permalink())), '</a></h3>'); ?>
                         </div>
@@ -103,9 +101,8 @@ elseif (is_page(20101)) :     ?>
                 <?php endwhile; ?>
             </div>
             <!-- post-production -->
-            
-            <div class="row justify-content-between mb-5">
-            <div class="col-12">
+            <div class="row  mb-5">
+                <div class="col-12">
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
                 <?php $loop = new WP_Query(array('post_type' => 'postproduction', 'paged' => $paged));
