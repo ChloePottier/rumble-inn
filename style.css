@@ -81,20 +81,7 @@ header{background-color: #e5e5e5;}
     #nav-top li .active{color: #03848a;}
     #nav-top li a:hover,.active, .current-menu-item a,.current_page_item a{color: #03848a!important; }
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
-    .btn-360{
-        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu.png) no-repeat scroll left center transparent;
-        width: 40px;
-        height: 40px;
-        text-indent: -9999px;
-        outline : none ;
-        }
-        .btn-360:hover{
-        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu-hover.png) no-repeat scroll left center transparent;
-        width: 40px;
-        height: 40px;
-        text-indent: -9999px;
-        outline : none ;
-        }
+ 
     .btn-360 a{ display: block;}
     #nav-burger{top: 3%;
         z-index: 2000;}

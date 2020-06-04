@@ -15,8 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <!-- ajouter les méta, opengraph et micro données ? -->
     <?php wp_head(); ?>
-    <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/font-awesome/css/all.css">
-    <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.css">
+
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
     <title><?php ?></title>
 </head>
