@@ -18,7 +18,7 @@ if (is_page(1905)) : ?>
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image_publication_studio'); ?>
                     <div class="col-12 pb-5">
-                        <h3 class="pt-5 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
+                        <h3 class="p-0"><?php the_field('titre_publication_studio'); ?></h3>
                         <?php the_field('description_publication_studio'); ?>
                     </div>
                 <?php endwhile; ?>
@@ -60,21 +60,21 @@ elseif (is_page(20101)) :     ?>
     <div class="container-fluid " id="references">
         <div class="container">
             <!-- Soundcloud -->
-            <div class="row pb-5 d-flex justify-content-center">
+            <div class="row pt-3 pb-4 d-flex justify-content-between">
                 <div class="col-4">
                     <!-- widget pour lien soundcloud -->
                     <?php if (is_active_sidebar('widget-soundcloud')) :
                         dynamic_sidebar('widget-soundcloud');
                     endif; ?>
                 </div>
-                <div class="col-6">
+                <div class="col-7">
                 <?php if (is_active_sidebar(' widget-nuage-groupe')) :
                         dynamic_sidebar(' widget-nuage-groupe');
                     endif; ?>
                 </div>
             </div>
             <!-- YouTube -->
-            <div class="row py-5 youtube">
+            <div class="row py-4 youtube">
                 <div class="col-12">
                     <h3 class="pb-2">Nos références en production</h3>
                 </div>
@@ -88,9 +88,8 @@ elseif (is_page(20101)) :     ?>
                     </div>
                 <?php endwhile; ?>
             </div>
-          
             <!-- post-production -->
-            <div class="row  mb-5">
+            <div class="row  pt-4 mb-5">
                 <div class="col-12">
                     <h3 class="pb-2">Nos références en post production</h3>
                 </div>
@@ -100,7 +99,7 @@ elseif (is_page(20101)) :     ?>
                     <div class="col-12 col-md-6 card h-280 mb-4">
                         <a href="<?php the_field('url_trailer'); ?>" target="_blank">
                             <div class="card__side card__side--back">
-                                <div class="text-center d-flex flex-column align-items-center justify-content-center bg-bordeau w-100 h-280">
+                                <div class="text-center d-flex flex-column align-items-center justify-content-center bg-blue w-100 h-280">
                                     <h4 class=" pt-2 text-uppercase text-grey-dark"><?php the_field('nom_trailer'); ?></h4>
                                     <p class="text-uppercase text-white"><?php the_field('description_trailer'); ?></p>
                                 </div>
@@ -115,13 +114,13 @@ elseif (is_page(20101)) :     ?>
             <!-- Galerie photos -->
         </div>
     </div>
-    <!-- PAGE PRESTATIONS-->
+    <!-- PAGE PRESTATIONS / SERVICES -->
 <?php elseif (is_page(20116)) :     ?>
     <div class="container-fluid " id="prestations">
         <div class="container">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <div class="row py-5">
+                    <div class="row pt-3 pb-5">
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                             <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">

@@ -92,9 +92,7 @@ register_nav_menus(
     array(
         'top'    => __( 'Top Menu', 'rumbleinn' ),
         'social' => __( 'Social Links Menu', 'rumbleinn' ),
-    )
-);
-
+    ));
 /* Autoriser l'upload de tous types de format dans les médias */
 add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
 function wpm_myme_types($mime_types){

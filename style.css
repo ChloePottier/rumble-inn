@@ -71,12 +71,27 @@ header{background-color: #e5e5e5;}
         text-align: right;
         padding-right: 5rem ;
     }
+    #navbar #nav-top{display: flex; align-items: center; margin: .5rem 0;}
     #nav-top li{padding-right:1.3rem;}
     #nav-top li:last-child{padding-right:0;}
     #nav-top li a{color: #000; font-size: 1.05rem;}
     #nav-top li .active{color: #03848a;}
     #nav-top li a:hover,.active, .current-menu-item a,.current_page_item a{color: #03848a!important; }
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
+    .btn-360{
+        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+        .btn-360:hover{
+        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu-hover.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
     #nav-burger{top: 3%;
         z-index: 2000;}
     .burger {
@@ -140,6 +155,7 @@ header{background-color: #e5e5e5;}
 .content-materiel,.content-plan{height: 263px;}
 .content-materiel{overflow-y: scroll;}
 /* BLOG */
+.details-blog p{height: 75px;}
 .read-more:hover{padding: .5rem; background-color: #fff; color: #03848a;}
 .read-more{padding: .3rem .5rem .5rem .5rem; background-color: #343a40 ; color: #fff; font-weight: 600;}
 #index-blog .content-blocs{height: 170px;}
@@ -148,7 +164,7 @@ header{background-color: #e5e5e5;}
 .btn-lien-article{background-color: #131316;} 
 /* REFERENCES */
     /* youtube  */
-    #references .youtube h4{font-size: 1rem; height: 40px;}
+    #references .youtube h4{font-size: 1rem;}
     #references iframe{width: 100%;}
     .embed-container { 
         position: relative; 
@@ -167,7 +183,7 @@ header{background-color: #e5e5e5;}
         height: 200px;
     }
     /* nuage de mots */
-    .widget-nuage-groupe img, .wp-image-20204{width: 100% !important;}
+.widget-nuage-content img{width: 100% !important;}
     /* groupes */
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
@@ -217,6 +233,7 @@ header{background-color: #e5e5e5;}
     }
 /* PRESTATIONS */
 #prestations .content-blocs{min-height: 270px;}
+.details-prestations{text-align: justify;}
 /* CONTACT */
 .content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
 .content-right{width: 75%;}
@@ -262,7 +279,7 @@ footer{height: 20rem;}
 .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
 /* Historique */
-#historique  h5{color:  #000; font-weight: 600; margin-top: 1rem;}
+#historique  h5{color:  #000; margin-top: 1rem; text-transform: capitalize;}
 #historique a{color: #03848a;}
 #historique a:hover{color: #e52d25;}
 #historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
@@ -295,6 +312,8 @@ footer{height: 20rem;}
     .content-right{width: 100%;}
     #formulaire_contact{order: 1 !important;}
     .adresse-rumble-inn{order:2!important;}
+    .custom-header{height: auto;}
+    .header-text{padding-bottom: 1rem;}
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
