@@ -10,15 +10,14 @@
 get_header();
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <div class="container py-5">
+    <div class="container pb-5">
         <div class="row">
-            <div class="col-12"></div>
             <div class="col-12 col-md-4">
                 <?php $image = get_field('image_article'); ?>
                 <img src="<?php echo $image ?>" class="image-responsive-blog w-100" />
             </div>
             <div class="col-12 col-md-8 pt-4 pt-md-0">
-                <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
+                <h4 class="font-family-cocogoose m-0"><?php the_field('titre_article'); ?></h4>
                 <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
                <!-- <div class="text-uppercase font-family-cocogoose-light m-0 author">-->
                    <?php
