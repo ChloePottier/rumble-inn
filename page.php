@@ -129,7 +129,6 @@ elseif (is_page(20101)) :     ?>
                                     <p class="details-prestations mt-5"><?php the_field('details_prestation'); ?></p>
                                 </div>
                             </div>
-
                         <?php endwhile; ?>
                     </div>
             <?php endwhile;
