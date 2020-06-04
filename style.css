@@ -8,11 +8,14 @@ License URI: https://github.com/ChloePottier
 Text Domain: rumble-inn */
 /*COLORS*/
 .bg-black{background-color: #000;}
-.bg-bordeau{background-color: #a63a3a;}
+/* .bg-bordeau{background-color: #a63a3a;} */
 .bg-blue{background-color: #03848a;}
+.text-blue{color: #03848a;}
 .bg-corail{background-color: #e52d25;}
+.text-corail{color: #e52d25;}
 .text-black{color: #000;}
 .text-grey-dark{color: #131316;}
+.bg-grey-light{background-color: rgba(199, 199, 199, 0.8);}
 ul{list-style: none;padding: 0; margin:0;}
 a:hover{text-decoration: none;}
 /* FONTS */
@@ -108,7 +111,7 @@ header{background-color: #e5e5e5;}
         font-weight: bold;
         font-size: .8rem;
     }
-    .bg-burger{background-color: rgba(232, 229, 229, .8);}
+    .bg-burger{background-color: rgba(199, 199, 199, 0.8);}
     .display-none{display:none;}
     .display-flex{display: flex; flex-direction: column;}
     .burger span:last-child { margin-bottom:0px;    }
@@ -236,23 +239,22 @@ header{background-color: #e5e5e5;}
 #prestations .content-blocs{min-height: 270px;}
 .details-prestations{text-align: justify;}
 /* CONTACT */
-.content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
-.content-right{width: 75%;}
+#contact h3{font-size: 1.3rem;}
+.phone-studio{font-size: 1.3rem; font-weight: 600;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
 textarea{height: 8rem;}
+#formulaire_contact p{margin: 0; padding: 0;}
 .wpcf7-submit, .submit,.btn-lien-article{
-    /* background-color: #e8e5e5; 
-    color: #000; */
     background-color: #03848a;
     color: #fff;}
+.widget-img-contact{height: 100%; overflow: hidden ;}
+.widget-img-contact img{height: 100% !important; object-fit: cover; width: 100%; max-width: none;}
     /* mail success */
 div.wpcf7-mail-sent-ok { border: none; color: #28a745 ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
 /* mail danger */
 div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
 .wpcf7-submit:hover, .submit:hover,.btn-lien-article:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
-.container-contact{max-width:800px;}
-.container-contact h3{font-size: 1.35rem;}
 .adresse-JFX{font-size: 1.35rem;}
 /* 360° */
 .wp-image-1852,.wp-image-20132{width:15rem;}

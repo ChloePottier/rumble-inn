@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Modèle de page contact pour le thème Rumble Inn
  * @package WordPress
@@ -7,30 +8,27 @@
  * @version 1.0
  */
 ?><?php get_header() ?>
-<div class="container-fluid">
+<div class="container-fluid" id="contact">
     <div class="container">
-       <div class="row d-flex">
-            <!-- Comment récuper le contenu d'une page -->
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                    <h1 class="py-5 w-100 col-12 text-center"><?php the_title(); ?></h1>
-                    <div class="d-flex flex-column col-6flex-md-row align-items-center">
-                        <div class="w-100 w-md-50 text-center adresse-rumble-inn my-5 my-md-0">
-                            <h2 class="pb-2">RUMBLE INN</h2>
-                            <h3 class="pb-1">Recording studio</h3>
-                            <p class="adresse-JFX">Croix Rousse<br />
-                                69004 Lyon<br />
-                                Tél : 07 70 69 77 64</p>
-                        </div>
-                        <div id="formulaire_contact" class=" col-6 w-100 w-md-50 px-2 px-sm-5 px-md-0">
-                            <!-- Le contenu -->
-                            <?php the_content(); ?>
-                        </div>
+                <div class="row py-3">
+                    <div class="col-4">
+                        <?php if (is_active_sidebar('widget-image-contact')) :
+                            dynamic_sidebar('widget-image-contact');
+                        endif; ?>
                     </div>
+                    <div class="col-4 text-center text-uppercase d-flex flex-column justify-content-center bg-blue">
+                        <h2 class="pb-2">RUMBLE INN</h2>
+                        <h3 class="pb-1 text-white">Recording studio</h3>
+                        <p class="adresse-JFX text-corail font-family-cocogoose-light">Lyon / France</p>
+                    </div>
+                    <div class="col-4" id="formulaire_contact">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
             <?php endwhile; ?>
-        <?php else : echo '<p class="pb-5"> Cette page nest pas disponible</p>';
-        endif; ?>
-       </div>
+        <?php endif; ?>
     </div>
 </div>
 <?php get_footer() ?>
