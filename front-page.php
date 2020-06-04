@@ -11,7 +11,7 @@ Version: 1.0 -->
  * @version 1.0
  */
 get_header(); ?>
-<div class="container-fluid pt-5" id="accueil">
+<div class="container-fluid pt-3" id="accueil">
     <div class="container">
         <div class="row d-flex flex wrap pb-5">
             <?php $loop = new WP_Query(array('post_type' => 'accueil', 'paged' => $paged, 'order' => 'ASC'));

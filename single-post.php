@@ -23,8 +23,8 @@ get_header();
                <!-- <div class="text-uppercase font-family-cocogoose-light m-0 author">-->
                    <?php
                 //  the_author(); 
-                 ?></div>
-                <div class="date m-0"><?php the_field('date_article') ?></div>
+                 ?>
+                <div class="date text-capitalize m-0"><?php the_field('date_article') ?></div>
                 <!--<div class="mt-3 mt-md-0 pt-3 text-center text-md-right"><a href="-->
                 <?php
                 //  echo the_field('lien_article');
