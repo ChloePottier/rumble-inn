@@ -64,6 +64,14 @@ function content_widgets_init() {
      'before_title' => '<h3 class="content-title">',
      'after_title' => '</h3>',
      ) );
+     register_sidebar( array(
+        'name' => 'Nuage de groupes',
+        'id' => 'widget-nuage-groupe',
+        'before_widget' => '<div class="widget-nuage-content">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="content-title">',
+        'after_title' => '</h3>',
+        ) );
  }
 add_action( 'widgets_init', 'content_widgets_init' );
 function footer_widgets_init() {

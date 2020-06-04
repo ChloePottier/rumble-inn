@@ -58,7 +58,7 @@ h1, .font-size-1-1{font-size: 1.7rem!important; text-transform: uppercase;}
 header{background-color: #e5e5e5;}
     /* widget menu (logo)*/
     #widget-menu-top{width: 400px; height:auto;}
-    .custom-logo{width: auto; height: 190px; }
+    .custom-logo{width: auto; height: 180px; margin: .5rem 0; }
     /* Menu, NAv top */
     #navigation{
         position: fixed;
@@ -166,6 +166,8 @@ header{background-color: #e5e5e5;}
         width: 100%;
         height: 200px;
     }
+    /* nuage de mots */
+    .widget-nuage-groupe img, .wp-image-20204{width: 100% !important;}
     /* groupes */
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
