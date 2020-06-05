@@ -21,10 +21,12 @@ if (is_page(1905)) : ?>
             <div class="row">
                 <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array(20055, 20058), 'paged' => $paged, 'order'   => 'ASC'));
                 while ($loop->have_posts()) : $loop->the_post();
-                    $image = get_field('image_publication_studio'); ?>
-                    <h3 class="p-0 bg-blue text-white p-2 w-auto"><?php the_field('titre_publication_studio'); ?></h3>
+                    $image = get_field('image_publication_studio'); 
+                    $titrePublication = get_field('titre_publication_studio'); 
+                    if( $titrePublication != ''){
+                        echo'<h3 class="p-0 bg-blue text-white p-2 w-auto">'.$titrePublication.'</h3>';
+                    }?>
                     <div class="col-12 pb-3 text-justify text-studio">
-                        
                         <?php the_field('description_publication_studio'); ?>
                     </div>
                 <?php endwhile; ?>

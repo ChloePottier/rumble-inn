@@ -23,15 +23,12 @@
                             dynamic_sidebar('widget-image-contact');
                         endif; ?>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 text-center text-uppercase d-flex flex-column justify-content-center ">
-                        <h2 class="mx-auto mb-0 text-black">RUMBLE&nbsp;&nbsp;INN</h2>
-                        <h3 class="mx-auto text-blue">Recording studio</h3>
-                        <h5 class="font-family-cocogoose mb-0 mx-auto text-black">OPEN TO EVERYONE</h5>
-                        <h4 class="mt-1 text-corail font-family-cocogoose-light mb-0 mx-auto">Lyon / France</h4>
-                        <!-- <h2 class="pb-2">RUMBLE INN</h2>
-                        <h3 class="pb-1 text-blue">Le studio d'enregistrement</h3>
-                        <h5>ouvert à tous</h5>
-                        <h4 class="adresse-JFX text-corail font-family-cocogoose-light">Lyon / France</h4> -->
+                    <div class="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center ">
+                        <h2 class="mx-auto mb-0 text-black  text-uppercase">RUMBLE&nbsp;&nbsp;INN</h2>
+                        <h3 class="mx-auto mb-0 text-blue  text-uppercase">Recording studio</h3>
+                        <h4 class="mt-1 text-corail font-family-cocogoose-light mb-0 mx-auto  text-uppercase">Lyon / France</h4>
+                        <p>adossé à <a href="http://www.jarringeffects.net/" target="_blank" class="jarring-effects">Jarring Effects</a></p>
+                        <p class="notes pt-4 text-justify text-center w-75 mx-auto">N'hésitez pas à nous écrire pour toute demande de renseignements et de devis personnalisés</p>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4" id="formulaire_contact">
                         <?php the_content(); ?>
