@@ -9,6 +9,11 @@
  */ get_header() ?>
 <div class="container-fluid" id="historique">
     <div class="container">
+    <div class="row pt-5 d-lg-none">
+                <div class="col-12">
+                    <h1> <?php the_title(); ?></h1>
+                </div>
+            </div>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <!--mettre nouveaux post-->

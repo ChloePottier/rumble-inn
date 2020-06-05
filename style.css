@@ -8,12 +8,11 @@ License URI: https://github.com/ChloePottier
 Text Domain: rumble-inn */
 /*COLORS*/
 .bg-black{background-color: #000;}
-/* .bg-bordeau{background-color: #a63a3a;} */
+.text-black{color: #000;}
 .bg-blue{background-color: #03848a;}
 .text-blue{color: #03848a;}
 .bg-corail{background-color: #e52d25;}
 .text-corail{color: #e52d25;}
-.text-black{color: #000;}
 .text-grey-dark{color: #131316;}
 .bg-grey-light{background-color: rgba(199, 199, 199, 0.8);}
 ul{list-style: none;padding: 0; margin:0;}
@@ -52,11 +51,12 @@ src:
     url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
 }
 h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
-.wpcf7-submit, .submit, .btn-lien-article{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
+.wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
 h1, .font-size-1-1{font-size: 1.7rem!important; text-transform: uppercase;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
-.date{font-family: Helvetica, Arial, sans-serif;}
+.p{font-family: Helvetica, Arial, sans-serif;}
 .z-index-1500{z-index: 1500;}
+.z-index-900{z-index: 900;}
 /* HEADER */
 header{background-color: #e5e5e5;}
     /* widget menu (logo)*/
@@ -81,7 +81,20 @@ header{background-color: #e5e5e5;}
     #nav-top li .active{color: #03848a;}
     #nav-top li a:hover,.active, .current-menu-item a,.current_page_item a{color: #03848a!important; }
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
- 
+    .btn-360{
+        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+        .btn-360:hover{
+        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu-hover.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
     .btn-360 a{ display: block;}
     #nav-burger{top: 3%;
         z-index: 2000;}
@@ -97,6 +110,7 @@ header{background-color: #e5e5e5;}
         font-family: arial;
         font-weight: bold;
         font-size: .8rem;
+        background-color: #03848a;
     }
     .bg-burger{background-color: rgba(199, 199, 199, 0.8);}
     .display-none{display:none;}
@@ -141,10 +155,10 @@ header{background-color: #e5e5e5;}
 .img-btn-accueil{opacity: .6; object-fit: cover;} 
 /* BLOCS */
 .content-blocs h3{font-size: 1rem; text-transform: uppercase; top: -7px; left:5px;}
+.deezer{background-image: url();}
 /* STUDIO */
+/* .text-studio:first-child p{font-size: 1.3rem;} */
 #studio h4{font-size: .8rem; padding-bottom: 0;}
-.content-materiel,.content-plan{height: 263px;}
-.content-materiel{overflow-y: scroll;}
 /* BLOG */
 .details-blog p{height: 75px;}
 .read-more:hover{padding: .5rem; background-color: #fff; color: #03848a;}
@@ -152,7 +166,6 @@ header{background-color: #e5e5e5;}
 #index-blog .content-blocs{height: 170px;}
 .img-blog{height: 340px; overflow: hidden;}
 .image-responsive-blog {min-width: 100%; min-height: 100%; width: 100%;}
-.btn-lien-article{background-color: #131316;} 
 /* REFERENCES */
     /* youtube  */
     #references .youtube h4{font-size: 1rem;}
@@ -174,7 +187,6 @@ header{background-color: #e5e5e5;}
         height: 200px;
     }
     /* nuage de mots */
-.widget-nuage-content img{width: 100% !important;}
     /* groupes */
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
@@ -226,24 +238,25 @@ header{background-color: #e5e5e5;}
 #prestations .content-blocs{min-height: 270px;}
 .details-prestations{text-align: justify;}
 /* CONTACT */
-#contact h3{font-size: 1.3rem;}
+#contact h2{letter-spacing: -4px; font-size: 2.5rem;}
+#contact h3{font-size: 1.4rem ;}
+#contact h4{font-size: 1.8rem ;}
+#contact h5{font-size: 1.35rem ;}
 .phone-studio{font-size: 1.3rem; font-weight: 600;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
 textarea{height: 8rem;}
 #formulaire_contact p{margin: 0; padding: 0;}
-.wpcf7-submit, .submit,.btn-lien-article{
-    background-color: #03848a;
-    color: #fff;}
-.widget-img-contact{height: 100%; overflow: hidden ;}
-.widget-img-contact img{height: 100% !important; object-fit: cover; width: 100%; max-width: none;}
+.wpcf7-submit, .submit{background-color: #03848a; color: #fff; margin-bottom: 0;}
+.widget-img-contact{height: 100%; width: 100%; overflow: hidden ;}
+.widget-img-contact img{height: 100% !important; object-fit: cover; width: 100%; max-width: none!important;}
+.ajax-loader{position: absolute;}
     /* mail success */
 div.wpcf7-mail-sent-ok { border: none; color: #28a745 ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
 /* mail danger */
 div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
-.wpcf7-submit:hover, .submit:hover,.btn-lien-article:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
-.adresse-JFX{font-size: 1.35rem;}
-/* 360° */
+.wpcf7-submit:hover, .submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
+/* 360° - constellation */
 .wp-image-1852,.wp-image-20132{width:15rem;}
 #labels figcaption{font-family: 'Cocogoose',Helvetica, sans-serif; font-size: .6rem; color: #03848a; margin-top: .8rem; margin-bottom: 1.5rem;}
 #labels .wp-block-image{margin-bottom: 3rem;}

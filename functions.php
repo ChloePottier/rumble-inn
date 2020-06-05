@@ -132,6 +132,7 @@ function custom_field_excerpt() {
 	}
 	return apply_filters('the_excerpt', $text);
 }
+// fonction read more
 function custom_field_excerpt_longer() {
 	global $post;
 	$text = get_field('detail_article');
