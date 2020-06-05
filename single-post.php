@@ -33,19 +33,19 @@ get_header();
                     $soundcloud = get_field('soundcloud');
                     $lienAutre = get_field('lien_autre');
                     if ($deezer != '') {
-                        echo '<a class="deezer rounded-circle d-flex mr-3" alt="aller sur deezer" href="' . $deezer . ' " target="_blank"><img class="m-auto" src="'. get_home_url().'/wp-content/uploads/2020/06/deezer-blanc-2.png" width="20"  height="20"/></a>';
+                        echo '<a class="deezer rounded-circle d-flex mr-3" title="aller sur Deezer" href="' . $deezer . ' " target="_blank"><img class="m-auto" src="'. get_home_url().'/wp-content/uploads/2020/06/deezer-blanc-2.png" width="20"  height="20"/></a>';
                     }
                     if ($youtube != '') {
-                        echo '<a class="youtube mr-3" alt="aller sur youtube" href="' . $youtube . ' " target="_blank"><i class="fab fa-youtube"></i></a>';
+                        echo '<a class="youtube mr-3" title="aller sur Youtube" href="' . $youtube . ' " target="_blank"><i class="fab fa-youtube"></i></a>';
                     }
                     if ($spotify != '') {
-                        echo '<a class="spotify mr-3" alt="aller sur spotify" href="' . $spotify . ' " target="_blank"><i class="fab fa-spotify"></i></a>';
+                        echo '<a class="spotify mr-3" title="aller sur Spotify" href="' . $spotify . ' " target="_blank"><i class="fab fa-spotify"></i></a>';
                     }
                     if ($soundcloud != '') {
-                        echo '<a class="soundcloud mr-3" alt="aller sur soundcloud" href="' . $soundcloud . ' " target="_blank"><i class="fab fa-soundcloud"></i></a>';
+                        echo '<a class="soundcloud mr-3" title="aller sur Soundcloud" href="' . $soundcloud . ' " target="_blank"><i class="fab fa-soundcloud"></i></a>';
                     }
                     if ($lienAutre != '') {
-                        echo '<a class="lien_autre" alt="suivre le lien" href="' . $lienAutre . ' " target="_blank"><i class="fas fa-play-circle"></i></a>';
+                        echo '<a class="lien_autre" title="Suivre le lien" href="' . $lienAutre . ' " target="_blank"><i class="fas fa-play-circle"></i></a>';
                     }
                     ?>
                 </div>
