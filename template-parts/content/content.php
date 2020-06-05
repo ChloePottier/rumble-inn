@@ -23,7 +23,6 @@ while ($loop->have_posts()) : $loop->the_post();
             Lire la suite... </a>
         </div>
     </div>
-    
 <?php endwhile;
 echo 'ANCIENS ARTICLES';
 

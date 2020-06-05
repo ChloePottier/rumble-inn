@@ -156,7 +156,6 @@ header{background-color: #e5e5e5;}
 .img-btn-accueil{opacity: .6; object-fit: cover;} 
 /* BLOCS */
 .content-blocs h3{font-size: 1rem; text-transform: uppercase; top: -7px; left:5px;}
-.deezer{background-image: url();}
 /* STUDIO */
 /* .text-studio:first-child p{font-size: 1.3rem;} */
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
@@ -167,6 +166,10 @@ header{background-color: #e5e5e5;}
 #index-blog .content-blocs{height: 170px;}
 .img-blog{height: 340px; overflow: hidden;}
 .image-responsive-blog {min-width: 100%; min-height: 100%; width: 100%;}
+.soundcloud, .spotify,.youtube, .lien_autre {font-size: 2.3rem; color: #03848a;}
+.soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
+.deezer{background-color: #03848a; width: 39px; height: 39px;}
+.deezer:hover{background-color: #000;}
 /* REFERENCES */
     /* youtube  */
     #references .youtube h4{font-size: 1rem;}
