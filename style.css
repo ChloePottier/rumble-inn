@@ -52,8 +52,9 @@ src:
 }
 h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
 .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
-h1, .font-size-1-1{font-size: 1.7rem!important; text-transform: uppercase;}
+h1, .font-size-1-1,{font-size: 1.7rem!important; text-transform: uppercase;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
+.picto{font-size: 3rem;}
 .p, {font-family: Helvetica, Arial, sans-serif;}
 .z-index-1500{z-index: 1500;}
 .z-index-900{z-index: 900;}
