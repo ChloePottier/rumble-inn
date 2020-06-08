@@ -79,14 +79,14 @@ elseif (is_page(20101)) :     ?>
                         dynamic_sidebar('widget-soundcloud');
                     endif; ?>
                 </div>
-                <div class="col-12 col-md-6 col-xl-5">
+                <div class="col-12 col-md-6 col-xl-5 pt-4 pt-lg-0">
                     <?php if (is_active_sidebar(' widget-nuage-groupe')) :
                         dynamic_sidebar(' widget-nuage-groupe');
                     endif; ?>
                 </div>
             </div>
             <!-- YouTube -->
-            <div class="row py-4 youtube">
+            <div class="row py-4 video-youtube">
                 <div class="col-12">
                     <h3 class="pb-2">Nos références en production</h3>
                 </div>
@@ -123,7 +123,6 @@ elseif (is_page(20101)) :     ?>
                     </div>
                 <?php endwhile; ?>
             </div>
-            <!-- Galerie photos -->
         </div>
     </div>
     <!-- PAGE PRESTATIONS / SERVICES -->
@@ -140,11 +139,13 @@ elseif (is_page(20101)) :     ?>
                     <div class="row pt-3 pb-5">
                         <?php $loop = new WP_Query(array('post_type' => 'prestations', 'paged' => $paged));
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <!-- sans picto, pour les picot voir services-picto.php -->
+                        
+                            <!-- avec picto -->
                             <div class="col-12 col-md-6 col-lg-4 mb-5 text-white">
-                                <div class="bg-blue h-100 p-4 content-blocs">
+                                <div class="bg-blue h-100 content-blocs">
                                     <h3 class="bg-dark d-inline py-2 px-3 position-absolute"><?php the_field('titre_prestation'); ?></h3>
-                                    <p class="details-prestations mt-5"><?php the_field('details_prestation'); ?></p>
+                                    <div class="picto text-white text-right mr-4"><?php the_field('picto_prestation'); ?></div>
+                                    <p class="details-prestations m-4"><?php the_field('details_prestation'); ?></p>
                                 </div>
                             </div>
                         <?php endwhile; ?>

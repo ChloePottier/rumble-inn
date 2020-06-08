@@ -52,7 +52,7 @@
                             'menu_id'  => 'nav-top',
                         )); ?>
                     <?php if (is_active_sidebar('widget-logo-jfx')) :?>
-                        <a href="<?php echo get_option('home'); ?>/?page_id=20123" class="lien-widget-jfx"><?php dynamic_sidebar('widget-logo-jfx');?></a>
+                        <a href="<?php echo get_option('home'); ?>/?page_id=20123" class="d-flex justify-content-end"><?php dynamic_sidebar('widget-logo-jfx');?></a>
                    <?php endif; ?>
                 </div>
             </div>

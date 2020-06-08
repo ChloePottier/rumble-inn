@@ -1,6 +1,4 @@
-<?php
-
-/**
+<?php /**
  * Modèle de page contact pour le thème Rumble Inn
  * @package WordPress
  * @subpackage rumble-inn
@@ -11,26 +9,26 @@
 <div class="container-fluid" id="contact">
     <div class="container">
         <div class="row pt-5 d-lg-none">
-            <div class="col-12 text-center text-md-left">
+            <div class="col-12 text-left">
                 <h1> <?php the_title(); ?></h1>
             </div>
         </div>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                <div class="row py-3">
-                    <div class="col-4 d-none d-md-flex">
+                <div class="row py-3 flex-column-reverse flex-sm-row">
+                    <div class="col-4 d-none d-lg-flex">
                         <?php if (is_active_sidebar('widget-image-contact')) :
                             dynamic_sidebar('widget-image-contact');
                         endif; ?>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center ">
-                        <h2 class="mx-auto mb-0 text-black  text-uppercase">RUMBLE&nbsp;&nbsp;INN</h2>
-                        <h3 class="mx-auto mb-0 text-blue  text-uppercase">Recording studio</h3>
-                        <h4 class="mt-1 text-corail font-family-cocogoose-light mb-0 mx-auto  text-uppercase">Lyon / France</h4>
-                        <p>adossé à <a href="http://www.jarringeffects.net/" target="_blank" class="jarring-effects">Jarring Effects</a></p>
-                        <p class="notes pt-4 text-justify text-center w-75 mx-auto">N'hésitez pas à nous écrire pour toute demande de renseignements et de devis personnalisés</p>
+                    <div class="col-12 col-sm-6 col-lg-4 text-lg-center d-flex flex-column justify-content-center mt-4 mt-md-0">
+                        <h2 class="text-left text-lg-center mx-lg-auto mb-0 text-black  text-uppercase">RUMBLE&nbsp;&nbsp;INN</h2>
+                        <h3 class="text-left text-lg-center mx-lg-auto mb-0 text-blue  text-uppercase">Recording studio</h3>
+                        <h4 class="text-left text-lg-center mt-1 text-dark font-family-cocogoose-light mb-0 mx-lg-auto  text-uppercase">Lyon / France</h4>
+                        <!-- <p>adossé à <a href="http://www.jarringeffects.net/" target="_blank" class="jarring-effects">Jarring Effects</a></p> -->
+                        <p class="notes pt-4 text-justify text-left text-lg-center w-75 mx-lg-auto">N'hésitez pas à nous écrire pour toute demande de renseignements et de devis personnalisés</p>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4" id="formulaire_contact">
+                    <div class="col-12 col-sm-6 col-lg-4" id="formulaire_contact">
                         <?php the_content(); ?>
                     </div>
                 </div>

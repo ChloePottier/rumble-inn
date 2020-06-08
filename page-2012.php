@@ -9,47 +9,43 @@
  */ get_header() ?>
 <div class="container-fluid" id="historique">
     <div class="container">
-    <div class="row pt-5 d-lg-none">
-                <div class="col-12">
-                    <h1> <?php the_title(); ?></h1>
-                </div>
-            </div>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                <!--mettre nouveaux post-->
-                <div class="row py-2">
-                    <!--nouveau post-->
-                    <?php $loop = new WP_Query(array(
-                        'post_type' => 'historique_jfx',
-                        'order' => 'ASC',
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'categorie',
-                                'operator' => 'NOT EXISTS'
-                            ))));
-                    while ($loop->have_posts()) : $loop->the_post();
-                        $image = get_field('image_histoire'); ?>
+                <?php $loop = new WP_Query(array(
+                    'post_type' => 'historique_jfx',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'categorie',
+                            'operator' => 'NOT EXISTS'
+                        )
+                    )
+                ));
+                while ($loop->have_posts()) : $loop->the_post();
+                    $image = get_field('image_histoire'); ?>
+                    <div class="row pb-2">
                         <div class="col-12 ">
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
-                        <?php
-                        if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
-                                <img class="w-100" src=" <?php echo $image ?>" />
-                            </div>
-                            <div class="col-12 col-sm-10">
-                                <?php the_field("details_histoire"); ?>
-                            </div>
-                        <?php } else { ?>
-                            <div class="col-12">
-                                <?php the_field("details_histoire"); ?>
-                            </div>
-                        <?php } ?>
-                    <?php endwhile; ?>
-                </div>
+                    <?php
+                    if ($image != '') { ?>
+                        <div class="col-12 col-md-2">
+                            <img class="w-100" src=" <?php echo $image ?>" />
+                        </div>
+                        <div class="col-12 col-md-10 mt-3 mt-md-0">
+                            <?php the_field("details_histoire"); ?>
+                        </div>
+                    <?php } else { ?>
+                        <div class="col-12">
+                            <?php the_field("details_histoire"); ?>
+                        </div>
+                    <?php } ?>
+                    </div>
+                <?php endwhile; ?>
+                <!-- </div> -->
                 <div class="row pt-3">
                     <div class="col-12">
-                        <h2>POST PRE RUMBLE INN</h2>
+                        <h2 class="text-uppercase">Histoire JFX Studio</h2>
                     </div>
                 </div>
                 <div class="row py-2">
@@ -77,10 +73,10 @@
                             </div>
                         <?php }
                         if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -109,10 +105,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -141,10 +137,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -173,10 +169,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -205,10 +201,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -237,10 +233,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -269,10 +265,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -301,10 +297,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>
@@ -333,10 +329,10 @@
                             <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
-                            <div class="col-12 col-sm-2">
+                            <div class="col-12 col-md-2">
                                 <img class="w-100" src=" <?php echo $image ?>" />
                             </div>
-                            <div class="col-12 col-sm-10">
+                            <div class="col-12 col-md-10  mt-3 mt-md-0">
                                 <?php the_field("details_histoire"); ?>
                             </div>
                         <?php } else { ?>

@@ -35,6 +35,8 @@
 <amp-script src="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.js" async></amp-script>
 <!-- Menu burger -->
 <amp-script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></amp-script>
+<script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></script>
+
 <?php wp_footer(); ?>
 </body>
 

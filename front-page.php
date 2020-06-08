@@ -13,7 +13,7 @@ Version: 1.0 -->
 get_header(); ?>
 <div class="container-fluid pt-3" id="accueil">
     <div class="container">
-        <div class="row d-flex flex wrap pb-5">
+        <div class="row d-flex flex wrap pb-5 pt-3 pt-lg-0">
             <?php $loop = new WP_Query(array('post_type' => 'accueil', 'paged' => $paged, 'order' => 'ASC'));
             while ($loop->have_posts()) : $loop->the_post();
                 $image = get_field('image_btn_accueil'); ?>

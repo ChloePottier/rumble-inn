@@ -16,6 +16,8 @@
     <!-- ajouter les méta, opengraph et micro données ? -->
     <!-- <meta description="Rumble Inn, studio d'enregistrement adossé à Jarring Effects. ouvert à tous. JFX Studio"> -->
     <?php wp_head(); ?>
+    
+    <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/font-awesome/css/all.min.css ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
     <title><?php ?></title>
 </head>
