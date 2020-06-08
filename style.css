@@ -324,14 +324,14 @@ footer{height: 20rem;}
     .adresse-rumble-inn{order:2!important;}
     .custom-header{height: auto;}
     .header-text{padding-bottom: 1rem;}
+    footer .menu-rs ul{justify-content: center;}
+
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
     .image-blog{max-width:100%; height: auto; width: 100%;}
-    
     .content-blog p{font-size: .8rem;}
     .content-blog{ padding-bottom: 1rem; max-width:100%; width: 100%; height: auto;}
-    footer .menu-rs ul{justify-content: center;}
     .menu-rs { padding-top: 2rem; }
     .sib-email-area, .submit{width: 100%;}
     #studio-equipement h4{font-size: 1rem;}

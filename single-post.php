@@ -7,8 +7,7 @@
  * @since 1.0
  * @version 1.0
  */
-get_header();
-?>
+get_header();?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php $unixtimestamp = strtotime(get_field('date_article')); ?>
     <div class="container pb-5">
@@ -19,7 +18,7 @@ get_header();
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4 img-blog text-center">
+            <div class="col-12 col-md-4 img-blog text-center mt-3 mt-lg-0">
                 <?php $image = get_field('image_article'); ?>
                 <img src="<?php echo $image ?>" class="image-responsive-blog" />
             </div>
