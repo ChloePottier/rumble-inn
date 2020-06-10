@@ -22,11 +22,10 @@
                         endif; ?>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 text-lg-center d-flex flex-column justify-content-center mt-4 mt-md-0">
-                        <h2 class="text-left text-lg-center mx-lg-auto mb-0 text-black  text-uppercase">RUMBLE&nbsp;&nbsp;INN</h2>
-                        <h3 class="text-left text-lg-center mx-lg-auto mb-0 text-blue  text-uppercase">Recording studio</h3>
-                        <h4 class="text-left text-lg-center mt-1 text-dark font-family-cocogoose-light mb-0 mx-lg-auto  text-uppercase">Lyon / France</h4>
-                        <!-- <p>adossé à <a href="http://www.jarringeffects.net/" target="_blank" class="jarring-effects">Jarring Effects</a></p> -->
-                        <p class="notes pt-4 text-justify text-left text-lg-center w-75 mx-lg-auto">N'hésitez pas à nous écrire pour toute demande de renseignements et de devis personnalisés</p>
+                        <h2 class="text-center text-sm-left text-lg-center mx-lg-auto mb-0 text-black  text-uppercase">RUMBLE&nbsp;&nbsp;INN</h2>
+                        <h3 class="text-center text-sm-left text-lg-center mx-lg-auto mb-0 text-blue  text-uppercase">Recording studio</h3>
+                        <h4 class="text-center text-sm-left text-lg-center mt-1 text-dark font-family-cocogoose-light mb-0 mx-lg-auto  text-uppercase">Lyon / France</h4>
+                        <p class="notes pt-4 text-justify text-center text-sm-left text-lg-center mx-auto mx-sm-0 mx-lg-auto">N'hésitez pas à nous écrire pour toute demande de renseignements et de devis personnalisés</p>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4" id="formulaire_contact">
                         <?php the_content(); ?>

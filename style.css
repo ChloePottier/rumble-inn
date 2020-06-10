@@ -54,7 +54,7 @@ h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-headin
 .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
 h1, .font-size-1-1,{font-size: 1.7rem!important; text-transform: uppercase;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
-.picto{font-size: 3rem;}
+.picto{font-size: 2.3rem;}
 .p, {font-family: Helvetica, Arial, sans-serif;}
 .z-index-1500{z-index: 1500;}
 .z-index-900{z-index: 900;}
@@ -157,8 +157,10 @@ header{background-color: #e5e5e5;}
 /* BLOCS */
 .content-blocs h3{font-size: 1rem; text-transform: uppercase; top: -7px; left:5px;}
 /* STUDIO */
-/* .text-studio:first-child p{font-size: 1.3rem;} */
+#studio h3{display:inline; color: white; background-color: #03848a; padding: .5rem 1rem; width: auto;}
+#studio p{   text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
+.content-plan img:hover{transform: scale(1.5);}
 /* BLOG */
 .details-blog p{height: 75px;}
 .date{font-size: .8rem;}
@@ -239,6 +241,7 @@ header{background-color: #e5e5e5;}
         transition-timing-function : ease-out;
         z-index:900;
     }
+
 /* PRESTATIONS */
 #prestations .content-blocs{min-height: 270px;}
 .details-prestations{text-align: justify;}
@@ -247,8 +250,7 @@ header{background-color: #e5e5e5;}
 #contact h3, #studio h3{font-size: 1.4rem ;}
 #contact h4{font-size: 1.8rem ;}
 #contact h5{font-size: 1.35rem ;}
-.jarring-effects{color: #313131; font-weight: 600;}
-.jarring-effects:hover{color: #03848a;}
+.notes{width: 75%!important;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
 textarea{height: 8rem;}
@@ -305,6 +307,7 @@ footer{height: 20rem;}
     .lien-widget-jfx{display: flex; justify-content: flex-end;}
     .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;}
     .h-280{height: 250px;}
+    
 }
 @media screen  and (max-width:767px){	
     .snip1581 {
@@ -325,6 +328,9 @@ footer{height: 20rem;}
     .custom-header{height: auto;}
     .header-text{padding-bottom: 1rem;}
     footer .menu-rs ul{justify-content: center;}
+    .image-responsive-blog {width: 100%; height: auto;}
+    .notes{width: 100%!important;}
+
 
 }
 @media screen  and (max-width:575px){
@@ -335,4 +341,5 @@ footer{height: 20rem;}
     .menu-rs { padding-top: 2rem; }
     .sib-email-area, .submit{width: 100%;}
     #studio-equipement h4{font-size: 1rem;}
+    .notes{width: 75%!important;}
 }

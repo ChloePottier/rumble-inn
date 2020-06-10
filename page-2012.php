@@ -16,7 +16,7 @@
                     'order' => 'ASC',
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'categorie',
+                            'taxonomy' => 'categorie', //nouveau articles, sans categories
                             'operator' => 'NOT EXISTS'
                         )
                     )
@@ -43,7 +43,7 @@
                     </div>
                 <?php endwhile; ?>
                 <!-- </div> -->
-                <div class="row pt-3">
+                <div class="row pt-4">
                     <div class="col-12">
                         <h2 class="text-uppercase">Histoire JFX Studio</h2>
                     </div>

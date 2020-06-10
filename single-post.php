@@ -15,6 +15,7 @@ get_header();?>
             <div class="col-12">
                 <h4 class="font-family-cocogoose m-0 text-capitalize"><?php the_field('titre_article'); ?></h4>
                 <div class="date text-capitalize m-0 text-blue text-left mb-3"><?php echo date_i18n("d F Y", $unixtimestamp); ?></div>
+                
             </div>
         </div>
         <div class="row">
@@ -24,7 +25,10 @@ get_header();?>
             </div>
             <div class="col-12 col-md-8 pt-4 text-justify">
                 <h4 class="d-none d-md-flex font-family-cocogoose m-0 text-capitalize"><?php the_field('titre_article'); ?></h4>
-                <div class="d-none d-md-flex  date text-capitalize m-0 text-blue text-left"><?php echo date_i18n("d F Y", $unixtimestamp); ?></div>
+                <div class="d-none d-md-flex  date text-capitalize m-0 text-blue text-left"><?php
+                //  echo date_i18n("d F Y", $unixtimestamp); 
+                the_field('date_article')
+                ?></div>
                 <p><?php the_field('detail_article'); ?></p>
                 <div class="d-flex align-items-center">
                     <?php $deezer = get_field('deezer');
