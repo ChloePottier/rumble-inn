@@ -51,19 +51,7 @@ get_header() ?>
                         $image = get_field('image_publication_studio'); ?>
                         <div>
                             <h3 class="pt-0 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
-                            <div class="content-plan">
-                                <?php the_field('description_publication_studio'); ?>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="pt-0 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
-                            <div class="content-plan">
-                                <?php the_field('description_publication_studio'); ?>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="pt-0 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
-                            <div class="content-plan">
+                            <div class="content-plan w-100">
                                 <?php the_field('description_publication_studio'); ?>
                             </div>
                         </div>

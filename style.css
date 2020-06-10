@@ -160,7 +160,7 @@ header{background-color: #e5e5e5;}
 #studio h3{display:inline; color: white; background-color: #03848a; padding: .5rem 1rem; width: auto;}
 #studio p{   text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
-.content-plan img:hover{transform: scale(1.5);}
+.image-map-plan{object-fit: contain;}
 /* BLOG */
 .details-blog p{height: 75px;}
 .date{font-size: .8rem;}
@@ -169,7 +169,7 @@ header{background-color: #e5e5e5;}
 #index-blog .content-blocs{height: 170px;}
 .img-blog{height: 350px; overflow: hidden;}
 .image-responsive-blog { height: 100%;}
-.soundcloud, .spotify,.youtube, .lien_autre {font-size: 2.3rem; color: #03848a;}
+.soundcloud, .spotify,.youtube, .lien_autre {font-size: 1.9rem; color: #03848a;}
 .soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
 .deezer{background-color: #03848a; width: 39px; height: 39px;}
 .deezer:hover{background-color: #000;}
