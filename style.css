@@ -161,7 +161,7 @@ header{background-color: #e5e5e5;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
 .image-map-plan{object-fit: contain;}
 #studio-equipement h4{font-size:1rem;}
-.plan-hover {animation: pulse 1s;}
+.plan-hover{animation: pulse 1s;}
   @keyframes pulse {
     0% {opacity:0;}
     100% {opacity:100;}

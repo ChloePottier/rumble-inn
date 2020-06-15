@@ -56,17 +56,18 @@ get_header() ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
+                    
                     <!-- galerie -->
                     <div>
-                    <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20500), 'paged' => $paged, 'order'   => 'ASC'));
-                    while ($loop2->have_posts()) : $loop2->the_post();
-                        $image = get_field('image_publication_studio'); ?>
-                        
+                        <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20500), 'paged' => $paged, 'order'   => 'ASC'));
+                        while ($loop2->have_posts()) : $loop2->the_post();
+                            $image = get_field('image_publication_studio'); ?>
+
                             <h3 class="pt-0 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
                             <div class="content-plan w-100">
                                 <?php the_field('description_publication_studio'); ?>
                             </div>
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
                     </div>
 
                 </div>

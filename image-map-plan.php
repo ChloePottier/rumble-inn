@@ -45,7 +45,7 @@
     onmouseover="document.images['immap'].src='https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/190301_regie.jpg';" 
     onmouseout="document.images['immap'].src='https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg';" 
     >
-    <area target="" alt="chillout" title="chillout" href="" coords="217,17,374,199" shape="rect"
+    <area id="chillout" target="" alt="chillout" title="chillout" href="" coords="217,17,374,199" shape="rect"
     onmouseover="document.images['immap'].src='https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/chillout-studio.jpg';" 
     onmouseout="document.images['immap'].src='https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg';" 
     >
