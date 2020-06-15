@@ -111,7 +111,6 @@ header{background-color: #e5e5e5;}
         font-family: arial;
         font-weight: bold;
         font-size: .8rem;
-        /* background-color: #03848a; */
     }
     .bg-burger{background-color: rgba(199, 199, 199, 0.8);}
     .display-none{display:none;}
@@ -161,6 +160,20 @@ header{background-color: #e5e5e5;}
 #studio p{   text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
 .image-map-plan{object-fit: contain;}
+#studio-equipement h4{font-size:1rem; }
+area {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    }
+area:hover {
+      opacity: 0.5;
+      }
+/* galerie */
+.foogallery-container{width: 100%; display: flex; flex-wrap: wrap;}
+.fg-default.fg-gutter-10 .fg-item{width: 40%; display: flex;}
+.foogallery.fg-light .fg-item-inner{background-color: rgba(255,255,255,0);}
 /* BLOG */
 .details-blog p{height: 75px;}
 .date{font-size: .8rem;}
@@ -168,7 +181,7 @@ header{background-color: #e5e5e5;}
 .read-more{padding: .3rem .5rem .5rem .5rem; background-color: #343a40 ; color: #fff; font-weight: 600;}
 #index-blog .content-blocs{height: 170px;}
 .img-blog{height: 350px; overflow: hidden;}
-.image-responsive-blog { height: 100%;}
+.image-responsive-blog {width: 100%; height: 100%; object-fit: cover; }
 .soundcloud, .spotify,.youtube, .lien_autre {font-size: 1.9rem; color: #03848a;}
 .soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
 .deezer{background-color: #03848a; width: 39px; height: 39px;}
@@ -330,7 +343,7 @@ footer{height: 20rem;}
     footer .menu-rs ul{justify-content: center;}
     .image-responsive-blog {width: 100%; height: auto;}
     .notes{width: 100%!important;}
-
+    .image-responsive-blog {width: 100%; height: 100%; object-fit: cover; }
 
 }
 @media screen  and (max-width:575px){

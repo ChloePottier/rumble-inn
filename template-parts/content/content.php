@@ -24,5 +24,23 @@ while ($loop->have_posts()) : $loop->the_post();
         </div>
     </div>
 <?php endwhile;?>
+<?php
+echo 'ANCIENS ARTICLES';
 
+//BDD news. ancien site jarring-effects-studio
+global $wpdb;
+$resultats = $wpdb->get_results("SELECT * FROM news WHERE `idrubrique`= 1 ORDER BY datecreation DESC") ;
+foreach ($resultats as $post) {?>
+<?php $urlImage = home_url( '/wp-content/uploads'); ?>
+        <div class="col-12 col-md-6 col-lg-4 btn-accueil">
+        
+            <img src="<?php echo $urlImage.'/'.$post->image?>" class="w-100" width="" height="" />
+            <div class=" text-bloc-blog">
+                <h3 class=" text-uppercase"><?php echo $post->titre; ?></h3>
+                <span class="date m-0 font-weight-bold"><?php echo $post->tags ; ?></span>
+                <p class=""><?php echo $post->texte ;  ?></p>
+            </div>
+        
+        </div>
+<?php }?>
 

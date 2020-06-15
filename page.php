@@ -18,7 +18,7 @@ get_header() ?>
                 </div>
             </div>
             <div class="row">
-                <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array(20055, 20058), 'paged' => $paged, 'order'   => 'ASC'));
+                <?php $loop = new WP_Query(array('post_type' => 'studio', 'post__not_in' => array(20055, 20058, 20500), 'paged' => $paged, 'order'   => 'ASC'));
                 while ($loop->have_posts()) : $loop->the_post();
                     $image = get_field('image_publication_studio');
                     $titrePublication = get_field('titre_publication_studio');
@@ -56,11 +56,23 @@ get_header() ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
+                    <!-- galerie -->
+                    <div>
+                    <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20500), 'paged' => $paged, 'order'   => 'ASC'));
+                    while ($loop2->have_posts()) : $loop2->the_post();
+                        $image = get_field('image_publication_studio'); ?>
+                        
+                            <h3 class="pt-0 pb-2"><?php the_field('titre_publication_studio'); ?></h3>
+                            <div class="content-plan w-100">
+                                <?php the_field('description_publication_studio'); ?>
+                            </div>
+                    <?php endwhile; ?>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!--galerie photos -->
 <?php
 // PAGE REFERENCES
 elseif (is_page(20101)) :     ?>
@@ -72,7 +84,7 @@ elseif (is_page(20101)) :     ?>
                 </div>
             </div>
             <!-- Soundcloud -->
-            <div class="row pt-3 pb-4 d-flex justify-content-around">
+            <div class="row pt-3 pb-4 d-flex justify-content-center">
                 <div class="col-12 col-md-6 col-xl-4">
                     <!-- widget pour lien soundcloud -->
                     <?php if (is_active_sidebar('widget-soundcloud')) :
