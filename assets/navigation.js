@@ -3,7 +3,6 @@
  * Theme functions file.
  *
  */
-
 window.onscroll = function () {
     stickyToScroll()
 };

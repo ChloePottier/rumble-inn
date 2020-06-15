@@ -14,8 +14,8 @@
             <div class="col-12 col-md-8 col-lg-md-6 text-center text-sm-left">
                 <!-- emplacement newsletter -->
                 <?php if (is_active_sidebar('widget-newsletter')) :
-                        dynamic_sidebar('widget-newsletter');
-                    endif; ?>
+                    dynamic_sidebar('widget-newsletter');
+                endif; ?>
             </div>
             <div class="col-12 col-md-4 col-lg-md-6 pt-3 pt-md-0 menu-rs text-center text-md-right">
                 <!-- Menu des réseaux sociaux -->
@@ -25,7 +25,8 @@
                         'container' => false,
                         'theme_location' => 'social',
                         'menu_id'  => 'Social Links Menu',
-                    )); ?>
+                    )
+                ); ?>
             </div>
         </div>
     </div>
@@ -36,8 +37,7 @@
 <!-- Menu burger -->
 <amp-script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></amp-script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></script>
-
+<amp-script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/plan.js" async></amp-script>
 <?php wp_footer(); ?>
 </body>
-
 </html>

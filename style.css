@@ -160,16 +160,12 @@ header{background-color: #e5e5e5;}
 #studio p{   text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
 .image-map-plan{object-fit: contain;}
-#studio-equipement h4{font-size:1rem; }
-area {
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    }
-area:hover {
-      opacity: 0.5;
-      }
+#studio-equipement h4{font-size:1rem;}
+.plan-hover {animation: pulse 1s;}
+  @keyframes pulse {
+    0% {opacity:0;}
+    100% {opacity:100;}
+}    
 /* galerie */
 .foogallery-container{width: 100%; display: flex; flex-wrap: wrap;}
 .fg-default.fg-gutter-10 .fg-item{width: 40%; display: flex;}
@@ -181,7 +177,7 @@ area:hover {
 .read-more{padding: .3rem .5rem .5rem .5rem; background-color: #343a40 ; color: #fff; font-weight: 600;}
 #index-blog .content-blocs{height: 170px;}
 .img-blog{height: 350px; overflow: hidden;}
-.image-responsive-blog {width: 100%; height: 100%; object-fit: cover; }
+.image-responsive-blog {height:100%; min-width: 100%; object-fit: cover; }
 .soundcloud, .spotify,.youtube, .lien_autre {font-size: 1.9rem; color: #03848a;}
 .soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
 .deezer{background-color: #03848a; width: 39px; height: 39px;}
@@ -341,14 +337,12 @@ footer{height: 20rem;}
     .custom-header{height: auto;}
     .header-text{padding-bottom: 1rem;}
     footer .menu-rs ul{justify-content: center;}
-    .image-responsive-blog {width: 100%; height: auto;}
     .notes{width: 100%!important;}
-    .image-responsive-blog {width: 100%; height: 100%; object-fit: cover; }
-
+    .img-blog{height: auto; overflow: hidden;}
+    .image-responsive-blog {width: 100%; object-fit: cover; }
 }
 @media screen  and (max-width:575px){
     .menu-rs{padding-top: 1rem;}
-    .image-blog{max-width:100%; height: auto; width: 100%;}
     .content-blog p{font-size: .8rem;}
     .content-blog{ padding-bottom: 1rem; max-width:100%; width: 100%; height: auto;}
     .menu-rs { padding-top: 2rem; }
