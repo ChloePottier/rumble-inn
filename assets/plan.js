@@ -1,21 +1,31 @@
+
 var regie = document.getElementById("regie");
 var chillout = document.getElementById("chillout");
+var prise3 = document.getElementById("prise3");
+
 var imagePlan = document.querySelector('image-map-plan');
 const url = new URL(document.location.href);
-console.log(url);
-regie.addEventListener("mouseover", function () {
-    document.images['immap'].src = url.protocol + '//' + url.hostname +'/rumble-inn/wp-content/uploads/2020/05/190301_regie.jpg';
+regie.addEventListener("mouseover", function() {
+    document.images['immap'].src = 'https://i0.wp.com/chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/190301_regie.jpg';
     document.images['immap'].classList.add("plan-hover");
 });
-regie.addEventListener("mouseleave", function () {
-    document.images['immap'].src = `${url.protocol}//${url.hostname}/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg`;
+regie.addEventListener("mouseleave", function() {
+    document.images['immap'].src = 'https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg';
     document.images['immap'].classList.remove("plan-hover");
 });
-chillout.addEventListener("mouseover", function () {
-    document.images['immap'].src = url.protocol + '//' + url.hostname +'/rumble-inn/wp-content/uploads/2020/06/chillout-studio.jpg';
+chillout.addEventListener("mouseover", function() {
+    document.images['immap'].src = 'https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/chillout-studio.jpg';
     document.images['immap'].classList.add("plan-hover");
 });
-chillout.addEventListener("mouseleave", function () {
-    document.images['immap'].src = `${url.protocol}//${url.hostname}/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg`;
+chillout.addEventListener("mouseleave", function() {
+    document.images['immap'].src = 'https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg';
+    document.images['immap'].classList.remove("plan-hover");
+});
+prise3.addEventListener("mouseover", function() {
+    document.images['immap'].src = 'https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/prise3.jpg';
+    document.images['immap'].classList.add("plan-hover");
+});
+prise3.addEventListener("mouseleave", function() {
+    document.images['immap'].src = 'https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/plan-rumble-inn-studio.jpg';
     document.images['immap'].classList.remove("plan-hover");
 });

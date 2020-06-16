@@ -56,8 +56,9 @@ get_header() ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
-                    
-                    <!-- galerie -->
+
+
+                    <!-- galerie photo studio-->
                     <div>
                         <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20500), 'paged' => $paged, 'order'   => 'ASC'));
                         while ($loop2->have_posts()) : $loop2->the_post();

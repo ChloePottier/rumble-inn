@@ -1,13 +1,10 @@
-<?php
-
-/**
+<?php /**
  * Footer file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
  * @version 1.0
- */
-?>
+ */ ?>
 <footer class="container-fluid border-top py-5">
     <div class="container">
         <div class="row">
@@ -31,15 +28,12 @@
         </div>
     </div>
 </footer>
-<amp-script src="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/jquery-3.5.1.min.js" async></amp-script>
-<amp-script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></amp-script>
-<amp-script src="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.js" async></amp-script>
+<script src="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/jquery-3.5.1.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.js" async></script>
 <!-- Menu burger -->
-<amp-script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></amp-script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></script>
-<amp-script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/plan.js" async></amp-script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/plan.js" async></script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
