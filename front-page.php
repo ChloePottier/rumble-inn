@@ -19,7 +19,7 @@ get_header(); ?>
                 $image = get_field('image_btn_accueil'); ?>
                 <a href="<?php the_field('lien_page'); ?>" class="col-12 col-md-6 col-lg-4 btn-accueil pb-4">
                     <figure class="snip1581 bg-black text-white">
-                        <img src="<?php echo $image ?>" class="img-btn-accueil w-100" width="" height="" />
+                        <img src="<?php echo $image ?>" class="img-btn-accueil w-100" width="" height="" id="<?php the_field('titre_btn_accueil'); ?>"/>
                     </figure>
                     <h3 class="bg-dark d-inline py-2 px-3 position-absolute text-uppercase text-white"><?php the_field('titre_btn_accueil'); ?></h3>
                 </a>
