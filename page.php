@@ -44,7 +44,7 @@ get_header() ?>
                     </div>
                     <!--  -->
                 <?php endwhile; ?>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" id="plan-studio">
                     <!-- affichage de l'article plan du studio -->
                     <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20058), 'paged' => $paged, 'order'   => 'ASC'));
                     while ($loop2->have_posts()) : $loop2->the_post();

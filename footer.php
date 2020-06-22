@@ -34,7 +34,7 @@
 <!-- Menu burger -->
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/plan.js" async></script>
-<script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/home.js" async></script>
+<script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/constellation.js" async></script>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -101,6 +101,9 @@ header{background-color: #e5e5e5;}
         outline : none ;
         }
     .btn-360 a{ display: block;}
+    .sub-menu-jfx{top: 5rem; right: 2rem; z-index: 1000;}
+    .dis-none{display:none;}
+    .dis-block{display: block;}
     #nav-burger{top: 3%;
         z-index: 2000;}
     .burger {
@@ -189,18 +192,16 @@ header{background-color: #e5e5e5;}
 .text-studio a{color: #03848a;}
 .text-studio a:hover{color: #ffaa03; border-bottom: 3px solid #ffaa03;}
 #studio-equipement .fa-record-vinyl{color: #ffaa03;}
-#studio-equipement p{margin-left: 1.3rem;}
-
-
-.image-map-plan{object-fit: contain;}
 #studio-equipement h4{font-size:1rem;}
+#plan-studio p{margin-left: 1.3rem;}
+.image-map-plan{object-fit: contain;}
 .plan-hover{animation: pulse 1s;}
   @keyframes pulse {
     0% {opacity:0;}
     100% {opacity:100;}
 }      
 /* galerie */
-.foogallery-container{width: 100%; display: flex; flex-wrap: wrap;}
+.foogallery-container{width: 100%; display: flex; flex-wrap: wrap; justify-content: center;}
 .fg-default.fg-gutter-10 .fg-item{width: 40%; display: flex;}
 .foogallery.fg-light .fg-item-inner{background-color: rgba(255,255,255,0);}
 .foogallery .fg-image-wrap {display: block; position: relative; height: 150px;}

@@ -33,7 +33,6 @@ burger.addEventListener("click", function () {
 var btnContainer = document.getElementById("nav-top");
 // Get all buttons with class="btn" inside the container
 var btns = btnContainer.getElementsByTagName("a");
-console.log(btns);
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
