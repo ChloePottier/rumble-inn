@@ -13,8 +13,10 @@ Text Domain: rumble-inn */
 .text-blue{color: #03848a;}
 .bg-corail{background-color: #e52d25;}
 .text-corail{color: #e52d25;}
+.bg-yellow{background-color: #ffaa03;}
+.text-yellow{color: #ffaa03;}
 .text-grey-dark{color: #131316;}
-.bg-grey-light{background-color: rgba(199, 199, 199, 0.8);}
+.bg-grey-light{background-color: #e7e7e7;}
 ul{list-style: none;padding: 0; margin:0;}
 a:hover{text-decoration: none;}
 /* FONTS */
@@ -153,7 +155,7 @@ header{background-color: #e5e5e5;}
 }
 .btn-accueil h3{top: -1rem; left: 0rem; font-size: 1.3rem;}
 .btn-accueil img{width: 100%; height:500px; object-fit: cover; }
-@-webkit-keyframes bouton-accueil {
+@keyframes bouton-accueil {
     0% {
       -webkit-transform: scale(1) rotate(0);
               transform: scale(1) rotate(0);
@@ -164,9 +166,8 @@ header{background-color: #e5e5e5;}
     }} 
 .btn-accueil img:hover{-webkit-animation: bouton-accueil 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: bouton-accueil 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
-    
 /* mouseout */
-@-webkit-keyframes bouton-accueil-out {
+@keyframes bouton-accueil-out {
     0% {
         -webkit-transform: scale(1.25) rotate(10deg);
                 transform: scale(1.25) rotate(10deg);
@@ -185,17 +186,25 @@ header{background-color: #e5e5e5;}
 #studio p{   text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
 .text-studio p img{padding-right: 1rem; padding-bottom: 1rem; padding-top: .5rem ; float: left;}
+.text-studio a{color: #03848a;}
+.text-studio a:hover{color: #ffaa03; border-bottom: 3px solid #ffaa03;}
+#studio-equipement .fa-record-vinyl{color: #ffaa03;}
+#studio-equipement p{margin-left: 1.3rem;}
+
+
 .image-map-plan{object-fit: contain;}
 #studio-equipement h4{font-size:1rem;}
 .plan-hover{animation: pulse 1s;}
   @keyframes pulse {
     0% {opacity:0;}
     100% {opacity:100;}
-}    
+}      
 /* galerie */
 .foogallery-container{width: 100%; display: flex; flex-wrap: wrap;}
 .fg-default.fg-gutter-10 .fg-item{width: 40%; display: flex;}
 .foogallery.fg-light .fg-item-inner{background-color: rgba(255,255,255,0);}
+.foogallery .fg-image-wrap {display: block; position: relative; height: 150px;}
+.fg-default .fg-image {height: 100%; overflow: hidden; object-fit: cover;}
 /* BLOG */
 .details-blog p{height: 75px;}
 .date{font-size: .8rem;}
@@ -208,6 +217,11 @@ header{background-color: #e5e5e5;}
 .soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
 .deezer{background-color: #03848a; width: 39px; height: 39px;}
 .deezer:hover{background-color: #000;}
+.page-numbers{display: flex; justify-content: center; margin-left: auto; margin-right: auto; font-size: 1.3rem;}
+.page-numbers li{margin-right: 1rem;}
+.page-numbers li:last-child{margin-right: 0rem;}
+.page-numbers li a{color: #03848a;}
+.page-numbers li span{color: #131316;}
 /* REFERENCES */
 .widget-soundcloud-content{height: 300px;}
     /* youtube  */
@@ -298,7 +312,10 @@ textarea{height: 8rem;}
 div.wpcf7-mail-sent-ok { border: none; color: #28a745 ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
 /* mail danger */
 div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
-.wpcf7-submit:hover, .submit:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
+.wpcf7-submit:hover, .submit:hover{ 
+    /* background-color:rgba(61, 61, 61, 0.925); */
+    background-color: #ffaa03;
+     color: #fff;}
 /* 360° - constellation */
 .wp-image-1852,.wp-image-20132{width:15rem;}
 #labels figcaption{font-family: 'Cocogoose',Helvetica, sans-serif; font-size: .6rem; color: #03848a; margin-top: .8rem; margin-bottom: 1.5rem;}
@@ -328,7 +345,10 @@ footer{height: 20rem;}
 /* Historique */
 #historique  h5{color:  #000; margin-top: 1rem; text-transform: capitalize;}
 #historique a{color: #03848a;}
-#historique a:hover{color: #e52d25;}
+#historique a:hover{
+    /* color: #e52d25; */
+    color: #ffaa03;
+}
 #historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
      text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
 #historique p{text-align: justify; margin-bottom: 0;}

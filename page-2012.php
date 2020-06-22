@@ -7,7 +7,7 @@
  * @since 1.0
  * @version 1.0
  */ get_header() ?>
-<div class="container-fluid" id="historique">
+<div class="container-fluid pb-5" id="historique">
     <div class="container">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>

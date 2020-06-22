@@ -1,12 +1,16 @@
-<?php
-// *************avec ancienne BDD
-/**
+<?php /**
  * Content article single file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
  * @version 1.0
  */
+
+// global $wp_query;
+
+// $args = array_merge($wp_query->query, array('posts_per_page' => 8));
+
+// query_posts( $args );  
 $loop1 = new WP_Query(array('post_type' => 'post','paged' => $paged, 'meta_key' => 'date_article',
 'orderby' => 'meta_value', 'order' => 'DESC', 'category_name' => 'uncategorized'));
 while ($loop1->have_posts()) : $loop1->the_post();
@@ -24,6 +28,8 @@ while ($loop1->have_posts()) : $loop1->the_post();
         </div>
     </div>
 <?php endwhile;
+wp_reset_postdata();
+wp_reset_query();
 $loop = new WP_Query(array('post_type' => 'post','paged' => $paged, 'meta_key' => 'date_article',
 'orderby' => 'meta_value', 'order' => 'DESC', 'category_name' => 'old-post'));
 while ($loop->have_posts()) : $loop->the_post();
@@ -41,6 +47,13 @@ while ($loop->have_posts()) : $loop->the_post();
         </div>
     </div>
 <?php endwhile;?>
+<div class="col-12 d-flex mb-5">
+<?php 
+echo theme_pagination( $paginate);
+// On réinitialise à la requête principale (important)
+wp_reset_postdata();
+wp_reset_query();
+ ?>
+</div>
 
-
-
+<?php the_excerpt();?>

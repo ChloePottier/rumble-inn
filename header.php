@@ -17,7 +17,7 @@
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php echo get_home_url() ?>/wp-content/themes/rumble-inn/assets/font-awesome/css/all.min.css ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
-    <title><?php ?></title>
+    <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 </head>
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>

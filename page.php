@@ -32,7 +32,7 @@ get_header() ?>
             </div>
         </div>
     </div>
-    <section class="container-fluid py-5 bg-burger" id="studio-equipement">
+    <section class="container-fluid py-5 bg-grey-light" id="studio-equipement">
         <div class="container">
             <div class="row">
                 <!-- affichage de l'article matériel du studio -->
@@ -56,9 +56,6 @@ get_header() ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
-
-
-                    <!-- galerie photo studio-->
                     <div>
                         <?php $loop2 = new WP_Query(array('post_type' => 'studio', 'post__in' => array(20500), 'paged' => $paged, 'order'   => 'ASC'));
                         while ($loop2->have_posts()) : $loop2->the_post();
