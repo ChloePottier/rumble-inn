@@ -101,7 +101,8 @@ header{background-color: #e5e5e5;}
         outline : none ;
         }
     .btn-360 a{ display: block;}
-    .sub-menu-jfx{top: 5rem; right: 2rem; z-index: 1000;}
+    .sub-menu-jfx{top: 4rem; right: 0; z-index: 1000; width: 34%;}
+    .logo-label{height: 50px;}
     .dis-none{display:none;}
     .dis-block{display: block;}
     #nav-burger{top: 3%;
@@ -318,11 +319,12 @@ div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-
     background-color: #ffaa03;
      color: #fff;}
 /* 360° - constellation */
-.wp-image-1852,.wp-image-20132{width:15rem;}
+/* .wp-image-1852,.wp-image-20132{width:15rem;}
 #labels figcaption{font-family: 'Cocogoose',Helvetica, sans-serif; font-size: .6rem; color: #03848a; margin-top: .8rem; margin-bottom: 1.5rem;}
 #labels .wp-block-image{margin-bottom: 3rem;}
-.description-label{font-size: .5rem; color: #03848a;}
-.logo-label{height: 69px;}
+.description-label{font-size: .5rem; color: #03848a;} 
+.logo-label{height: 69px;}*/
+/* #sub-menu-jfx .label-jfx{} */
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */

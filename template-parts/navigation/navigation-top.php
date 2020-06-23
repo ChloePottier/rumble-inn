@@ -22,14 +22,13 @@
                         )
                     ); ?>
                 </div>
-                <div class="sub-menu-jfx position-absolute bg-grey-light dis-none" id="sub-menu-jfx">
+                <div class="sub-menu-jfx position-absolute bg-white text-center dis-none" id="sub-menu-jfx">
                     <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
                     while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('logo_label'); ?>
-                        <div class="">
+                        <div class="label-jfx border-top py-2">
                             <a href="<?php the_field('lien_site'); ?>" target="_blank">
                                 <img src="<?php echo $image ?>" class="logo-label" />
-                                <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
                             </a>
                         </div>
                     <?php endwhile; ?>
