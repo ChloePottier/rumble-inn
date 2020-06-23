@@ -25,7 +25,7 @@
                     $image = get_field('image_histoire'); ?>
                     <div class="row pb-2">
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                     <?php
                     if ($image != '') { ?>
@@ -69,7 +69,7 @@
                         $titreHistoire = the_field('titre_histoire');
                         if ($titreHistoire != '') { ?>
                             <div class="col-12">
-                                <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                                <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                             </div>
                         <?php }
                         if ($image != '') { ?>
@@ -102,7 +102,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -134,7 +134,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -166,7 +166,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -198,7 +198,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -230,7 +230,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -262,7 +262,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -294,7 +294,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">
@@ -326,7 +326,7 @@
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
-                            <h5 class="font-weight-bold"><?php the_field('titre_histoire'); ?></h5>
+                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                         </div>
                         <?php if ($image != '') { ?>
                             <div class="col-12 col-md-2">

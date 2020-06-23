@@ -62,7 +62,7 @@ h1, .font-size-1-1,{font-size: 1.7rem!important; text-transform: uppercase;}
 .z-index-900{z-index: 900;}
 .custom-logo-link, .outline-none{outline: none;}
 /* HEADER */
-header{background-color: #e5e5e5;}
+header{background-color: #e5e5e5; z-index: 2000;}
     /* widget menu (logo)*/
     #widget-menu-top{width: 400px; height:auto;}
     .custom-logo{width: auto; height: 180px; margin: .5rem 0; }
@@ -77,7 +77,9 @@ header{background-color: #e5e5e5;}
         padding-top: 7rem;
         text-align: right;
         padding-right: 5rem ;
+       
     }
+   
     #navbar #nav-top{display: flex; align-items: center; margin: .5rem 0;}
     #nav-top li{padding-right:1.3rem;}
     #nav-top li:last-child{padding-right:0;}
@@ -101,7 +103,7 @@ header{background-color: #e5e5e5;}
         outline : none ;
         }
     .btn-360 a{ display: block;}
-    .sub-menu-jfx{top: 4rem; right: 0; z-index: 1000; width: 34%;}
+    .sub-menu-jfx{top: 4rem; right: 0; z-index: 1000; width: 34%; z-index: 1000;}
     .logo-label{height: 50px;}
     .dis-none{display:none;}
     .dis-block{display: block;}
@@ -346,15 +348,12 @@ footer{height: 20rem;}
 .elementor-text-editor h1, .elementor-text-editor h2, 
 .elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
 /* Historique */
-#historique  h5{color:  #000; margin-top: 1rem; text-transform: capitalize;}
-#historique a{color: #03848a;}
-#historique a:hover{
-    /* color: #e52d25; */
-    color: #ffaa03;
-}
-#historique h4{background-color: #03848a; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
+#historique h4{background-color: #ffaa03; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
      text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
+#historique  h5{margin-top: 1rem;}
 #historique p{text-align: justify; margin-bottom: 0;}
+#historique a{color: #03848a;}
+#historique a:hover{ color: #ffaa03;}
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 
@@ -365,7 +364,6 @@ footer{height: 20rem;}
     .lien-widget-jfx{display: flex; justify-content: flex-end;}
     .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;}
     .h-280{height: 250px;}
-    
 }
 @media screen  and (max-width:767px){	
     .snip1581 {
