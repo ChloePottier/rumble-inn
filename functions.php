@@ -158,3 +158,36 @@ if( !function_exists( 'theme_pagination' ) ) {
 	echo str_replace('page/1/','', paginate_links( $pagination ) );
     }	
 }
+/*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
+function my_sharing_buttons($content) {
+    global $post;
+    if(is_singular() || is_home()){
+        // Récuperer URL de la page en cours 
+        $myCurrentURL = urlencode(get_permalink());
+        // Récuperer TITRE de la page en cours
+        $myCurrentTitle = urlencode(get_field('titre_article')); // utilisation de ACF 
+        $myCurrentImg = urlencode(get_field('image_article')); 
+        wp_get_attachment_image_src($myCurrentImg, 'full');// image ACF convertie en attachement wordpress
+        // Récuperer MINIATURE si l'image à la une existe
+        // if(has_post_thumbnail($post->ID)) {
+        //     $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); 
+        // }
+        // Construction des URL de partage - correction du 9 février 2017 (url échapées)
+        $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
+        $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
+        // instagram
+        $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article interressant : '.$myCurrentURL.'&amp;title='.$myCurrentTitle );
+        // Ajout des bouton en bas des articles et des pages
+        $content .= '<div class="partage-reseaux-sociaux">';
+        $content .= __('<h5>Partagez Maintenant !</h5>'); // correction du 9 février 2017 : texte traduisible
+        $content .= '<a class="msb-link msb-facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
+        $content .= '<a class="msb-link msb-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
+        $content .= '<a class="msb-link msb-email" href="'.$email_share.'" target="_blank">eMail</a>'; // correction du 9 février 2017
+        $content .= '</div>';
+        }
+
+        // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
+        return $content; // correction du 9 février 2017
+};
+
+add_filter( 'the_content', 'my_sharing_buttons');

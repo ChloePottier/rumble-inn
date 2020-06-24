@@ -355,6 +355,66 @@ footer{height: 20rem;}
 #historique p{text-align: justify; margin-bottom: 0;}
 #historique a{color: #03848a;}
 #historique a:hover{ color: #ffaa03;}
+/* test */
+/*** CUSTOMISER LES BOUTONS DE PARTAGES ***/
+
+.msb-link {
+    padding: 5px 15px 5px 15px !important;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    margin-top: 2px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase
+   }
+    
+   .msb-link:hover,.msb-link:active {
+    background: #ff942a;
+    transition: all 0.3s ease-in;
+   }
+    
+   .msb-twitter {
+    background: #00aced;
+   }
+    
+   .msb-facebook {
+    background: #3B5997;
+   }
+    
+   .msb-googleplus {
+    background: #D64937;
+   }
+    
+   .msb-pinterest {
+    background: #bd081c;
+   }
+    
+   .msb-linkedin {
+    background: #0074A1;
+   }
+   
+   .msb-email {
+    background: #878787;
+   }
+    
+   .partage-reseaux-sociaux {
+    margin: 20px 0px 25px 0px;
+    font-size: 12px;
+   }
+   
+   /*** CUSTOMISER LES BOUTONS DE PARTAGES POUR RESPONSIVE ***/
+   
+   @media only screen and (max-width: 680px) {
+    
+   /* placer ici votre CSS Responsive */
+   
+   }
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 

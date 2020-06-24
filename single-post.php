@@ -57,7 +57,7 @@ get_header();?>
                     }
                     ?>
                 </div>
-
+                <?php the_content()?>
                 <!--" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>-->
             </div>
         </div>
