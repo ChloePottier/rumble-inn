@@ -1,11 +1,17 @@
-<?php /**
- * Article blog single, file for the Rumble Inn theme blog
+<?php
+
+/**
+ * Reference single, file for the Rumble Inn theme blog
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
  * @version 1.0
  */
 get_header();?>
+       <?php
+        // Start the loop.
+        while ( have_posts() ) : the_post();
+  ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php $unixtimestamp = strtotime(get_field('date_article')); ?>
     <div class="container pb-5">
@@ -51,10 +57,13 @@ get_header();?>
                     }
                     ?>
                 </div>
+
+                <!--" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>-->
             </div>
         </div>
     </div>
 </article>
+                <?php endwhile; ?>
 <?php
 get_footer();
 ?>

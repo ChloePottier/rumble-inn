@@ -11,6 +11,7 @@ $loop1 = new WP_Query(array(
     'post_type' => 'post', 'paged' => $paged, 'meta_key' => 'date_article',
     'orderby' => 'meta_value', 'order' => 'DESC', 'category_name' => 'uncategorized'
 ));
+
 while ($loop1->have_posts()) : $loop1->the_post();
     $image = get_field('image_article');
     $text = get_field('detail_article') ?>
@@ -28,10 +29,7 @@ while ($loop1->have_posts()) : $loop1->the_post();
 <?php endwhile;
 wp_reset_postdata();
 wp_reset_query();
-$loop = new WP_Query(array(
-    'post_type' => 'post', 'paged' => $paged, 'meta_key' => 'date_article',
-    'orderby' => 'meta_value', 'order' => 'DESC', 'category_name' => 'old-post'
-));
+
 while ($loop->have_posts()) : $loop->the_post();
     $image = get_field('image_article');
     $text = get_field('detail_article') ?>
@@ -46,17 +44,14 @@ while ($loop->have_posts()) : $loop->the_post();
             Lire la suite... </a>
         </div>
     </div>
-<?php endwhile; 
-//create new empty query and populate it with the other two
-// $wp_query = new WP_Query();
-// $wp_query->posts = array_merge( $loop->posts, $loop1->posts );
+<?php endwhile;
+$megaTab = array_merge($loop, $loop1);
+// $merged_megaTab = new WP_Query( $megaTab );
+$merged_megaTab = new WP_Query(array('post__in' => $megaTab)); ?>
 
-// //populate post_count count for the loop to work correctly
-// $wp_query->post_count = $loop->post_count + $loop1->post_count;
-?>
 <div class="col-12 d-flex mb-5">
     <?php
-    echo theme_pagination();
+    echo theme_pagination($merged_megaTab);
     // On réinitialise à la requête principale (important)
     wp_reset_postdata();
     wp_reset_query();

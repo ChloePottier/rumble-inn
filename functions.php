@@ -134,9 +134,7 @@ function custom_field_excerpt_longer() {
 }
 
 if( !function_exists( 'theme_pagination' ) ) {
-	
     function theme_pagination() {
-	
 	global $wp_query, $wp_rewrite;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 	$pagination = array(
