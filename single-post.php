@@ -1,7 +1,5 @@
-<?php
-
-/**
- * Reference single, file for the Rumble Inn theme blog
+<?php /**
+ * Article blog single, file for the Rumble Inn theme blog
  * @package WordPress
  * @subpackage rumble-inn
  * @since 1.0
@@ -53,8 +51,6 @@ get_header();?>
                     }
                     ?>
                 </div>
-
-                <!--" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>-->
             </div>
         </div>
     </div>

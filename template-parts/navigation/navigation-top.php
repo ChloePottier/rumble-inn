@@ -8,7 +8,7 @@
  * @version 1.0
  */ ?>
 <!-- Menu desktop -->
-<div class="container-fluid  bg-white d-none d-lg-block " id="navbar">
+<div class="container-fluid  bg-white d-none d-lg-block position-relative" id="navbar">
     <div class="container">
         <nav class="row ">
             <div class="col-12 d-flex justify-content-center">
@@ -21,17 +21,6 @@
                             'menu_id'  => 'nav-top',
                         )
                     ); ?>
-                </div>
-                <div class="sub-menu-jfx position-absolute bg-white text-center dis-none" id="sub-menu-jfx">
-                    <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
-                    while ($loop->have_posts()) : $loop->the_post();
-                        $image = get_field('logo_label'); ?>
-                        <div class="label-jfx border-top py-2">
-                            <a href="<?php the_field('lien_site'); ?>" target="_blank">
-                                <img src="<?php echo $image ?>" class="logo-label" />
-                            </a>
-                        </div>
-                    <?php endwhile; ?>
                 </div>
             </div>
         </nav>
@@ -49,23 +38,17 @@
                 </label>
                 <div class="menu-burger display-none bg-burger font-family-cocogoose text-uppercase" id="navigation">
                     <a href="<?php echo get_option('home'); ?>">
-                        <?php if (is_active_sidebar('widget-menu-top')) :
-                            dynamic_sidebar('widget-menu-top');
-                        endif; ?>
+                        <img src="https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/Logo-rumble-inn-little-2.svg" />
                     </a>
-                    <?php
-                    wp_nav_menu(
+                    <?php wp_nav_menu(
                         array(
                             'container' => false,
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
-                        )
-                    ); ?>
-                    <?php if (is_active_sidebar('widget-logo-jfx')) : ?>
-                        <a href="<?php echo get_option('home'); ?>/?page_id=20123" class="d-flex justify-content-end"><?php dynamic_sidebar('widget-logo-jfx'); ?></a>
-                    <?php endif; ?>
+                        )); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<?php get_template_part( 'template-parts/navigation/sub', 'menu' ); ?>

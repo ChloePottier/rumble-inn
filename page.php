@@ -163,7 +163,39 @@ elseif (is_page(20101)) :     ?>
             endif; ?>
         </div>
     </div>
-   
+   <!-- PAGE 360 (la constellation, tous les labels,...) -->
+<?php elseif (is_page(20123)) :     ?>
+    <div class="container-fluid" id="labels">
+        <div class="container">
+            <div class="row pt-4 d-lg-none">
+                <div class="col-12">
+                    <h1> <?php the_title(); ?></h1>
+                </div>
+            </div>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <div class="row py-5 justify-content-center">
+                        <div class="col-12 font-family-cocogoose text-center">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
+                        while ($loop->have_posts()) : $loop->the_post();
+                            $image = get_field('logo_label'); ?>
+
+                            <div class="col-6 col-sm-4 col-lg-2 my-5 text-center">
+                                <a href="<?php the_field('lien_site'); ?>" target="_blank">
+
+                                    <img src="<?php echo $image ?>" class="logo-label" />
+                                    <h3 class="description-label text-uppercase mt-2"><?php the_field('description_label'); ?></h3>
+                                </a>
+                            </div>
+
+                        <?php endwhile; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
+    </div>
     <!-- Sinon -->
 <?php else :     ?>
     <div class="container-fluid" id="page-<?php the_ID(); ?>">

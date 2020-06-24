@@ -139,7 +139,6 @@ if( !function_exists( 'theme_pagination' ) ) {
 	
 	global $wp_query, $wp_rewrite;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-	
 	$pagination = array(
 		'base' => @add_query_arg('page','%#%'),
 		'format' => '?paged=%#%',
@@ -152,7 +151,6 @@ if( !function_exists( 'theme_pagination' ) ) {
 		'next_text' => '»',
 		'prev_text' => '«'
 	);
-	
 	if( $wp_rewrite->using_permalinks() )
 		$pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
 	

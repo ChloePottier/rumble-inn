@@ -79,7 +79,7 @@ header{background-color: #e5e5e5; z-index: 2000;}
         padding-right: 5rem ;
        
     }
-   
+    #navbar{z-index:1100;}
     #navbar #nav-top{display: flex; align-items: center; margin: .5rem 0;}
     #nav-top li{padding-right:1.3rem;}
     #nav-top li:last-child{padding-right:0;}
@@ -103,8 +103,9 @@ header{background-color: #e5e5e5; z-index: 2000;}
         outline : none ;
         }
     .btn-360 a{ display: block;}
-    .sub-menu-jfx{top: 4rem; right: 0; z-index: 1000; width: 34%; z-index: 1000;}
+    .sub-menu-jfx{top: 18.75rem; right: 12.5rem; z-index: 1000; width: 34%;}
     .logo-label{height: 50px;}
+    .description-label{font-size: .5rem; color: #03848a;}
     .dis-none{display:none;}
     .dis-block{display: block;}
     #nav-burger{top: 3%;
@@ -361,8 +362,8 @@ footer{height: 20rem;}
 @media screen  and (max-width:991px){
     /* NAV */
     #nav-top li{padding-right: 0; padding-bottom: .3rem; font-size: 1.5rem;}
-    .lien-widget-jfx{display: flex; justify-content: flex-end;}
-    .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;}
+    /* .lien-widget-jfx{display: flex; justify-content: flex-end;}
+    .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;} */
     .h-280{height: 250px;}
 }
 @media screen  and (max-width:767px){	

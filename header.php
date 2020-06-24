@@ -21,8 +21,8 @@
 </head>
 <body <?php body_class(); ?> class="home blog logged-in admin-bar no-customize-support ">
 <?php wp_body_open(); ?>
-    <header class="custom-header" >
-        <div class="position-absolute z-index-1">
+    <header class="custom-header position-relative" >
+        <div class="position-absolute z-index-1500">
             <!-- Faire boucle : si l'image d'en-tête existe alors afficher sinon rien -->
             <!-- image d'en-tête -->
             <?php if (get_header_image() != '') : ?>

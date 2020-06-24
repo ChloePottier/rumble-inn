@@ -4,8 +4,6 @@ var chillout = document.getElementById("chillout");
 var prise1 = document.getElementById("prise1");
 var prise2 = document.getElementById("prise2");
 var prise3 = document.getElementById("prise3");
-
-var imagePlan = document.querySelector('image-map-plan');
 const url = new URL(document.location.href);
 regie.addEventListener("mouseover", function() {
     document.images['immap'].src = url.protocol + '//' + url.hostname +'/rumble-inn/wp-content/uploads/2020/06/regie.jpg';
