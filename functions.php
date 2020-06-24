@@ -161,6 +161,7 @@ if( !function_exists( 'theme_pagination' ) ) {
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     global $post;
+    // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
     if(is_singular() || is_home()){
         // Récuperer URL de la page en cours 
         $myCurrentURL = urlencode(get_permalink());
@@ -172,22 +173,19 @@ function my_sharing_buttons($content) {
         // if(has_post_thumbnail($post->ID)) {
         //     $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); 
         // }
-        // Construction des URL de partage - correction du 9 février 2017 (url échapées)
+        // Construction des URL de partage 
         $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
+        // $instagramURL = esc_url( 'https://www.instagram.com/sharer/sharer.php?u='.$myCurrentURL ); //instagram je crois qu'on peut pas
         $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
-        // instagram
         $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article interressant : '.$myCurrentURL.'&amp;title='.$myCurrentTitle );
         // Ajout des bouton en bas des articles et des pages
-        $content .= '<div class="partage-reseaux-sociaux">';
-        $content .= __('<h5>Partagez Maintenant !</h5>'); // correction du 9 février 2017 : texte traduisible
-        $content .= '<a class="msb-link msb-facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
-        $content .= '<a class="msb-link msb-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
-        $content .= '<a class="msb-link msb-email" href="'.$email_share.'" target="_blank">eMail</a>'; // correction du 9 février 2017
+        $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
+        $content .= __('<span class="font-weight-bold mr-2">Partagez  : </span>');
+        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
+        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank"><i class="fab fa-linkedin"></i></a>';
+        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank"><i class="fas fa-envelope"></i></a>';
         $content .= '</div>';
         }
-
-        // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
-        return $content; // correction du 9 février 2017
+        return $content;
 };
-
 add_filter( 'the_content', 'my_sharing_buttons');

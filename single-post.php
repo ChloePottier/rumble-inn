@@ -8,10 +8,7 @@
  * @version 1.0
  */
 get_header();?>
-       <?php
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-  ?>
+<?php while ( have_posts() ) : the_post();  ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php $unixtimestamp = strtotime(get_field('date_article')); ?>
     <div class="container pb-5">
@@ -57,13 +54,11 @@ get_header();?>
                     }
                     ?>
                 </div>
-                <?php the_content()?>
+                <?php the_content()?><!--boutons de partage-->
                 <!--" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>-->
             </div>
         </div>
     </div>
 </article>
-                <?php endwhile; ?>
-<?php
-get_footer();
-?>
+<?php endwhile;
+get_footer(); ?>
