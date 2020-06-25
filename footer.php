@@ -21,9 +21,12 @@
                     array(
                         'container' => false,
                         'theme_location' => 'social',
-                        'menu_id'  => 'Social Links Menu',
-                    )
-                ); ?>
+                        'menu_id'  => 'Social Links Menu' )); ?>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-12 copyright text-center">
+                ©2020 Tous droits réservés <a href="http://www.rumbleinnstudio.com/">Rumble Inn</a>  – création Chloé Huarkaya
             </div>
         </div>
     </div>
@@ -35,6 +38,8 @@
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/navigation.js" async></script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/plan.js" async></script>
 <script src="<?php echo esc_url(home_url('/')); ?>wp-content/themes/rumble-inn/assets/constellation.js" async></script>
+<!--Start Cookie Script-->
+<script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/7b1e8b9343b2dc8f9f3743443f45aea8.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

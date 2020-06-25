@@ -169,10 +169,6 @@ function my_sharing_buttons($content) {
         $myCurrentTitle = urlencode(get_field('titre_article')); // utilisation de ACF 
         $myCurrentImg = urlencode(get_field('image_article')); 
         wp_get_attachment_image_src($myCurrentImg, 'full');// image ACF convertie en attachement wordpress
-        // Récuperer MINIATURE si l'image à la une existe
-        // if(has_post_thumbnail($post->ID)) {
-        //     $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); 
-        // }
         // Construction des URL de partage 
         $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
         // $instagramURL = esc_url( 'https://www.instagram.com/sharer/sharer.php?u='.$myCurrentURL ); //instagram je crois qu'on peut pas
@@ -180,7 +176,7 @@ function my_sharing_buttons($content) {
         $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article interressant : '.$myCurrentURL.'&amp;title='.$myCurrentTitle );
         // Ajout des bouton en bas des articles et des pages
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
-        $content .= __('<span class="font-weight-bold mr-2">Partagez  : </span>');
+        $content .= __('<span class="font-weight-bold mr-2 partagez">Partagez  : </span>');
         $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
         $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank"><i class="fab fa-linkedin"></i></a>';
         $content .= '<a class="share-email" href="'.$email_share.'" target="_blank"><i class="fas fa-envelope"></i></a>';
@@ -189,3 +185,10 @@ function my_sharing_buttons($content) {
         return $content;
 };
 add_filter( 'the_content', 'my_sharing_buttons');
+/*** page de maintenance côté visiteur - sans plugins ***/
+// function mode_maintenance(){
+//     if(!current_user_can('edit_themes') || !is_user_logged_in()){
+//         wp_die('<div style="text-align:center; "><h1 style="color:#03848a; text-transform:uppercase;">JFX Studio devient Rumble Inn ! </h1><div style="margin-top: 1rem; font-size: 1.3rem;">Le nouveau site arrive très bientôt, stay tuned !</div></div>', 'Maintenance', array( ‘response’ => 503 )); // correction du 9 février 2017
+//     }
+// }
+// add_action('init', 'mode_maintenance');

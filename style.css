@@ -51,8 +51,7 @@ src:
     url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
     url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
 }
-h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
-.wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
+h1,h2,h3, h4, .font-family-cocogoose, .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
 h1, .font-size-1-1,{font-size: 1.7rem!important; text-transform: uppercase;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
 .picto{font-size: 2.3rem;}
@@ -75,8 +74,7 @@ header{background-color: #e5e5e5; z-index: 2000;}
         right: 0;
         padding-top: 7rem;
         text-align: right;
-        padding-right: 5rem ;
-       
+        padding-right: 5rem ;       
     }
     #navbar{z-index:1100;}
     #navbar #nav-top{display: flex; align-items: center; margin: .5rem 0;}
@@ -102,13 +100,20 @@ header{background-color: #e5e5e5; z-index: 2000;}
         outline : none ;
         }
     .btn-360 a{ display: block;}
-    .sub-menu-jfx{top: 18.75rem; right: 12.5rem; z-index: 1000; width: 34%;}
+    .sub-menu-jfx{
+        right: 19.5rem; z-index: 1000; width: 20%;
+        animation-duration: 2s;
+        animation-name: slidein;
+      }
+      @keyframes slidein {
+        from { top: -4rem; }
+        to {top: 18.75rem; }
+      }
     .logo-label{height: 50px;}
     .description-label{font-size: .5rem; color: #03848a;}
-    .dis-none{display:none;}
+    .dis-none{display:none;}  
     .dis-block{display: block;}
-    #nav-burger{top: 3%;
-        z-index: 2000;}
+    #nav-burger{top: 3%; z-index: 2000;}
     .burger {
         margin: 0;
         top: 3%;
@@ -142,14 +147,9 @@ header{background-color: #e5e5e5; z-index: 2000;}
         display: block;
         margin-bottom: 6px;
     }
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1500;
-      }
-      .widget-jfx{ width: 50px; height: 50px; overflow: hidden; margin-left: 2rem;}
-      .widget-jfx img{width: 50px; margin-bottom: 50px; outline : none }
+    .sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
+    .widget-jfx{ width: 50px; height: 50px; overflow: hidden; margin-left: 2rem;}
+    .widget-jfx img{width: 50px; margin-bottom: 50px; outline : none }
 /* ACCUEIL */
 .snip1581 {
     position: relative;
@@ -226,6 +226,9 @@ header{background-color: #e5e5e5; z-index: 2000;}
 .page-numbers li:last-child{margin-right: 0rem;}
 .page-numbers li a{color: #03848a;}
 .page-numbers li span{color: #131316;}
+.partagez{color: #575757;}
+.share-facebook,.share-linkedin,.share-email{font-size: 1.3rem; color: #131316;}
+.share-facebook:hover,.share-linkedin:hover,.share-email:hover{color: #03848a;}
 /* REFERENCES */
 .widget-soundcloud-content{height: 300px;}
     /* youtube  */
@@ -339,12 +342,9 @@ footer{height: 20rem;}
       .sib-email-area{width: 70%;}
       .submit{width: 30%;}
       .text-newsletter{font-size: .75rem; padding-top: .3rem; text-align: justify;}
-/* AUTRES */
-.elementor-text-editor{color: #131316;}
-.elementor-text-editor, .elementor-text-editor h1, .elementor-text-editor h2, 
-.elementor-text-editor h3, .elementor-text-editor h4{white-space: break-spaces; font-family: Helvetica, Arial, sans-serif;}
-.elementor-text-editor h1, .elementor-text-editor h2, 
-.elementor-text-editor h3, .elementor-text-editor h5{color: #000000; font-weight: 600;}
+      .copyright{font-size: .7rem;}
+      .copyright a{color: #03848a;}   
+      .copyright a:hover{color: #ffaa03;}
 /* Historique */
 #historique h4{background-color: #ffaa03; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
      text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
@@ -352,10 +352,6 @@ footer{height: 20rem;}
 #historique p{text-align: justify; margin-bottom: 0;}
 #historique a{color: #03848a;}
 #historique a:hover{ color: #ffaa03;}
-/*** CUSTOMISER LES BOUTONS DE PARTAGES ***/
-.share-facebook,.share-linkedin,.share-email{font-size: 1.3rem; color: #575757;}
-.share-facebook:hover,.share-linkedin:hover,.share-email:hover{color: #ffaa03;}
-
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 

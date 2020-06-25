@@ -16,7 +16,6 @@ get_header();?>
             <div class="col-12">
                 <h4 class="font-family-cocogoose m-0 text-capitalize"><?php the_field('titre_article'); ?></h4>
                 <div class="date text-capitalize m-0 text-blue text-left mb-3"><?php echo date_i18n("d F Y", $unixtimestamp); ?></div>
-                
             </div>
         </div>
         <div class="row">
@@ -51,11 +50,9 @@ get_header();?>
                     }
                     if ($lienAutre != '') {
                         echo '<a class="lien_autre" title="Suivre le lien" href="' . $lienAutre . ' " target="_blank"><i class="fas fa-globe"></i></a>';
-                    }
-                    ?>
+                    } ?>
                 </div>
                 <?php the_content()?><!--boutons de partage-->
-                <!--" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>-->
             </div>
         </div>
     </div>
