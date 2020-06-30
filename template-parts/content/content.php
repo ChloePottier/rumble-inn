@@ -1,6 +1,4 @@
-<?php
-// *************avec ancienne BDD
-/**
+<?php /**
  * Content article single file for the Rumble Inn theme
  * @package WordPress
  * @subpackage rumble-inn
@@ -26,10 +24,8 @@ while ($loop->have_posts()) : $loop->the_post();
     </div>
 <?php endwhile; ?>
 <div class="col-12 d-flex mb-5">
-    <?php
-    echo theme_pagination();
+    <?php echo theme_pagination();
     // On réinitialise à la requête principale (important)
     wp_reset_postdata();
-    wp_reset_query();
-    ?>
+    wp_reset_query(); ?>
 </div>

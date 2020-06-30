@@ -48,6 +48,15 @@ function header_widgets_init() {
          'before_title' => '<h2 class="header-title">',
          'after_title' => '</h2>',
          ) );
+         register_sidebar( array(
+            'name' => 'Logo JFX dans Menu smartphone',
+            'id' => 'logo-jarring-effects',
+            'before_widget' => '<div id="logo-jfx">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+            ) );
+
      }
     add_action( 'widgets_init', 'header_widgets_init' );
  // widget content
@@ -105,19 +114,6 @@ function wpm_myme_types($mime_types){
     return $mime_types;
 }
 // page blog, lire la suite
-function custom_field_excerpt() {
-	global $post;
-	$text = get_field('detail_article');
-	if ( '' != $text ) {
-		$text = strip_shortcodes( $text );
-		$text = apply_filters('the_content', $text);
-		$text = str_replace(']]>', ']]>', $text);
-		$excerpt_length = 17; // 20 words
-		$excerpt_more = apply_filters('excerpt_more', ' ' . '...');
-		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-	}
-	return apply_filters('the_excerpt', $text);
-}
 // fonction read more
 function custom_field_excerpt_longer() {
 	global $post;
@@ -132,7 +128,7 @@ function custom_field_excerpt_longer() {
 	}
 	return apply_filters('the_excerpt', $text);
 }
-
+// pagination
 if( !function_exists( 'theme_pagination' ) ) {
     function theme_pagination() {
 	global $wp_query, $wp_rewrite;
@@ -162,7 +158,7 @@ if( !function_exists( 'theme_pagination' ) ) {
 function my_sharing_buttons($content) {
     global $post;
     // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
-    if(is_singular() || is_home()){
+    if(is_singular() || is_home() || !is_singular('contact')){
         // Récuperer URL de la page en cours 
         $myCurrentURL = urlencode(get_permalink());
         // Récuperer TITRE de la page en cours
@@ -188,7 +184,9 @@ add_filter( 'the_content', 'my_sharing_buttons');
 /*** page de maintenance côté visiteur - sans plugins ***/
 // function mode_maintenance(){
 //     if(!current_user_can('edit_themes') || !is_user_logged_in()){
-//         wp_die('<div style="text-align:center; "><h1 style="color:#03848a; text-transform:uppercase;">JFX Studio devient Rumble Inn ! </h1><div style="margin-top: 1rem; font-size: 1.3rem;">Le nouveau site arrive très bientôt, stay tuned !</div></div>', 'Maintenance', array( ‘response’ => 503 )); // correction du 9 février 2017
+//         wp_die('<div style="text-align:center; "><h1 style="color:#03848a; text-transform:uppercase;">JFX Studio devient Rumble Inn ! </h1><div style="margin-top: 1rem; font-size: 1.3rem;">Le nouveau site arrive très bientôt, stay tuned !</div></div>',
+//          'Maintenance', 
+//          array( 'response' => 503 )); // correction du 9 février 2017
 //     }
 // }
 // add_action('init', 'mode_maintenance');

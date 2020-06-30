@@ -10,8 +10,6 @@ Text Domain: rumble-inn */
 .text-black{color: #000;}
 .bg-blue{background-color: #03848a;}
 .text-blue{color: #03848a;}
-.bg-corail{background-color: #e52d25;}
-.text-corail{color: #e52d25;}
 .bg-yellow{background-color: #ffaa03;}
 .text-yellow{color: #ffaa03;}
 .text-grey-dark{color: #131316;}
@@ -86,14 +84,14 @@ header{background-color: #e5e5e5; z-index: 2000;}
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
     .menu-nav a{outline: none;}
     .btn-360{
-        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu.png) no-repeat scroll left center transparent;
+        background: url(http://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-1.png) no-repeat scroll left center transparent;
         width: 40px;
         height: 40px;
         text-indent: -9999px;
         outline : none ;
         }
         .btn-360:hover{
-        background: url(https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/06/logo-JFX-menu-hover.png) no-repeat scroll left center transparent;
+        background: url(http://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-hover-1.png) no-repeat scroll left center transparent;
         width: 40px;
         height: 40px;
         text-indent: -9999px;
@@ -101,13 +99,13 @@ header{background-color: #e5e5e5; z-index: 2000;}
         }
     .btn-360 a{ display: block;}
     .sub-menu-jfx{
-        right: 19.5rem; z-index: 1000; width: 20%;
+        right: 0rem; z-index: 1000; width: 40%;
         animation-duration: 2s;
         animation-name: slidein;
       }
       @keyframes slidein {
         from { top: -4rem; }
-        to {top: 18.75rem; }
+        to {top: 18rem; }
       }
     .logo-label{height: 50px;}
     .description-label{font-size: .5rem; color: #03848a;}
@@ -184,19 +182,18 @@ header{background-color: #e5e5e5; z-index: 2000;}
     }} 
     .btn-accueil img:not( :hover ){-webkit-animation: bouton-accueil-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: bouton-accueil-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
-.img-btn-accueil{opacity: .6; object-fit: cover;} 
+.img-btn-accueil{opacity: .8; object-fit: cover;} 
 /* BLOCS */
 .content-blocs h3{font-size: 1rem; text-transform: uppercase; top: -7px; left:5px;}
 /* STUDIO */
 #studio h3{display:inline; color: white; background-color: #03848a; padding: .5rem 1rem; width: auto;}
-#studio p{   text-align: justify;}
+#studio p{ margin-bottom: 0;  text-align: justify;}
 #studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
 .text-studio p img{padding-right: 1rem; padding-bottom: 1rem; padding-top: .5rem ; float: left;}
 .text-studio a{color: #03848a;}
 .text-studio a:hover{color: #ffaa03; border-bottom: 3px solid #ffaa03;}
 #studio-equipement .fa-record-vinyl{color: #ffaa03;}
 #studio-equipement h4{font-size:1rem;}
-#plan-studio p{margin-left: 1.3rem;}
 .image-map-plan{object-fit: contain;}
 .plan-hover{animation: pulse 1s;}
   @keyframes pulse {
@@ -231,6 +228,7 @@ header{background-color: #e5e5e5; z-index: 2000;}
 .share-facebook:hover,.share-linkedin:hover,.share-email:hover{color: #03848a;}
 /* REFERENCES */
 .widget-soundcloud-content{height: 300px;}
+.widget-nuage-content img{width: 100%;}
     /* youtube  */
     #references .video-youtube h4{font-size: 1rem;}
     #references iframe{width: 100%;}
@@ -305,6 +303,7 @@ header{background-color: #e5e5e5; z-index: 2000;}
 #contact h3, #studio h3{font-size: 1.4rem ;}
 #contact h4{font-size: 1.8rem ;}
 #contact h5{font-size: 1.35rem ;}
+#contact .partage-reseaux-sociaux  {visibility: hidden;}
 .notes{width: 75%!important;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
@@ -321,13 +320,6 @@ div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-
 .wpcf7-submit:hover, .submit:hover{ 
     background-color: #ffaa03;
      color: #fff;}
-/* 360° - constellation */
-/* .wp-image-1852,.wp-image-20132{width:15rem;}
-#labels figcaption{font-family: 'Cocogoose',Helvetica, sans-serif; font-size: .6rem; color: #03848a; margin-top: .8rem; margin-bottom: 1.5rem;}
-#labels .wp-block-image{margin-bottom: 3rem;}
-.description-label{font-size: .5rem; color: #03848a;} 
-.logo-label{height: 69px;}*/
-/* #sub-menu-jfx .label-jfx{} */
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */
@@ -337,6 +329,7 @@ footer{height: 20rem;}
       footer .menu-rs a{color: #000;}
       footer .menu-rs a:hover{color:#03848a;}
       /* Newsletter Sendinblue */
+      .widget-newsletter h3{display: none;}
       .sib_signup_box_inside_1{align-items: center;}
       #sib_signup_form_1 input, .sib-default-btn, .sib-email-area{border-radius: none!important; margin: 0!important; }
       .sib-email-area{width: 70%;}
@@ -350,8 +343,9 @@ footer{height: 20rem;}
      text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
 #historique  h5{margin-top: 1rem;}
 #historique p{text-align: justify; margin-bottom: 0;}
-#historique a{color: #03848a;}
-#historique a:hover{ color: #ffaa03;}
+#historique p a{color: #03848a;}
+#historique p a:hover{ color: #ffaa03;}
+#historique h4 a, #historique h4 a:hover{color: #fff; }
 /* MEDIA QUERIES */
 @media screen  and (max-width:1199px){
 
@@ -359,9 +353,32 @@ footer{height: 20rem;}
 @media screen  and (max-width:991px){
     /* NAV */
     #nav-top li{padding-right: 0; padding-bottom: .3rem; font-size: 1.5rem;}
-    /* .lien-widget-jfx{display: flex; justify-content: flex-end;}
-    .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;} */
     .h-280{height: 250px;}
+    .btn-360{
+        background: url(http://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-1.png) no-repeat right center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+        .btn-360:hover{
+        background: url(http://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-hover-1.png) no-repeat right center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+    .btn-360 a{ display: block;}
+    #logo-jfx{width: 40px; height: 40px; position: relative; left: 120rem;}
+    .sub-menu-jfx{
+        top: 5rem; z-index: 1000; width: 40%;
+        animation-duration: 2s;
+        animation-name: slidein;
+      }
+      @keyframes slidein {
+        from { right: -30rem; }
+        to {right: 0rem; }
+      }
 }
 @media screen  and (max-width:767px){	
     .snip1581 {

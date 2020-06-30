@@ -8,13 +8,13 @@
 ?><?php get_header() ?>
 <div class="container-fluid" id="contact">
     <div class="container">
-        <div class="row pt-5 d-lg-none">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+            <div class="row pt-5 d-lg-none">
             <div class="col-12 text-left">
                 <h1> <?php the_title(); ?></h1>
             </div>
         </div>
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
                 <div class="row py-3 flex-column-reverse flex-sm-row">
                     <div class="col-4 d-none d-lg-flex">
                         <?php if (is_active_sidebar('widget-image-contact')) :

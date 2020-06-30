@@ -1,4 +1,6 @@
 <div class="sub-menu-jfx position-absolute bg-white text-center dis-none" id="sub-menu-jfx">
+<?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
     <?php $loop = new WP_Query(array('post_type' => 'label', 'paged' => $paged, 'order' => 'ASC'));
     while ($loop->have_posts()) : $loop->the_post();
         $image = get_field('logo_label'); ?>
@@ -7,5 +9,7 @@
                 <img src="<?php echo $image ?>" class="logo-label" />
             </a>
         </div>
-    <?php endwhile; ?>
+    <?php endwhile; 
+    endwhile;
+endif;?>
 </div>

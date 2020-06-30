@@ -19,8 +19,14 @@
                             'container' => false,
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
-                        )
-                    ); ?>
+                        ) ); ?>
+                    <!-- <span class="pl-3"> -->
+                        <?php 
+                        // if (is_active_sidebar('logo-jarring-effects')) :
+                        //     dynamic_sidebar('logo-jarring-effects');
+                        // endif; 
+                        ?>
+                    <!-- </span> -->
                 </div>
             </div>
         </nav>
@@ -38,17 +44,22 @@
                 </label>
                 <div class="menu-burger display-none bg-burger font-family-cocogoose text-uppercase" id="navigation">
                     <a href="<?php echo get_option('home'); ?>">
-                        <img src="https://chloep.promo-37.codeur.online/rumble-inn/wp-content/uploads/2020/05/Logo-rumble-inn-little-2.svg" />
+                        <img src="http://www.rumbleinnstudio.com/wp-content/uploads/2020/05/Logo-rumble-inn-little-2.svg" />
                     </a>
                     <?php wp_nav_menu(
                         array(
                             'container' => false,
                             'theme_location' => 'top',
                             'menu_id'  => 'nav-top',
-                        )); ?>
+                        ));
+                        //  if (is_active_sidebar('logo-jarring-effects')) :
+                        //         dynamic_sidebar('logo-jarring-effects');
+                        //     endif; 
+                            ?>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
-<?php get_template_part( 'template-parts/navigation/sub', 'menu' ); ?>
+<?php get_template_part('template-parts/navigation/sub', 'menu'); ?>

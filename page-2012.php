@@ -18,29 +18,27 @@
                         array(
                             'taxonomy' => 'categorie', //nouveau articles, sans categories
                             'operator' => 'NOT EXISTS'
-                        )
-                    )
-                ));
+                        ))));
                 while ($loop->have_posts()) : $loop->the_post();
-                    $image = get_field('image_histoire'); ?>
-                    <div class="row pb-2">
-                        <div class="col-12 ">
-                            <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
-                        </div>
-                    <?php
-                    if ($image != '') { ?>
-                        <div class="col-12 col-md-2">
-                            <img class="w-100" src=" <?php echo $image ?>" />
-                        </div>
-                        <div class="col-12 col-md-10 mt-3 mt-md-0">
-                            <?php the_field("details_histoire"); ?>
-                        </div>
-                    <?php } else { ?>
-                        <div class="col-12">
-                            <?php the_field("details_histoire"); ?>
-                        </div>
-                    <?php } ?>
+                $image = get_field('image_histoire');
+                $titreHistoire = the_field('titre_histoire');
+                if ($titreHistoire != '') { ?>
+                    <div class="col-12">
+                        <h5 class="font-weight-bold text-blue text-capitalize"><?php the_field('titre_histoire'); ?></h5>
                     </div>
+                <?php }
+                if ($image != '') { ?>
+                    <div class="col-12 col-md-2">
+                        <img class="w-100" src=" <?php echo $image ?>" />
+                    </div>
+                    <div class="col-12 col-md-10  mt-3 mt-md-0">
+                        <?php the_field("details_histoire"); ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="col-12">
+                        <?php the_field("details_histoire"); ?>
+                    </div>
+                <?php } ?>
                 <?php endwhile; ?>
                 <!-- </div> -->
                 <div class="row pt-4">
@@ -322,7 +320,7 @@
                             )
                         )
                     )); ?>
-                    <h4>Dernier post</h4>
+                    <h4>L'histoire du Rumble Inn commence</h4>
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $image = get_field('image_histoire'); ?>
                         <div class="col-12 ">
