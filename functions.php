@@ -1,64 +1,42 @@
-<?php 
-//ajouter le logo
-function theme_prefix_setup() {
+<?php require 'hooks.php';
+function rumbleinn_setup() {
     add_theme_support( 'custom-logo', array(
         'height'      => 400,
         'width'       => 400,
         'flex-width' => true,
         'header-text' => array( 'site-title', 'site-description' ),
-     ) );   }
-add_action( 'after_setup_theme', 'theme_prefix_setup' );
-
-    // Chargement des styles et des scripts Bootstrap sur WordPress
-    function wpbootstrap_styles_scripts(){
-        wp_enqueue_style('style', get_stylesheet_uri());
-        wp_enqueue_style('bootstrap', ''. get_home_url() .'/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.css');
-        wp_enqueue_script('jquery');
-        // wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), 1, true);
-        wp_enqueue_script('popper',''. get_home_url() .'/wp-content/themes/rumble-inn/assets/popper.min.js', array('jquery'), 1, true);
-        wp_enqueue_script('boostrap', ''. get_home_url() .'/wp-content/themes/rumble-inn/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
-    }
-    add_action('wp_enqueue_scripts', 'wpbootstrap_styles_scripts');
-
-//ajouter l'image d'entête/header du site(options de cette img)
-$defaults = array(
-    'default-image'          => '',
-    'random-default'         => false,
-    'width'                  => 1900,
-    'height'                 => 481,
-    'flex-height'            => false,
-    'flex-width'             => true,
-    'default-text-color'     => '',
-    'header-text'            => true,
-    'uploads'                => true,
-    'wp-head-callback'       => '',
-    'admin-head-callback'    => '',
-    'admin-preview-callback' => '',
-    'video'                  => false,
-    'video-active-callback'  => 'is_front_page',
-);
-add_theme_support( 'custom-header', $defaults );
+     ) ); 
+     add_theme_support('title-tag');
+     // Ajouter la prise en charge des images mises en avant
+    add_theme_support( 'post-thumbnails' );
+}
+function wp_styles_scripts(){
+    wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
+    wp_enqueue_style('font-awesome', ''. get_template_directory_uri() .'/assets/font-awesome/css/all.min.css');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('popper',''. get_template_directory_uri().'/assets/popper.min.js', array('jquery'), 1, true);
+    wp_enqueue_script('boostrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
+    wp_enqueue_style('style', get_stylesheet_uri());
+}
 // widget header
 function header_widgets_init() {
+    register_sidebar( array(
+        'name' => 'Ajouter du texte au Header',
+        'id' => 'widget-header-text',
+        'before_widget' => '<div class="header-text">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="header-title">',
+        'after_title' => '</h2>',
+        ) );
         register_sidebar( array(
-         'name' => 'Ajouter du texte au Header',
-         'id' => 'widget-header-text',
-         'before_widget' => '<div class="header-text">',
-         'after_widget' => '</div>',
-         'before_title' => '<h2 class="header-title">',
-         'after_title' => '</h2>',
-         ) );
-         register_sidebar( array(
-            'name' => 'Logo JFX dans Menu smartphone',
-            'id' => 'logo-jarring-effects',
-            'before_widget' => '<div id="logo-jfx">',
-            'after_widget' => '</div>',
-            'before_title' => '<h2>',
-            'after_title' => '</h2>',
-            ) );
-
-     }
-    add_action( 'widgets_init', 'header_widgets_init' );
+        'name' => 'Logo JFX dans Menu smartphone',
+        'id' => 'logo-jarring-effects',
+        'before_widget' => '<div id="logo-jfx">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+        ) );
+    }
  // widget content
 function content_widgets_init() {
     register_sidebar( array(
@@ -86,7 +64,6 @@ function content_widgets_init() {
         'after_title' => '</h3>',
         ) );
  }
-add_action( 'widgets_init', 'content_widgets_init' );
 function footer_widgets_init() {
      register_sidebar( array(
         'name' => 'Newsletter',
@@ -97,17 +74,15 @@ function footer_widgets_init() {
         'after_title' => '</h3>',
         ) );
  }
-add_action( 'widgets_init', 'footer_widgets_init' );
-// Ajouter la prise en charge des images mises en avant
-add_theme_support( 'post-thumbnails' );
 // NAvigation top menu
-register_nav_menus(
-    array(
-        'top'    => __( 'Top Menu', 'rumbleinn' ),
-        'social' => __( 'Social Links Menu', 'rumbleinn' ),
+function register_nav(){
+    register_nav_menus(
+        array(
+        'top'    => __('Top Menu', 'rumbleinn'),
+        'social' => __('Social Links Menu', 'rumbleinn'),
     ));
+}
 /* Autoriser l'upload de tous types de format dans les médias */
-add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
 function wpm_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml'; //On autorise les .svg
     $mime_types['webp'] = 'image/webp'; //On autorise les .webp
@@ -153,7 +128,6 @@ if( !function_exists( 'theme_pagination' ) ) {
 	echo str_replace('page/1/','', paginate_links( $pagination ) );
     }	
 }
-
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     //si le blog est en page d'accueil ou si c'est un post seul
@@ -162,33 +136,20 @@ function my_sharing_buttons($content) {
         $myCurrentURL = urlencode(get_permalink());
         // Récuperer TITRE de la page en cours et on l'encode pour les URL 
         $myCurrentTitle = urlencode(get_field('titre_article')); // utilisation de ACF 
-        // $myCurrentImg = urlencode(get_field('image_article')); 
-        // wp_get_attachment_image_src($myCurrentImg, 'full');// image ACF convertie en attachement wordpress
+        $image = get_field('image_article');
+        wp_get_attachment_image_src($image['ID'], 'full');
         // Construction des URL de partage 
-        $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
+        $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL);
         $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
         $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article interressant : '
         .$myCurrentURL.'&amp;title='.$myCurrentTitle );
         // Ajout des bouton en bas des articles et des pages
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
         $content .= __('<span class="font-weight-bold mr-2 partagez">Partagez  : </span>');
-        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
-        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank"><i class="fab fa-linkedin"></i></a>';
-        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank"><i class="fas fa-envelope"></i></a>';
+        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a>';
+        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>';
+        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank" rel="noreferrer"><i class="fas fa-envelope"></i></a>';
         $content .= '</div>';
         }
         return $content;
 };
-//ajoute un filtre qui autorise la fonction à s'ajouter lorsqu'on utilise
-add_filter( 'the_content', 'my_sharing_buttons');
-
-
-/*** page de maintenance côté visiteur - sans plugins ***/
-// function mode_maintenance(){
-//     if(!current_user_can('edit_themes') || !is_user_logged_in()){
-//         wp_die('<div style="text-align:center; "><h1 style="color:#03848a; text-transform:uppercase;">JFX Studio devient Rumble Inn ! </h1><div style="margin-top: 1rem; font-size: 1.3rem;">Le nouveau site arrive très bientôt, stay tuned !</div></div>',
-//          'Maintenance', 
-//          array( 'response' => 503 )); // correction du 9 février 2017
-//     }
-// }
-// add_action('init', 'mode_maintenance');
