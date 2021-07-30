@@ -18,7 +18,7 @@ get_header();
             </div>
             <div class="col-12 col-md-6">
                 <h4 class="font-family-cocogoose pt-2 m-0"><?php the_field('titre_article'); ?></h4>
-                <p class="m-0 text-justify"><?php the_field('detail_article'); ?></p>
+                <p class="m-0 text-justify"><?php the_excerpt(); ?></p>
                 <div class="text-uppercase font-family-cocogoose-light m-0 author"><?php the_author(); ?></div>
                 <div class="date m-0"><?php the_date('d M Y') ?></div>
                 <div class="pt-3 text-right"><a href="<?php echo the_field('lien_article'); ?>" target="_blank" class="btn-lien-article p-3">Suivre le lien</a></div>
