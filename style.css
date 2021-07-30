@@ -1,17 +1,19 @@
-
-/* Theme Name: Rumble Inn
+/* Theme Name: Rumble Innsauv
 Author: Chloé Pottier
 Description: Thème Rumble Inn
 Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier
-Text Domain: rumble-inn */
+Text Domain: rumble-inn-sauv */
 /*COLORS*/
 .bg-black{background-color: #000;}
-.bg-bordeau{background-color: #a63a3a;}
-.bg-blue{background-color: #03848a;}
 .text-black{color: #000;}
+.bg-blue{background-color: #03848a;}
+.text-blue{color: #03848a;}
+.bg-yellow{background-color: #ffaa03;}
+.text-yellow{color: #ffaa03;}
 .text-grey-dark{color: #131316;}
+.bg-grey-light{background-color: #e7e7e7;}
 ul{list-style: none;padding: 0; margin:0;}
 a:hover{text-decoration: none;}
 /* FONTS */
@@ -22,40 +24,49 @@ a:hover{text-decoration: none;}
         url('font/cocogoose_pro-trial-webfont.woff') format('woff'),
         url('font/cocogoose_pro-trial-webfont.woff2') format('woff2'),
         url('font/cocogoose_pro-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {
-    font-family: 'Cocogoose Light';
+    font-display: swap;
+}
+@font-face {
+font-family: 'Cocogoose Light';
+src: 
+    url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
+    font-display: swap;
+}
+@font-face {        
+    font-family: 'Cocogoose Light Italic';
     src: 
-        url('font/cocogoose_pro_light-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {        
-        font-family: 'Cocogoose Light Italic';
-        src: 
-        url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
-    }
-    @font-face {
-        font-family: 'Cocogoose Italic';
-        src: 
-        url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
-        url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
-        url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
-        url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
-    }
-
-h1,h2,h3, h4, .font-family-cocogoose,.elementor-widget-heading .elementor-heading-title, 
-.wpcf7-submit, .submit, .btn-lien-article{font-family: 'Cocogoose', Helvetica,Arial, sans-serif;}
+    url('font/cocogoose_pro_light_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_light_italic-trial-webfont.ttf') format('ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cocogoose Italic';
+    src: 
+    url('font/cocogoose_pro_italic-trial-webfont.otf') format('otf'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff') format('woff'),
+    url('font/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+    url('font/cocogoose_pro_italic-trial-webfont.ttf') format('ttf'); 
+    font-display: swap;
+}
+h1,h2,h3, h4, .font-family-cocogoose, .wpcf7-submit, .submit{font-family: 'Cocogoose', Helvetica, Arial, sans-serif;}
+h1, .font-size-1-1{font-size: 1.7rem!important; text-transform: uppercase;}
 .font-family-cocogoose-light{font-family: 'Cocogoose Light', Helvetica,Arial, sans-serif;}
-.date{font-family: Helvetica, sans-serif;}
+.picto{font-size: 2.3rem;}
+.p, .font-family-helvetica {font-family: Helvetica, Arial, sans-serif;}
+.font-weight-bold-900{font-weight: 900 !important;}
+.z-index-1500{z-index: 1500;}
+.z-index-900{z-index: 900;}
+.custom-logo-link, .outline-none{outline: none;}
 /* HEADER */
-header{background-color: #e5e5e5;}
+header{background-color: #e5e5e5; z-index: 2000;}
     /* widget menu (logo)*/
-    #widget-menu-top{width: 200px; height:auto;}
+    #widget-menu-top{width: 400px; height:auto;}
+    .custom-logo{width: auto; height: 180px; margin: .5rem 0; }
     /* Menu, NAv top */
     #navigation{
         position: fixed;
@@ -66,16 +77,52 @@ header{background-color: #e5e5e5;}
         right: 0;
         padding-top: 7rem;
         text-align: right;
-        padding-right: 5rem ;
+        padding-right: 5rem ;       
     }
-    #nav-top li{padding-right:.5rem;}
+    #navbar{z-index:1100;}
+    #navbar #nav-top{display: flex; align-items: center; margin: .5rem 0;}
+    #nav-top li{padding-right:1.3rem;}
     #nav-top li:last-child{padding-right:0;}
-    #nav-top li a{color: #000;}
-    #nav-top li .active{color: rgba(117, 117, 117, 0.925);}
-    #nav-top li a:hover,.active{color: rgba(117, 117, 117, 0.925);}
+    #nav-top li a, article a:hover{color: #000!important;}
+    #nav-top li a{font-size: 1.05rem; outline: none; }
+    #nav-top li .active, #nav-top li a:hover,.active, .current-menu-item a,.current_page_item a, article a{color: #03848a!important; }
     .menu-nav ul{ list-style: none; display: flex; flex-direction: row; }
-    #nav-burger{top: 3%;
-        z-index: 2000;}
+    .menu-nav a{outline: none;}
+    .btn-360{
+        background: url(https://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-1.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+        .btn-360:hover{
+        background: url(https://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-hover-1.png) no-repeat scroll left center transparent;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        outline : none ;
+        }
+    .btn-360 a{ display: block;}
+    .sub-menu-jfx{
+        right: 8rem; z-index: 1000; width: 30%;
+        animation-duration: 1s;
+        animation-name: slidein;
+        transition: all ease-in;
+      }
+      @keyframes slidein {
+        from { top: -4rem; }
+        to {top: 18rem; }
+      }
+      
+    .logo-label{height: 50px; margin-left: 50%; transform: translate(-50%);}
+    .label-jfx a span{visibility: hidden; position: absolute; left: 58%; font-size: .5rem; font-weight: 800; margin-top: 1rem;}
+    .label-jfx a:hover span{visibility: visible; color: #03848a; }
+    .description-label{font-size: .5rem; color: #03848a;}
+    
+    .dis-none{display: none;}  
+    .dis-block{display: block;}
+
+    #nav-burger{top: 3%; z-index: 2000;}
     .burger {
         margin: 0;
         top: 3%;
@@ -89,7 +136,7 @@ header{background-color: #e5e5e5;}
         font-weight: bold;
         font-size: .8rem;
     }
-    .bg-burger{background-color: rgba(232, 229, 229, .8);}
+    .bg-burger{background-color: rgba(199, 199, 199, 0.8);}
     .display-none{display:none;}
     .display-flex{display: flex; flex-direction: column;}
     .burger span:last-child { margin-bottom:0px;    }
@@ -109,12 +156,9 @@ header{background-color: #e5e5e5;}
         display: block;
         margin-bottom: 6px;
     }
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1500;
-      }
+    .sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
+    .widget-jfx{ width: 50px; height: 50px; overflow: hidden; margin-left: 2rem;}
+    .widget-jfx img{width: 50px; margin-bottom: 50px; outline : none }
 /* ACCUEIL */
 .snip1581 {
     position: relative;
@@ -124,21 +168,83 @@ header{background-color: #e5e5e5;}
     text-align: left;
     font-size: 16px;
 }
-.btn-accueil h3{bottom: 2rem; left: 2rem; }
+.btn-accueil h3{top: -1rem; left: 0rem; font-size: 1.3rem;}
 .btn-accueil img{width: 100%; height:500px; object-fit: cover; }
-.btn-accueil img:hover{transform: rotate(0.02turn)  scale(1.25); transition-timing-function : ease-in;}
-.img-btn-accueil{opacity: .6; object-fit: cover;} 
+@keyframes bouton-accueil {
+    0% {
+      -webkit-transform: scale(1) rotate(0);
+              transform: scale(1) rotate(0);
+    }
+    100% {
+      -webkit-transform: scale(1.25) rotate(10deg);
+              transform: scale(1.25) rotate(10deg);
+    }} 
+.btn-accueil img:hover{-webkit-animation: bouton-accueil 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: bouton-accueil 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+/* mouseout */
+@keyframes bouton-accueil-out {
+    0% {
+        -webkit-transform: scale(1.25) rotate(10deg);
+                transform: scale(1.25) rotate(10deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }} 
+    .btn-accueil img:not( :hover ){-webkit-animation: bouton-accueil-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: bouton-accueil-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+.img-btn-accueil{opacity: .8; object-fit: cover;} 
+/* BLOCS */
+.content-blocs h3{font-size: 1rem; text-transform: uppercase; top: -7px; left:5px;}
 /* STUDIO */
-#studio h4{font-size: .8rem; padding-bottom: 0;}
-.content-materiel,.content-plan{height: 263px;}
-.content-materiel{overflow-y: scroll;}
+#studio h3{display:inline; color: white; background-color: #03848a; padding: .5rem 1rem; }
+#studio p{ margin-bottom: 0;  text-align: justify;}
+#studio h4, #contact .notes{font-size: .8rem; padding-bottom: 0;}
+.text-studio p img{padding-right: 1rem; padding-bottom: 1rem; padding-top: .5rem ; float: left;}
+.text-studio a{color: #03848a;}
+.text-studio a:hover{color: #ffaa03; border-bottom: 3px solid #ffaa03;}
+#studio-equipement .fa-record-vinyl{color: #ffaa03;}
+#studio-equipement h4{font-size:1rem;}
+.image-map-plan{object-fit: contain;}
+.plan-hover{animation: pulse 1s;}
+  @keyframes pulse {
+    0% {opacity:0;}
+    90% {opacity:100;}
+}      
+/* galerie */
+.foogallery{display:flex;}
+.foogallery-container{width: 100%; display: flex; flex-wrap: wrap; justify-content: center;}
+.fg-default.fg-gutter-10 .fg-item{width: 40%; display: flex;}
+.foogallery.fg-light .fg-item-inner{background-color: rgba(255,255,255,0);}
+.foogallery .fg-image-wrap {display: block; position: relative; height: 150px;}
+.fg-default .fg-image {height: 100%; overflow: hidden; object-fit: cover;}
 /* BLOG */
-.text-bloc-blog{top:2rem; left: 2rem; right: 2rem;}
-.text-bloc-blog h3{font-size: 1.5rem;}
-.btn-lien-article{background-color: #131316;}
+.details-blog p{height: 75px;}
+.date{font-size: .8rem;}
+.read-more:hover{padding: .5rem; background-color: #fff; color: #03848a;}
+.read-more{padding: .3rem .5rem .5rem .5rem; background-color: #343a40 ; color: #fff; font-weight: 600;}
+#index-blog .content-blocs{height: 170px;}
+.img-blog{height: 350px; overflow: hidden;}
+.image-responsive-blog {height:100%; min-width: 100%; object-fit: cover; }
+.soundcloud, .spotify,.youtube, .lien_autre {font-size: 1.9rem; color: #03848a;}
+.soundcloud:hover, .spotify:hover,.youtube:hover, .lien_autre:hover { color: #000;}
+.deezer{background-color: #03848a; width: 39px; height: 39px;}
+.deezer:hover{background-color: #000;}
+.page-numbers{display: flex; justify-content: center; margin-left: auto; margin-right: auto; font-size: 1.3rem;}
+.page-numbers li{margin-right: 1rem;}
+.page-numbers li:last-child{margin-right: 0rem;}
+.page-numbers li a{color: #03848a;}
+.page-numbers li span{color: #131316;}
+.partagez{color: #575757;}
+.share-facebook,.share-linkedin,.share-email{font-size: 1.3rem; color: #131316;}
+.share-facebook:hover,.share-linkedin:hover,.share-email:hover{color: #03848a;}
+#breadcrumbs a{color: #000!important;}
+#breadcrumbs a:hover{color: #03848a!important;}
 /* REFERENCES */
+.widget-soundcloud-content{height: 300px;}
+.widget-nuage-content img{width: 100%;}
     /* youtube  */
-    #references .youtube h3{font-size: 1rem; height: 40px;}
+    #references .video-youtube h4{font-size: 1rem;}
     #references iframe{width: 100%;}
     .embed-container { 
         position: relative; 
@@ -151,8 +257,8 @@ header{background-color: #e5e5e5;}
     .embed-container object,
     .embed-container embed { 
         position: absolute;
-        top: 0;
-        left: 0;
+        top: .8rem;
+        left: .8rem;
         width: 100%;
         height: 200px;
     }
@@ -160,8 +266,9 @@ header{background-color: #e5e5e5;}
     #references .col-lg-2{padding-left: 5px; padding-right: 5px;}
     #references .entry-header{font-size: .75rem; white-space: nowrap; overflow: hidden;}
     .lien-reference-single{font-size: .75rem; color: #000;}
-    .lien-reference-single:hover{color: rgba(61, 61, 61, 0.925);}
+    .lien-reference-single:hover{color: #03848a}
     #references h4{font-size: 1.1rem ;}
+    .image-reference{object-fit: cover;}
     /* post-production */
     .h-280{height:280px;}
     .border{border: solid 1px #b2b2b2 !important;}
@@ -203,24 +310,33 @@ header{background-color: #e5e5e5;}
         z-index:900;
     }
 /* PRESTATIONS */
-#prestations h3{font-size: 1rem; text-transform: uppercase; }
-#prestations .prix-prestation{font-weight: 600;}
+#prestations .content-blocs{min-height: 270px;}
+.details-prestations{text-align: justify;}
 /* CONTACT */
-.content-left{width: 35%; background-image: url(http://localhost/jarring-effects-sites/Rumble%20Inn/wp-content/uploads/2020/05/clients_bg.jpg); background-size: cover;}
-.content-right{width: 75%;}
+#contact h2{letter-spacing: -4px; font-size: 2.5rem;}
+#contact h3, #studio h3{font-size: 1.4rem ;}
+#contact h4{font-size: 1.33rem ;}
+#contact h5{font-size: 1.35rem ;}
+/* #contact .partage-reseaux-sociaux  {visibility: hidden;} */
+.notes{width: 75%!important;}
 input, textarea{margin-top: .2rem; margin-bottom: .2rem;  border: solid 1px #e5e5e5; padding: .5rem;}
 #formulaire_contact input, #formulaire_contact textarea{width: 100%; border-radius: .2rem; }
 textarea{height: 8rem;}
-.wpcf7-submit, .submit,.btn-lien-article{
-    /* background-color: #e8e5e5; 
-    color: #000; */
-    background-color: #03848a;
-    color: #fff;
-}
-.wpcf7-submit:hover, .submit:hover,.btn-lien-article:hover{ background-color:rgba(61, 61, 61, 0.925); color: #fff;}
-.container-contact{max-width:800px;}
-.container-contact h3{font-size: 1.35rem;}
-.adresse-JFX{font-size: 1.35rem;}
+#formulaire_contact p{margin: 0; padding: 0;}
+.wpcf7-submit, .submit{background-color: #03848a; color: #fff; margin: 0; text-transform: uppercase;}
+.widget-img-contact{height: 100%; width: 100%; overflow: hidden ;}
+.widget-img-contact img{height: 100% !important; object-fit: cover; width: 100%; max-width: none!important;}
+.ajax-loader{position: absolute;}
+/* mail success */
+div.wpcf7-mail-sent-ok { border: none; color: #28a745 ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
+/* mail danger */
+div.wpcf7-validation-errors{border: none; color: #dc3545  ; padding: 0rem; font-weight: 600; text-align: center; margin: 0 0 2rem 0; font-size: 1.2rem;}
+.wpcf7-submit:hover, .submit:hover{ 
+    background-color: #ffaa03;
+     color: #fff;}
+/* Politique de confidentialité */
+#page-20143 h2{font-size: 1.3rem;}
+#page-20143 h3{font-size: 1rem;}
 /* FOOTER */
 footer{height: 20rem;}  
       /* Réseaux sociaux */
@@ -228,30 +344,69 @@ footer{height: 20rem;}
       footer .menu-rs ul{display: flex; justify-content: flex-end; margin-top: 1rem;}
       footer .menu-rs li{padding-left: 1.5rem; font-size: 2rem;}
       footer .menu-rs a{color: #000;}
-      footer .menu-rs a:hover{color:rgba(117, 117, 117, 0.925);}
+      footer .menu-rs a:hover{color:#03848a;}
       /* Newsletter Sendinblue */
-      #sib_signup_form_1 input, .sib-default-btn, .sib-email-area{border-radius: none!important; }
+      .widget-newsletter h3{display: none;}
+      .sib_signup_box_inside_1{align-items: center;}
+      .sib_signup_form input, .sib-default-btn, .sib-email-area{ margin: 0!important; }
       .sib-email-area{width: 70%;}
       .submit{width: 30%;}
-      .text-newsletter{font-size: .75rem; padding-top: .3rem;}
-
-
+      .text-newsletter{font-size: .75rem; padding-top: .3rem; text-align: justify;}
+      .copyright{font-size: .7rem;}
+      .rumbleinn{color: #03848a;}   
+      .rumbleinn:hover, .huarkaya:hover{color: #ffaa03;}
+      .huarkaya{color: #000;}
+/* RECAPTACHA */
+.grecaptcha-badge{visibility: hidden;}
+/* Historique */
+#historique h4{background-color: #ffaa03; color: #fff; font-weight: 600; padding: .5rem; display: inline-block;
+     text-transform: capitalize; margin-left: 15px; margin-bottom: 0px !important; margin-top: 1rem;}
+#historique  h5{margin-top: 1rem;}
+#historique p{text-align: justify; margin-bottom: 0;}
+#historique p a{color: #03848a;}
+#historique p a:hover{ color: #ffaa03;}
+#historique h4 a, #historique h4 a:hover{color: #fff; }
+#historique img{height: auto; max-height: 100vh; object-fit: contain;}
 /* MEDIA QUERIES */
-@media screen  and (max-width:1199px){
-
+@media screen  and (max-width:1500px){
+    .sub-menu-jfx{
+        right: 8rem;
 }
-@media screen  and (max-width:991px){
+@media screen  and (max-width: 991px){
     /* NAV */
     #nav-top li{padding-right: 0; padding-bottom: .3rem; font-size: 1.5rem;}
-    .widget-menu-top{padding-top: 1rem; padding-bottom: 1rem;}
     .h-280{height: 250px;}
+    .btn-360{
+        background: url(https://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-1.png) no-repeat right center transparent;
+        width: 100%;
+        /* height: 40px; */
+        text-indent: -9999px;
+        outline : none ;
+        }
+        .btn-360:hover{
+        background: url(https://www.rumbleinnstudio.com/wp-content/uploads/2020/06/logo-JFX-menu-hover-1.png) no-repeat right center transparent;
+        width: 100%;
+        /* height: 40px;
+        text-indent: -9999px;
+        outline : none ; */
+        }
+    .btn-360 a{ display: block; width:40px; height:40px;}
+    #logo-jfx{width: 40px; height: 40px; position: relative; left: 120rem;}
+    .sub-menu-jfx{
+        top: 5rem; z-index: 1000; width: 40%;
+        animation-duration: 2s;
+        animation-name: slidein;
+      }
+      @keyframes slidein {
+        from { right: -30rem; }
+        to {right: 0rem; }
+      }
 }
-@media screen  and (max-width:767px){	
+@media screen  and (max-width: 767px){	
     .snip1581 {
         position: relative;
         display: inline-block;
         overflow: hidden;
-        /* height: 500px; */
         text-align: left;
         font-size: 16px;
         width: 100%;
@@ -260,15 +415,26 @@ footer{height: 20rem;}
     .content-plan{height: auto;}
     .content-plan img{height: auto; width: 100%;}
     .image-blog img{width: 100%!important; height: auto; }
+    .content-right{width: 100%;}
+    #formulaire_contact{order: 1 !important;}
+    .adresse-rumble-inn{order:2!important;}
+    .custom-header{height: auto;}
+    .header-text{padding-bottom: 1rem;}
+    footer .menu-rs ul{justify-content: center;}
+    .notes{width: 100%!important;}
+    .img-blog{height: auto; overflow: hidden;}
+    .image-responsive-blog {width: 100%; object-fit: cover; }
 }
-@media screen  and (max-width:575px){
+@media screen  and (max-width: 575px){
+    h1 {font-size: 2rem;}
+    h3 {font-size: 1.4rem;}
     .menu-rs{padding-top: 1rem;}
-    .image-blog{max-width:100%; height: auto; width: 100%;}
-    
+    .text-studio img{width: 100%; height: auto;}
     .content-blog p{font-size: .8rem;}
     .content-blog{ padding-bottom: 1rem; max-width:100%; width: 100%; height: auto;}
-    footer .menu-rs ul{justify-content: center;}
     .menu-rs { padding-top: 2rem; }
     .sib-email-area, .submit{width: 100%;}
     #studio-equipement h4{font-size: 1rem;}
+    .notes{width: 75%!important;}
+}
 }
